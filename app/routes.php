@@ -15,9 +15,8 @@
 |
 */
 
-// Route::get('/', function()
-// {
-// 	return View::make('hello');
-// });
-
+// 
 Route::controller('/', 'SiteController');
+
+// 所有post请求csrf验证
+Route::when('*', 'csrf', ['post']);
