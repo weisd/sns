@@ -16,7 +16,12 @@
 */
 
 // 
-Route::controller('/', 'SiteController');
+Route::controller('/', 'SiteController', [
+	'getIndex' => 'index',
+	'getActivate' => 'activate',
+	'getSignup' => 'signup',
+	'getSignin' => 'signin',
+]);
 
 // 所有post请求csrf验证
 Route::when('*', 'csrf', ['post']);

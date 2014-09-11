@@ -106,5 +106,10 @@ App::down(function()
 | 而不是将它们都放置在主路由文件中。
 |
 */
-
+ 
 require app_path().'/filters.php';
+
+// weisd 添加自定义异常处理
+require app_path().'/errors.php';
+// 自定义函数库
+require app_path().'/helpers/functions.php';

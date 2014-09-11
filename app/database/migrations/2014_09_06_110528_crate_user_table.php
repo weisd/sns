@@ -18,8 +18,9 @@ class CrateUserTable extends Migration {
 			$table->string('username', 30)->unique();
 			$table->string('email', 30)->unique();
 			$table->string('password', 60);
-			$table->boolean('actived')->default(false);	// 是否激活
+			$table->dateTime('activated_at')->nullable();
 			$table->dateTime('signin_at')->nullable();		// 登陆时间
+			$table->string('remember_token')->nullable();
 			$table->softDeletes();
 			$table->timestamps();
 		});
