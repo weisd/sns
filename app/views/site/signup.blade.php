@@ -1,3 +1,8 @@
+@extends('layouts.master')
+
+
+@section('content')
+
 {{Form::open()}}
 
 	{{Form::label('username')}}
@@ -18,3 +23,8 @@
 	{{Form::submit('注册')}}
 
 {{Form::close()}}
+
+
+<a href="/signin">登陆</a>
+
+@stop

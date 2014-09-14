@@ -1,3 +1,8 @@
+@extends('layouts.master')
+
+
+@section('content')
+
 @if($type == 0)
 链接已失效！
 
@@ -28,4 +33,7 @@
 
 {{Form::close()}}
 @endif
+
+
+@stop
 

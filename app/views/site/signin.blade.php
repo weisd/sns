@@ -1,3 +1,7 @@
+@extends('layouts.master')
+
+@section('content')
+
 {{$errors->first('error', '<strong>:message</strong>')}}
 
 {{Form::open()}}
@@ -12,3 +16,7 @@
 
 {{Form::submit('登陆')}}
 {{Form::close()}}
+
+<a href="/forget-password">找回密码</a>
+
+@stop

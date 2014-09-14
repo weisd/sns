@@ -62,7 +62,7 @@
 </div>
 
 <!-- 内容 -->
-<div class="container">
+<div class="container" style="margin-top:50px;">
     @yield('content')
 </div><!-- /.container -->
 

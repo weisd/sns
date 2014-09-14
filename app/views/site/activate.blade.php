@@ -1,4 +1,7 @@
+@extends('layouts.master')
 
+
+@section('content')
 
 <?php switch($type):?>
 <?php case 0:?>
@@ -23,3 +26,6 @@
 你的帐号已经激活，不用重复激活
 
 <?php endswitch;?>
+
+
+@stop
