@@ -11,6 +11,11 @@
 /**
  * An OpenDKIM Specific Header using only raw header datas without encoding
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Mime
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     De Cock Xavier <xdecock@gmail.com>
  */
 class Swift_Mime_Headers_OpenDKIMHeader implements Swift_Mime_Header
@@ -21,14 +26,22 @@ class Swift_Mime_Headers_OpenDKIMHeader implements Swift_Mime_Header
      * @var string
      */
     private $_value;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
      * The name of this Header
      * @var string
      */
     private $_fieldName;
 
+<<<<<<< HEAD
     /**
+=======
+	/**
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * Creates a new SimpleHeader with $name.
      *
      * @param string                   $name
@@ -106,7 +119,11 @@ class Swift_Mime_Headers_OpenDKIMHeader implements Swift_Mime_Header
     {
         return $this->_value;
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
      * Get this Header rendered as a RFC 2822 compliant string.
      *
@@ -114,13 +131,20 @@ class Swift_Mime_Headers_OpenDKIMHeader implements Swift_Mime_Header
      */
     public function toString()
     {
+<<<<<<< HEAD
         return $this->_fieldName.': '.$this->_value;
     }
 
+=======
+    	return $this->_fieldName.': '.$this->_value; 
+    }
+    
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
      * Set the Header FieldName
 	 * @see Swift_Mime_Header::getFieldName()
 	 */
+<<<<<<< HEAD
     public function getFieldName()
     {
         return $this->_fieldName;
@@ -134,4 +158,19 @@ class Swift_Mime_Headers_OpenDKIMHeader implements Swift_Mime_Header
 
     }
 
+=======
+	public function getFieldName()
+	{
+        return $this->_fieldName;
+    }
+
+    /** 
+     * Ignored
+     */
+    public function setCharset($charset) 
+    {
+    
+    }
+    
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 }

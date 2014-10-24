@@ -11,6 +11,10 @@
 /**
  * Stores Messages on the filesystem.
  *
+<<<<<<< HEAD
+=======
+ * @package Swift
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author  Fabien Potencier
  * @author  Xavier De Cock <xdecock@gmail.com>
  */

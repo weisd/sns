@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1.12.0 / 2014-X-X
 ===================
 * Add new functions diffInDaysFiltered(), diffInWeekdays() and diffInWeekendDays() (thanks @m4tthumphrey)
@@ -6,6 +7,8 @@
 * Microsecond getter.
 * Various refactorings (thanks @lucasmichot)
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 1.11.0 / 2014-08-25
 ===================
 * Added isSameDay() (thanks @enkelmedia)

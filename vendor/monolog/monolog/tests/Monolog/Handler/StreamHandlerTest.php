@@ -54,6 +54,7 @@ class StreamHandlerTest extends TestCase
     }
 
     /**
+<<<<<<< HEAD
      * @covers Monolog\Handler\StreamHandler::__construct
      * @covers Monolog\Handler\StreamHandler::write
      */
@@ -65,6 +66,8 @@ class StreamHandlerTest extends TestCase
     }
 
     /**
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * @expectedException LogicException
      * @covers Monolog\Handler\StreamHandler::__construct
      * @covers Monolog\Handler\StreamHandler::write

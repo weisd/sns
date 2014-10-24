@@ -16,8 +16,11 @@ use Monolog\Logger;
 
 class BufferHandlerTest extends TestCase
 {
+<<<<<<< HEAD
     private $shutdownCheckHandler;
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
      * @covers Monolog\Handler\BufferHandler::__construct
      * @covers Monolog\Handler\BufferHandler::handle
@@ -40,12 +43,17 @@ class BufferHandlerTest extends TestCase
      * @covers Monolog\Handler\BufferHandler::close
      * @covers Monolog\Handler\BufferHandler::flush
      */
+<<<<<<< HEAD
     public function testPropagatesRecordsAtEndOfRequest()
+=======
+    public function testDestructPropagatesRecords()
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     {
         $test = new TestHandler();
         $handler = new BufferHandler($test);
         $handler->handle($this->getRecord(Logger::WARNING));
         $handler->handle($this->getRecord(Logger::DEBUG));
+<<<<<<< HEAD
         $this->shutdownCheckHandler = $test;
         register_shutdown_function(array($this, 'checkPropagation'));
     }
@@ -56,6 +64,11 @@ class BufferHandlerTest extends TestCase
             echo '!!! BufferHandlerTest::testPropagatesRecordsAtEndOfRequest failed to verify that the messages have been propagated' . PHP_EOL;
             exit(1);
         }
+=======
+        $handler->__destruct();
+        $this->assertTrue($test->hasWarningRecords());
+        $this->assertTrue($test->hasDebugRecords());
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     }
 
     /**

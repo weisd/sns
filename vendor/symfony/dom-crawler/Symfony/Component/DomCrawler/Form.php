@@ -11,7 +11,10 @@
 
 namespace Symfony\Component\DomCrawler;
 
+<<<<<<< HEAD
 use Symfony\Component\DomCrawler\Field\ChoiceFormField;
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 use Symfony\Component\DomCrawler\Field\FormField;
 
 /**
@@ -461,9 +464,13 @@ class Form extends Link implements \ArrayAccess
         if ('select' == $nodeName || 'input' == $nodeName && 'checkbox' == strtolower($node->getAttribute('type'))) {
             $this->set(new Field\ChoiceFormField($node));
         } elseif ('input' == $nodeName && 'radio' == strtolower($node->getAttribute('type'))) {
+<<<<<<< HEAD
             // there may be other fields with the same name that are no choice
             // fields already registered (see https://github.com/symfony/symfony/issues/11689)
             if ($this->has($node->getAttribute('name')) && $this->get($node->getAttribute('name')) instanceof ChoiceFormField) {
+=======
+            if ($this->has($node->getAttribute('name'))) {
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                 $this->get($node->getAttribute('name'))->addChoice($node);
             } else {
                 $this->set(new Field\ChoiceFormField($node));

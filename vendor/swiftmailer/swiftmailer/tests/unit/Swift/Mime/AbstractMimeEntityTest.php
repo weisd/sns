@@ -522,7 +522,11 @@ abstract class Swift_Mime_AbstractMimeEntityTest extends \SwiftMailerTestCase
             $headerSet = $this->_createHeaderSet(array('Content-Type' => $cType));
             $headerSet->shouldReceive('newInstance')
                       ->zeroOrMoreTimes()
+<<<<<<< HEAD
                       ->andReturnUsing(function () use ($headerSet) {
+=======
+                      ->andReturnUsing(function() use ($headerSet) {
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                           return $headerSet;
                       });
             $entity = $this->_createEntity($headerSet,
@@ -978,9 +982,14 @@ abstract class Swift_Mime_AbstractMimeEntityTest extends \SwiftMailerTestCase
                 ->will($this->returnValue($name));
         $encoder->expects($this->any())
                 ->method('encodeString')
+<<<<<<< HEAD
                 ->will($this->returnCallback(function () {
                     $args = func_get_args();
 
+=======
+                ->will($this->returnCallback(function() {
+                    $args = func_get_args();
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                     return array_shift($args);
                 }));
 
@@ -997,12 +1006,20 @@ abstract class Swift_Mime_AbstractMimeEntityTest extends \SwiftMailerTestCase
         $set = $this->getMockery('Swift_Mime_HeaderSet')->shouldIgnoreMissing();
         $set->shouldReceive('get')
             ->zeroOrMoreTimes()
+<<<<<<< HEAD
             ->andReturnUsing(function ($key) use ($headers) {
+=======
+            ->andReturnUsing(function($key) use ($headers) {
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                 return $headers[$key];
             });
         $set->shouldReceive('has')
             ->zeroOrMoreTimes()
+<<<<<<< HEAD
             ->andReturnUsing(function ($key) use ($headers) {
+=======
+            ->andReturnUsing(function($key) use ($headers) {
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                 return array_key_exists($key, $headers);
             });
 
@@ -1020,7 +1037,11 @@ abstract class Swift_Mime_AbstractMimeEntityTest extends \SwiftMailerTestCase
                ->andReturn($model);
         $header->shouldReceive('getParameter')
                ->zeroOrMoreTimes()
+<<<<<<< HEAD
                ->andReturnUsing(function ($key) use ($params) {
+=======
+               ->andReturnUsing(function($key) use ($params) {
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                    return $params[$key];
                });
 
@@ -1033,14 +1054,21 @@ abstract class Swift_Mime_AbstractMimeEntityTest extends \SwiftMailerTestCase
         if (isset($data)) {
             $os->shouldReceive('read')
                ->zeroOrMoreTimes()
+<<<<<<< HEAD
                ->andReturnUsing(function () use ($data) {
+=======
+               ->andReturnUsing(function() use ($data) {
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                    static $first = true;
                    if (!$first) {
                        return false;
                    }
 
                    $first = false;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                    return $data;
                });
         }

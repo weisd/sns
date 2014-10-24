@@ -1,5 +1,9 @@
 <?php
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 class Swift_Mime_Headers_ParameterizedHeaderTest extends \SwiftMailerTestCase
 {
     private $_charset = 'utf-8';

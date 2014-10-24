@@ -83,7 +83,11 @@ class Swift_Plugins_ThrottlerPluginTest extends \SwiftMailerTestCase
         $msg = $this->getMockery('Swift_Mime_Message');
         $msg->shouldReceive('toByteStream')
             ->zeroOrMoreTimes()
+<<<<<<< HEAD
             ->andReturnUsing(function ($is) use ($bytes) {
+=======
+            ->andReturnUsing(function($is) use ($bytes) {
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                 for ($i = 0; $i < $bytes; ++$i) {
                     $is->write('x');
                 }

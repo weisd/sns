@@ -11,6 +11,11 @@
 /**
  * Wraps a standard PHP array in an iterator.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Mailer
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Mailer_ArrayRecipientIterator implements Swift_Mailer_RecipientIterator

@@ -13,18 +13,26 @@ namespace Monolog\Handler;
 
 use Monolog\Logger;
 use Monolog\Formatter\JsonFormatter;
+<<<<<<< HEAD
 use PhpAmqpLib\Message\AMQPMessage;
 use PhpAmqpLib\Channel\AMQPChannel;
 use AMQPExchange;
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
 class AmqpHandler extends AbstractProcessingHandler
 {
     /**
+<<<<<<< HEAD
      * @var AMQPExchange|AMQPChannel $exchange
+=======
+     * @var \AMQPExchange $exchange
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      */
     protected $exchange;
 
     /**
+<<<<<<< HEAD
      * @var string
      */
     protected $exchangeName;
@@ -45,6 +53,17 @@ class AmqpHandler extends AbstractProcessingHandler
             throw new \InvalidArgumentException('PhpAmqpLib\Channel\AMQPChannel or AMQPExchange instance required');
         }
         $this->exchange = $exchange;
+=======
+     * @param \AMQPExchange $exchange     AMQP exchange, ready for use
+     * @param string        $exchangeName
+     * @param int           $level
+     * @param bool          $bubble       Whether the messages that are handled can bubble up the stack or not
+     */
+    public function __construct(\AMQPExchange $exchange, $exchangeName = 'log', $level = Logger::DEBUG, $bubble = true)
+    {
+        $this->exchange = $exchange;
+        $this->exchange->setName($exchangeName);
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
         parent::__construct($level, $bubble);
     }
@@ -58,11 +77,15 @@ class AmqpHandler extends AbstractProcessingHandler
 
         $routingKey = sprintf(
             '%s.%s',
+<<<<<<< HEAD
             // TODO 2.0 remove substr call
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             substr($record['level_name'], 0, 4),
             $record['channel']
         );
 
+<<<<<<< HEAD
         if ($this->exchange instanceof AMQPExchange) {
             $this->exchange->publish(
                 $data,
@@ -86,6 +109,17 @@ class AmqpHandler extends AbstractProcessingHandler
                 strtolower($routingKey)
             );
         }
+=======
+        $this->exchange->publish(
+            $data,
+            strtolower($routingKey),
+            0,
+            array(
+                'delivery_mode' => 2,
+                'Content-type' => 'application/json'
+            )
+        );
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     }
 
     /**

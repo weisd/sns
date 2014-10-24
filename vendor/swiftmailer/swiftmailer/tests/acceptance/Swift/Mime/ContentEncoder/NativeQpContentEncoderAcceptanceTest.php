@@ -79,6 +79,11 @@ class Swift_Mime_ContentEncoder_NativeQpContentEncoderAcceptanceTest extends \PH
         $this->assertSame('quoted-printable', $this->_encoder->getName());
     }
 
+<<<<<<< HEAD
+=======
+    // -- Private Methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     private function _createEncoderFromContainer()
     {
         return Swift_DependencyContainer::getInstance()

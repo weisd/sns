@@ -1177,7 +1177,11 @@ class HttpCacheTest extends HttpCacheTestCase
 
     public function testEsiCacheRemoveValidationHeadersIfEmbeddedResponses()
     {
+<<<<<<< HEAD
         $time = new \DateTime();
+=======
+        $time = new \DateTime;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
         $responses = array(
             array(

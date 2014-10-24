@@ -11,6 +11,11 @@
 /**
  * A collection of MIME headers.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Mime
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Mime_SimpleHeaderSet implements Swift_Mime_HeaderSet
@@ -325,6 +330,11 @@ class Swift_Mime_SimpleHeaderSet implements Swift_Mime_HeaderSet
         return $this->toString();
     }
 
+<<<<<<< HEAD
+=======
+    // -- Private methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /** Save a Header to the internal collection */
     private function _storeHeader($name, Swift_Mime_Header $header, $offset = null)
     {

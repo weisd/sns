@@ -67,6 +67,7 @@ class ServerBagTest extends \PHPUnit_Framework_TestCase
         ), $bag->getHeaders());
     }
 
+<<<<<<< HEAD
     public function testHttpBasicAuthWithPhpCgiBogus()
     {
         $bag = new ServerBag(array('HTTP_AUTHORIZATION' => 'Basic_'.base64_encode('foo:bar')));
@@ -85,6 +86,16 @@ class ServerBagTest extends \PHPUnit_Framework_TestCase
             'AUTHORIZATION' => 'Basic '.base64_encode('username:pass:word'),
             'PHP_AUTH_USER' => 'username',
             'PHP_AUTH_PW' => 'pass:word'
+=======
+    public function testHttpBasicAuthWithPhpCgiRedirect()
+    {
+        $bag = new ServerBag(array('REDIRECT_HTTP_AUTHORIZATION' => 'Basic '.base64_encode('foo:bar')));
+
+        $this->assertEquals(array(
+            'AUTHORIZATION' => 'Basic '.base64_encode('foo:bar'),
+            'PHP_AUTH_USER' => 'foo',
+            'PHP_AUTH_PW' => 'bar'
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         ), $bag->getHeaders());
     }
 
@@ -110,6 +121,7 @@ class ServerBagTest extends \PHPUnit_Framework_TestCase
         ), $bag->getHeaders());
     }
 
+<<<<<<< HEAD
     public function testHttpDigestAuthWithPhpCgiBogus()
     {
         $digest = 'Digest_username="foo", realm="acme", nonce="'.md5('secret').'", uri="/protected, qop="auth"';
@@ -121,6 +133,8 @@ class ServerBagTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse(isset($headers['PHP_AUTH_PW']));
     }
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     public function testHttpDigestAuthWithPhpCgiRedirect()
     {
         $digest = 'Digest username="foo", realm="acme", nonce="'.md5('secret').'", uri="/protected, qop="auth"';

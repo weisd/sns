@@ -11,6 +11,11 @@
 /**
  * The EventDispatcher which handles the event dispatching layer.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Events
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Events_SimpleEventDispatcher implements Swift_Events_EventDispatcher
@@ -132,6 +137,11 @@ class Swift_Events_SimpleEventDispatcher implements Swift_Events_EventDispatcher
         $this->_bubble($evt, $target);
     }
 
+<<<<<<< HEAD
+=======
+    // -- Private methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /** Queue listeners on a stack ready for $evt to be bubbled up it */
     private function _prepareBubbleQueue(Swift_Events_EventObject $evt)
     {

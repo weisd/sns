@@ -12,6 +12,7 @@
     ],
     "require": {
         "php": ">=5.3.0",
+<<<<<<< HEAD
         "laravel/framework": "4.*|5.0.*",
         "symfony/finder": "~2.3",
         "maximebf/debugbar": "~1.9.15"
@@ -27,6 +28,20 @@
     "extra": {
         "branch-alias": {
             "dev-master": "1.7-dev"
+=======
+        "laravel/framework": "~4.0",
+        "symfony/finder": "~2.3",
+        "maximebf/debugbar": "~1.9"
+    },
+    "autoload": {
+        "psr-0": {
+            "Barryvdh\\Debugbar": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.6-dev"
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         }
     }
 }

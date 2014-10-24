@@ -152,6 +152,7 @@ class Crypt_AES extends Crypt_Rijndael
     {
         return;
     }
+<<<<<<< HEAD
 
     /**
      * Sets the key length
@@ -204,4 +205,6 @@ class Crypt_AES extends Crypt_Rijndael
             $this->_setupEngine();
         }
     }
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 }

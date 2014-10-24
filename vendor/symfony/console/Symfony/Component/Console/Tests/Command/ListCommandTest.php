@@ -50,7 +50,11 @@ EOF;
     public function testExecuteListsCommandsWithNamespaceArgument()
     {
 
+<<<<<<< HEAD
         require_once realpath(__DIR__.'/../Fixtures/FooCommand.php');
+=======
+        require_once(realpath(__DIR__.'/../Fixtures/FooCommand.php'));
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         $application = new Application();
         $application->add(new \FooCommand());
         $commandTester = new CommandTester($command = $application->get('list'));

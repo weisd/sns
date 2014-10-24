@@ -493,6 +493,7 @@ class Crypt_RSA
         $this->configFile = CRYPT_RSA_OPENSSL_CONFIG;
 
         if ( !defined('CRYPT_RSA_MODE') ) {
+<<<<<<< HEAD
             switch (true) {
                 // Math/BigInteger's openssl requirements are a little less stringent than Crypt/RSA's. in particular,
                 // Math/BigInteger doesn't require an openssl.cfg file whereas Crypt/RSA does. so if Math/BigInteger
@@ -500,6 +501,16 @@ class Crypt_RSA
                 case defined('MATH_BIGINTEGER_OPENSSL_DISABLE'):
                     define('CRYPT_RSA_MODE', CRYPT_RSA_MODE_INTERNAL);
                     break;
+=======
+            // Math/BigInteger's openssl requirements are a little less stringent than Crypt/RSA's. in particular,
+            // Math/BigInteger doesn't require an openssl.cfg file whereas Crypt/RSA does. so if Math/BigInteger
+            // can't use OpenSSL it can be pretty trivially assumed, then, that Crypt/RSA can't either.
+            if ( defined('MATH_BIGINTEGER_OPENSSL_DISABLE') ) {
+                define('CRYPT_RSA_MODE', CRYPT_RSA_MODE_INTERNAL);
+            }
+
+            switch ( !defined('CRYPT_RSA_MODE') ) { // ie. only run this if the above didn't set CRYPT_RSA_MODE already
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                 // openssl_pkey_get_details - which is used in the only place Crypt/RSA.php uses OpenSSL - was introduced in PHP 5.2.0
                 case !function_exists('openssl_pkey_get_details'):
                     define('CRYPT_RSA_MODE', CRYPT_RSA_MODE_INTERNAL);
@@ -532,7 +543,11 @@ class Crypt_RSA
                             define('MATH_BIGINTEGER_OPENSSL_DISABLE', true);
                     }
                     break;
+<<<<<<< HEAD
                 default:
+=======
+                case true:
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                     define('CRYPT_RSA_MODE', CRYPT_RSA_MODE_INTERNAL);
             }
         }
@@ -742,6 +757,7 @@ class Crypt_RSA
      */
     function _convertPrivateKey($n, $e, $d, $primes, $exponents, $coefficients)
     {
+<<<<<<< HEAD
         $signed = $this->privateKeyFormat != CRYPT_RSA_PRIVATE_FORMAT_XML;
         $num_primes = count($primes);
         $raw = array(
@@ -754,6 +770,19 @@ class Crypt_RSA
             'exponent1' => $exponents[1]->toBytes($signed),
             'exponent2' => $exponents[2]->toBytes($signed),
             'coefficient' => $coefficients[2]->toBytes($signed)
+=======
+        $num_primes = count($primes);
+        $raw = array(
+            'version' => $num_primes == 2 ? chr(0) : chr(1), // two-prime vs. multi
+            'modulus' => $n->toBytes(true),
+            'publicExponent' => $e->toBytes(true),
+            'privateExponent' => $d->toBytes(true),
+            'prime1' => $primes[1]->toBytes(true),
+            'prime2' => $primes[2]->toBytes(true),
+            'exponent1' => $exponents[1]->toBytes(true),
+            'exponent2' => $exponents[2]->toBytes(true),
+            'coefficient' => $coefficients[2]->toBytes(true)
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         );
 
         // if the format in question does not support multi-prime rsa and multi-prime rsa was used,
@@ -942,10 +971,15 @@ class Crypt_RSA
      */
     function _convertPublicKey($n, $e)
     {
+<<<<<<< HEAD
         $signed = $this->publicKeyFormat != CRYPT_RSA_PUBLIC_FORMAT_XML;
 
         $modulus = $n->toBytes($signed);
         $publicExponent = $e->toBytes($signed);
+=======
+        $modulus = $n->toBytes(true);
+        $publicExponent = $e->toBytes(true);
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
         switch ($this->publicKeyFormat) {
             case CRYPT_RSA_PUBLIC_FORMAT_RAW:

@@ -48,6 +48,7 @@ class GettersTest extends TestFixture
       $d = Carbon::create(1234, 5, 6, 7, 8, 9);
       $this->assertSame(9, $d->second);
    }
+<<<<<<< HEAD
    public function testMicroGetter()
    {
       $micro = 345678;
@@ -59,6 +60,8 @@ class GettersTest extends TestFixture
       $d = Carbon::now();
       $this->assertSame(0, $d->micro);
    }
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
    public function testDayOfWeeGetter()
    {
       $d = Carbon::create(2012, 5, 7, 7, 8, 9);
@@ -197,7 +200,11 @@ class GettersTest extends TestFixture
    {
       $this->assertFalse(Carbon::createFromDate(2011, 1, 1)->isLeapYear());
    }
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
    public function testWeekOfMonth()
    {
       $this->assertSame(5, Carbon::createFromDate(2012, 9, 30)->weekOfMonth);

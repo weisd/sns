@@ -142,7 +142,11 @@ class ErrorHandler
         }
 
         $level = isset($this->errorLevelMap[$code]) ? $this->errorLevelMap[$code] : LogLevel::CRITICAL;
+<<<<<<< HEAD
         $this->logger->log($level, self::codeToString($code).': '.$message, array('code' => $code, 'message' => $message, 'file' => $file, 'line' => $line));
+=======
+        $this->logger->log($level, self::codeToString($code).': '.$message, array('file' => $file, 'line' => $line));
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
         if ($this->previousErrorHandler === true) {
             return false;
@@ -163,7 +167,11 @@ class ErrorHandler
             $this->logger->log(
                 $this->fatalLevel === null ? LogLevel::ALERT : $this->fatalLevel,
                 'Fatal Error ('.self::codeToString($lastError['type']).'): '.$lastError['message'],
+<<<<<<< HEAD
                 array('code' => $lastError['type'], 'message' => $lastError['message'], 'file' => $lastError['file'], 'line' => $lastError['line'])
+=======
+                array('file' => $lastError['file'], 'line' => $lastError['line'])
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             );
         }
     }

@@ -160,7 +160,12 @@ class Swift_Mime_HeaderEncoder_QpHeaderEncoderTest extends \SwiftMailerTestCase
                 $this->assertEquals($char, $encodedChar,
                     '%s: Character ' . $char . ' should not be encoded.'
                     );
+<<<<<<< HEAD
             } elseif (0x20 == $byte) { //Special case
+=======
+            } elseif (0x20 == $byte) //Special case
+            {
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                 $this->assertEquals('_', $encodedChar,
                     '%s: Space character should be replaced.'
                     );

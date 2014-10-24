@@ -5,7 +5,11 @@
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  */
 
+<<<<<<< HEAD
 class Unit_Math_BigInteger_InternalTest extends Unit_Math_BigInteger_TestCase
+=======
+class Math_BigInteger_InternalTest extends Unit_Math_BigInteger_TestCase
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 {
     static public function setUpBeforeClass()
     {

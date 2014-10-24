@@ -11,6 +11,11 @@
 /**
  * A KeyCache which streams to and from disk.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage KeyCache
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_KeyCache_DiskKeyCache implements Swift_KeyCache
@@ -261,6 +266,11 @@ class Swift_KeyCache_DiskKeyCache implements Swift_KeyCache
         }
     }
 
+<<<<<<< HEAD
+=======
+    // -- Private methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
      * Initialize the namespace of $nsKey if needed.
      *

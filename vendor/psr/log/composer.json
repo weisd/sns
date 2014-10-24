@@ -13,10 +13,13 @@
         "psr-0": {
             "Psr\\Log\\": ""
         }
+<<<<<<< HEAD
     },
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.x-dev"
         }
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     }
 }

@@ -13,16 +13,23 @@ namespace Monolog\Handler;
 
 use Monolog\TestCase;
 use Monolog\Logger;
+<<<<<<< HEAD
 use PhpAmqpLib\Message\AMQPMessage;
 use PhpAmqpLib\Channel\AMQPChannel;
 use PhpAmqpLib\Connection\AMQPConnection;
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
 /**
  * @covers Monolog\Handler\RotatingFileHandler
  */
 class AmqpHandlerTest extends TestCase
 {
+<<<<<<< HEAD
     public function testHandleAmqpExt()
+=======
+    public function setUp()
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     {
         if (!class_exists('AMQPConnection') || !class_exists('AMQPExchange')) {
             $this->markTestSkipped("amqp-php not installed");
@@ -31,7 +38,14 @@ class AmqpHandlerTest extends TestCase
         if (!class_exists('AMQPChannel')) {
             $this->markTestSkipped("Please update AMQP to version >= 1.0");
         }
+<<<<<<< HEAD
 
+=======
+    }
+
+    public function testHandle()
+    {
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         $messages = array();
 
         $exchange = $this->getMock('AMQPExchange', array('publish', 'setName'), array(), '', false);
@@ -77,6 +91,7 @@ class AmqpHandlerTest extends TestCase
         unset($messages[0][0]['datetime']);
         $this->assertEquals($expected, $messages[0]);
     }
+<<<<<<< HEAD
 
     public function testHandlePhpAmqpLib()
     {
@@ -134,4 +149,6 @@ class AmqpHandlerTest extends TestCase
 
         $this->assertEquals($expected, $messages[0]);
     }
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 }

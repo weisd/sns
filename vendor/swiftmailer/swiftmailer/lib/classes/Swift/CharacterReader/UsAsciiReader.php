@@ -11,6 +11,11 @@
 /**
  * Analyzes US-ASCII characters.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Encoder
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_CharacterReader_UsAsciiReader implements Swift_CharacterReader

@@ -11,6 +11,11 @@
 /**
  * A basic KeyCache backed by an array.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage KeyCache
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_KeyCache_ArrayKeyCache implements Swift_KeyCache
@@ -192,6 +197,11 @@ class Swift_KeyCache_ArrayKeyCache implements Swift_KeyCache
         unset($this->_contents[$nsKey]);
     }
 
+<<<<<<< HEAD
+=======
+    // -- Private methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
      * Initialize the namespace of $nsKey if needed.
      *

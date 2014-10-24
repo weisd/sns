@@ -53,6 +53,7 @@ class FilesystemTest extends FilesystemTestCase
         $this->filesystem->copy($sourceFilePath, $targetFilePath);
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException \Symfony\Component\Filesystem\Exception\IOException
      */
@@ -74,6 +75,8 @@ class FilesystemTest extends FilesystemTestCase
         $this->filesystem->copy($sourceFilePath, $targetFilePath);
     }
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     public function testCopyOverridesExistingFileIfModified()
     {
         $sourceFilePath = $this->workspace.DIRECTORY_SEPARATOR.'copy_source_file';
@@ -127,6 +130,7 @@ class FilesystemTest extends FilesystemTestCase
         $this->assertEquals('SOURCE FILE', file_get_contents($targetFilePath));
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException \Symfony\Component\Filesystem\Exception\IOException
      */
@@ -154,6 +158,8 @@ class FilesystemTest extends FilesystemTestCase
         $this->filesystem->copy($sourceFilePath, $targetFilePath, true);
     }
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     public function testCopyCreatesTargetDirectoryIfItDoesNotExist()
     {
         $sourceFilePath = $this->workspace.DIRECTORY_SEPARATOR.'copy_source_file';

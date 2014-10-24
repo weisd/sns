@@ -11,6 +11,11 @@
 /**
  * Redundantly and rotationally uses several Transport implementations when sending.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Transport
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_LoadBalancedTransport extends Swift_Transport_LoadBalancedTransport

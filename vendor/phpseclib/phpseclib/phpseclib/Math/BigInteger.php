@@ -2904,7 +2904,11 @@ class Math_BigInteger
         $leading_ones = chr((1 << ($new_bits & 0x7)) - 1) . str_repeat(chr(0xFF), $new_bits >> 3);
         $this->_base256_lshift($leading_ones, $current_bits);
 
+<<<<<<< HEAD
         $temp = str_pad($temp, strlen($leading_ones), chr(0), STR_PAD_LEFT);
+=======
+        $temp = str_pad($temp, ceil($this->bits / 8), chr(0), STR_PAD_LEFT);
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
         return $this->_normalize(new Math_BigInteger($leading_ones | $temp, 256));
     }

@@ -12,11 +12,18 @@
 namespace Symfony\Component\HttpKernel\EventListener;
 
 use Symfony\Component\HttpFoundation\Request;
+<<<<<<< HEAD
+=======
+use Symfony\Component\HttpFoundation\IpUtils;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\HttpKernel\UriSigner;
+<<<<<<< HEAD
 use Symfony\Component\HttpKernel\HttpKernelInterface;
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
@@ -25,8 +32,13 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
  * All URL paths starting with /_fragment are handled as
  * content fragments by this listener.
  *
+<<<<<<< HEAD
  * If throws an AccessDeniedHttpException exception if the request
  * is not signed or if it is not an internal sub-request.
+=======
+ * If the request does not come from a trusted IP, it throws an
+ * AccessDeniedHttpException exception.
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */
@@ -62,9 +74,13 @@ class FragmentListener implements EventSubscriberInterface
             return;
         }
 
+<<<<<<< HEAD
         if ($event->isMasterRequest()) {
             $this->validateRequest($request);
         }
+=======
+        $this->validateRequest($request);
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
         parse_str($request->query->get('_path', ''), $attributes);
         $request->attributes->add($attributes);
@@ -79,6 +95,16 @@ class FragmentListener implements EventSubscriberInterface
             throw new AccessDeniedHttpException();
         }
 
+<<<<<<< HEAD
+=======
+        // does the Request come from a trusted IP?
+        $trustedIps = array_merge($this->getLocalIpAddresses(), $request->getTrustedProxies());
+        $remoteAddress = $request->server->get('REMOTE_ADDR');
+        if (IpUtils::checkIp($remoteAddress, $trustedIps)) {
+            return;
+        }
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         // is the Request signed?
         // we cannot use $request->getUri() here as we want to work with the original URI (no query string reordering)
         if ($this->signer->check($request->getSchemeAndHttpHost().$request->getBaseUrl().$request->getPathInfo().(null !== ($qs = $request->server->get('QUERY_STRING')) ? '?'.$qs : ''))) {
@@ -88,11 +114,14 @@ class FragmentListener implements EventSubscriberInterface
         throw new AccessDeniedHttpException();
     }
 
+<<<<<<< HEAD
     /**
      * @deprecated Deprecated since 2.3.19, to be removed in 3.0.
      *
      * @return string[]
      */
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     protected function getLocalIpAddresses()
     {
         return array('127.0.0.1', 'fe80::1', '::1');

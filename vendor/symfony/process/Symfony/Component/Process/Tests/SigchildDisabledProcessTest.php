@@ -51,7 +51,11 @@ class SigchildDisabledProcessTest extends AbstractProcessTest
 
     /**
      * @expectedException \Symfony\Component\Process\Exception\RuntimeException
+<<<<<<< HEAD
      * @expectedExceptionMessage This PHP has been compiled with --enable-sigchild. Term signal can not be retrieved.
+=======
+     * @expectedExceptionMessage his PHP has been compiled with --enable-sigchild. Term signal can not be retrieved.
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      */
     public function testProcessIsSignaledIfStopped()
     {
@@ -60,7 +64,11 @@ class SigchildDisabledProcessTest extends AbstractProcessTest
 
     /**
      * @expectedException \Symfony\Component\Process\Exception\RuntimeException
+<<<<<<< HEAD
      * @expectedExceptionMessage This PHP has been compiled with --enable-sigchild. Term signal can not be retrieved.
+=======
+     * @expectedExceptionMessage his PHP has been compiled with --enable-sigchild. Term signal can not be retrieved.
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      */
     public function testProcessWithTermSignal()
     {
@@ -69,7 +77,11 @@ class SigchildDisabledProcessTest extends AbstractProcessTest
 
     /**
      * @expectedException \Symfony\Component\Process\Exception\RuntimeException
+<<<<<<< HEAD
      * @expectedExceptionMessage This PHP has been compiled with --enable-sigchild. Term signal can not be retrieved.
+=======
+     * @expectedExceptionMessage his PHP has been compiled with --enable-sigchild. Term signal can not be retrieved.
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      */
     public function testProcessIsNotSignaled()
     {
@@ -78,7 +90,11 @@ class SigchildDisabledProcessTest extends AbstractProcessTest
 
     /**
      * @expectedException \Symfony\Component\Process\Exception\RuntimeException
+<<<<<<< HEAD
      * @expectedExceptionMessage This PHP has been compiled with --enable-sigchild. Term signal can not be retrieved.
+=======
+     * @expectedExceptionMessage his PHP has been compiled with --enable-sigchild. Term signal can not be retrieved.
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      */
     public function testProcessWithoutTermSignal()
     {
@@ -211,11 +227,14 @@ class SigchildDisabledProcessTest extends AbstractProcessTest
         $this->markTestSkipped('Signal is not supported in sigchild environment');
     }
 
+<<<<<<< HEAD
     public function testRunProcessWithTimeout()
     {
         $this->markTestSkipped('Signal (required for timeout) is not supported in sigchild environment');
     }
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
      * {@inheritdoc}
      */

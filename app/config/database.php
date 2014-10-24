@@ -15,7 +15,11 @@ return array(
 	| array format for simplicity. Here you can tweak the fetch style.
 	| 在这里你可以调整获取的类型。
 	|
+<<<<<<< HEAD
 	 */
+=======
+	*/
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
 	'fetch' => PDO::FETCH_CLASS,
 
@@ -32,7 +36,11 @@ return array(
 	| you may use many connections at once using the Database library.
 	| 你可以在一个数据库类库的使用中采用多个连接。
 	|
+<<<<<<< HEAD
 	 */
+=======
+	*/
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
 	'default' => 'mysql',
 
@@ -57,11 +65,16 @@ return array(
 	| choice installed on your machine before you begin development.
 	| 安装在你的机器上的，特定数据库的驱动。
 	|
+<<<<<<< HEAD
 	 */
+=======
+	*/
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
 	'connections' => array(
 
 		'sqlite' => array(
+<<<<<<< HEAD
 			'driver' => 'sqlite',
 			'database' => __DIR__ . '/../database/production.sqlite',
 			'prefix' => '',
@@ -96,6 +109,42 @@ return array(
 			'username' => 'root',
 			'password' => '',
 			'prefix' => '',
+=======
+			'driver'   => 'sqlite',
+			'database' => __DIR__.'/../database/production.sqlite',
+			'prefix'   => '',
+		),
+
+		'mysql' => array(
+			'driver'    => 'mysql',
+			'host'      => 'localhost',
+			'database'  => 'database',
+			'username'  => 'root',
+			'password'  => '',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+		),
+
+		'pgsql' => array(
+			'driver'   => 'pgsql',
+			'host'     => 'localhost',
+			'database' => 'database',
+			'username' => 'root',
+			'password' => '',
+			'charset'  => 'utf8',
+			'prefix'   => '',
+			'schema'   => 'public',
+		),
+
+		'sqlsrv' => array(
+			'driver'   => 'sqlsrv',
+			'host'     => 'localhost',
+			'database' => 'database',
+			'username' => 'root',
+			'password' => '',
+			'prefix'   => '',
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 		),
 
 	),
@@ -113,7 +162,11 @@ return array(
 	| the migrations on disk haven't actually been run in the database.
 	| 磁盘上的哪些迁移还没有运行于数据库中。
 	|
+<<<<<<< HEAD
 	 */
+=======
+	*/
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
 	'migrations' => 'migrations',
 
@@ -130,15 +183,24 @@ return array(
 	| such as APC or Memcached. Laravel makes it easy to dig right in.
 	| 如 APC 或 Memcached 更丰富的命令。Laravel 使得它更容易的被使用。
 	|
+<<<<<<< HEAD
 	 */
+=======
+	*/
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
 	'redis' => array(
 
 		'cluster' => false,
 
 		'default' => array(
+<<<<<<< HEAD
 			'host' => '127.0.0.1',
 			'port' => 6379,
+=======
+			'host'     => '127.0.0.1',
+			'port'     => 6379,
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 			'database' => 0,
 		),
 

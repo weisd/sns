@@ -78,6 +78,7 @@ class SettersTest extends TestFixture
       $d->second = 2;
       $this->assertSame(2, $d->second);
    }
+<<<<<<< HEAD
 
    public function testTimeSetter()
    {
@@ -109,6 +110,8 @@ class SettersTest extends TestFixture
       $this->assertSame(0, $d->second);
    }
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
    public function testSecondSetterWithWrap()
    {
       $d = Carbon::now();

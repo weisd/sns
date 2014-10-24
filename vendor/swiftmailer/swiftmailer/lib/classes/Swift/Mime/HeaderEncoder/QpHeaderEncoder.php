@@ -11,6 +11,11 @@
 /**
  * Handles Quoted Printable (Q) Header Encoding in Swift Mailer.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Mime
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Mime_HeaderEncoder_QpHeaderEncoder extends Swift_Encoder_QpEncoder implements Swift_Mime_HeaderEncoder

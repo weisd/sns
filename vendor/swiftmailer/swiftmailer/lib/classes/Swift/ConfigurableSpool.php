@@ -11,6 +11,10 @@
 /**
  * Base class for Spools (implements time and message limits).
  *
+<<<<<<< HEAD
+=======
+ * @package Swift
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author  Fabien Potencier
  */
 abstract class Swift_ConfigurableSpool implements Swift_Spool

@@ -73,6 +73,7 @@ class WebProcessorTest extends TestCase
         $this->assertFalse(isset($record['extra']['unique_id']));
     }
 
+<<<<<<< HEAD
     public function testProcessorAddsOnlyRequestedExtraFields()
     {
         $server = array(
@@ -88,6 +89,8 @@ class WebProcessorTest extends TestCase
         $this->assertSame(array('url' => 'A', 'http_method' => 'C'), $record['extra']);
     }
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
      * @expectedException UnexpectedValueException
      */

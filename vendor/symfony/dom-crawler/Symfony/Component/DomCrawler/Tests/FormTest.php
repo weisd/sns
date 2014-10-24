@@ -802,6 +802,7 @@ class FormTest extends \PHPUnit_Framework_TestCase
         ));
     }
 
+<<<<<<< HEAD
     public function testDifferentFieldTypesWithSameName()
     {
         $dom = new \DOMDocument();
@@ -824,6 +825,8 @@ class FormTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('Symfony\Component\DomCrawler\Field\ChoiceFormField', $form->get('option'));
     }
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     protected function getFormFieldMock($name, $value = null)
     {
         $field = $this

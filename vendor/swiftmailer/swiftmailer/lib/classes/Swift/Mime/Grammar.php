@@ -11,6 +11,11 @@
 /**
  * Defines the grammar to use for validation, implements the RFC 2822 (and friends) ABNF grammar definitions.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Mime
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Fabien Potencier
  * @author     Chris Corbyn
  */

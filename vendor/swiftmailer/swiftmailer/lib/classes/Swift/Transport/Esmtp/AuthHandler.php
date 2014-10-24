@@ -11,6 +11,11 @@
 /**
  * An ESMTP handler for AUTH support.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Transport
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Transport_Esmtp_AuthHandler implements Swift_Transport_EsmtpHandler
@@ -240,6 +245,11 @@ class Swift_Transport_Esmtp_AuthHandler implements Swift_Transport_EsmtpHandler
     {
     }
 
+<<<<<<< HEAD
+=======
+    // -- Protected methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
      * Returns the authenticator list for the given agent.
      *

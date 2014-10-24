@@ -13,6 +13,11 @@
  *
  * Possibly the most accurate RFC 2045 QP implementation found in PHP.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Encoder
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Encoder_QpEncoder implements Swift_Encoder
@@ -222,6 +227,11 @@ class Swift_Encoder_QpEncoder implements Swift_Encoder
         $this->_charStream->setCharacterSet($charset);
     }
 
+<<<<<<< HEAD
+=======
+    // -- Protected methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
      * Encode the given byte array into a verbatim QP form.
      *

@@ -10,9 +10,17 @@
 
 /**
  * Signed Message, message that can be signed using a signer.
+<<<<<<< HEAD
  *
  * This class is only kept for compatibility
  *
+=======
+ * 
+ * This class is only kept for compatibility
+ *
+ * @package    Swift
+ * @subpackage Signed
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  *
  * @author     Xavier De Cock <xdecock@gmail.com>
  * @deprecated

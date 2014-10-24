@@ -32,6 +32,7 @@ class Functional_Net_SSH2Test extends PhpseclibFunctionalTestCase
 
     /**
     * @depends testConstructor
+<<<<<<< HEAD
     * @group github408
     * @group github412
     */
@@ -62,6 +63,8 @@ class Functional_Net_SSH2Test extends PhpseclibFunctionalTestCase
 
     /**
     * @depends testPreLogin
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     */
     public function testPasswordLogin($ssh)
     {

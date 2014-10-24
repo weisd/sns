@@ -11,6 +11,11 @@
 /**
  * A MIME part, in a multipart message.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Mime
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Mime_MimePart extends Swift_Mime_SimpleMimeEntity
@@ -171,6 +176,11 @@ class Swift_Mime_MimePart extends Swift_Mime_SimpleMimeEntity
         $this->setCharset($charset);
     }
 
+<<<<<<< HEAD
+=======
+    // -- Protected methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /** Fix the content-type and encoding of this entity */
     protected function _fixHeaders()
     {

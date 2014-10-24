@@ -259,6 +259,7 @@ Ao8eayMp6FcvNucIpUndo1X8dKMv3Y26ZQIDAQAB
         $this->assertGreaterThanOrEqual(1, strlen("$rsa"));
         $this->assertFalse($rsa->getPublicKey());
     }
+<<<<<<< HEAD
 
     /**
     * make phpseclib generated XML keys be unsigned. this may need to be reverted
@@ -301,4 +302,6 @@ JWrQdxx/WNN+ABG426rgYYbeGcIlWLZCw6Bx/1HtN5ef6nVEoiGNChYKIRB4QFOi
 
         $this->assertSame(preg_replace('#\s#', '', $key), preg_replace('#\s#', '', $newkey));
     }
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 }

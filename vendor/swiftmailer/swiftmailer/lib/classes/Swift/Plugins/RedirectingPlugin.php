@@ -11,6 +11,11 @@
 /**
  * Redirects all email to a single recipient.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Plugins
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Fabien Potencier
  */
 class Swift_Plugins_RedirectingPlugin implements Swift_Events_SendListener
@@ -182,6 +187,11 @@ class Swift_Plugins_RedirectingPlugin implements Swift_Events_SendListener
         $this->_restoreMessage($evt->getMessage());
     }
 
+<<<<<<< HEAD
+=======
+    // -- Private methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     private function _restoreMessage(Swift_Mime_Message $message)
     {
         // restore original headers

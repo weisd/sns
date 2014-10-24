@@ -70,6 +70,11 @@ class Swift_Mime_Headers_PathHeaderTest extends \PHPUnit_Framework_TestCase
             );
     }
 
+<<<<<<< HEAD
+=======
+    // -- Private methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     private function _getHeader($name)
     {
         return new Swift_Mime_Headers_PathHeader($name, new Swift_Mime_Grammar());

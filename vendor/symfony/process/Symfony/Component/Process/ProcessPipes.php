@@ -284,8 +284,11 @@ class ProcessPipes
     private function readStreams($blocking, $close = false)
     {
         if (empty($this->pipes)) {
+<<<<<<< HEAD
             usleep(Process::TIMEOUT_PRECISION * 1E4);
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             return array();
         }
 
@@ -315,11 +318,19 @@ class ProcessPipes
             $type = array_search($pipe, $this->pipes);
 
             $data = '';
+<<<<<<< HEAD
             while ('' !== $dataread = (string) fread($pipe, self::CHUNK_SIZE)) {
                 $data .= $dataread;
             }
 
             if ('' !== $data) {
+=======
+            while ($dataread = fread($pipe, self::CHUNK_SIZE)) {
+                $data .= $dataread;
+            }
+
+            if ($data) {
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                 $read[$type] = $data;
             }
 

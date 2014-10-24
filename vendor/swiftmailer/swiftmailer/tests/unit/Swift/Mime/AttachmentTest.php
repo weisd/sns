@@ -302,14 +302,21 @@ class Swift_Mime_AttachmentTest extends Swift_Mime_AbstractMimeEntityTest
              ->andReturn($path);
         $file->shouldReceive('read')
              ->zeroOrMoreTimes()
+<<<<<<< HEAD
              ->andReturnUsing(function () use ($data) {
+=======
+             ->andReturnUsing(function() use ($data) {
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                  static $first = true;
                  if (!$first) {
                      return false;
                  }
 
                  $first = false;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                  return $data;
              });
 

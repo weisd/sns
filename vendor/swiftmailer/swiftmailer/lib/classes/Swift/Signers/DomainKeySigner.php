@@ -11,6 +11,11 @@
 /**
  * DomainKey Signer used to apply DomainKeys Signature to a message
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Signatures
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Xavier De Cock <xdecock@gmail.com>
  */
 class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
@@ -60,7 +65,11 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
     /**
      * Signer identity
      *
+<<<<<<< HEAD
      * @var string
+=======
+     * @var unknown_type
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      */
     protected $_signerIdentity;
 
@@ -80,6 +89,16 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
     private $_signedHeaders = array();
 
     /**
+<<<<<<< HEAD
+=======
+     * If debugHeaders is set store debugDatas here
+     *
+     * @var string
+     */
+    private $_debugHeadersData = '';
+
+    /**
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * Stores the signature header
      *
      * @var Swift_Mime_Headers_ParameterizedHeader
@@ -89,7 +108,11 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
     /**
      * Hash Handler
      *
+<<<<<<< HEAD
      * @var resource|null
+=======
+     * @var hash_ressource
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      */
     private $_hashHandler;
 
@@ -132,11 +155,18 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
      * @param string $selector
      * @return Swift_Signers_DomainKeySigner
      */
+<<<<<<< HEAD
     public static function newInstance($privateKey, $domainName, $selector)
     {
         return new static($privateKey, $domainName, $selector);
     }
 
+=======
+    public static function newInstance($privateKey, $domainName, $selector) {
+        return new static($privateKey, $domainName, $selector);
+    }
+    
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
      * Resets internal states
      *
@@ -148,7 +178,11 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
         $this->_hashHandler = null;
         $this->_bodyCanonIgnoreStart = 2;
         $this->_bodyCanonEmptyCounter = 0;
+<<<<<<< HEAD
         $this->_bodyCanonLastChar = null;
+=======
+        $this->_bodyCanonLastChar = NULL;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         $this->_bodyCanonSpace = false;
 
         return $this;

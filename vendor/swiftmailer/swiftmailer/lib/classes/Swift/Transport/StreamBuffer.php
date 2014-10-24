@@ -11,6 +11,11 @@
 /**
  * A generic IoBuffer implementation supporting remote sockets and local processes.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Transport
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Transport_StreamBuffer extends Swift_ByteStream_AbstractFilterableInputStream implements Swift_Transport_IoBuffer
@@ -213,6 +218,11 @@ class Swift_Transport_StreamBuffer extends Swift_ByteStream_AbstractFilterableIn
     {
     }
 
+<<<<<<< HEAD
+=======
+    // -- Protected methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /** Flush the stream contents */
     protected function _flush()
     {
@@ -243,6 +253,11 @@ class Swift_Transport_StreamBuffer extends Swift_ByteStream_AbstractFilterableIn
         }
     }
 
+<<<<<<< HEAD
+=======
+    // -- Private methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
      * Establishes a connection to a remote server.
      */

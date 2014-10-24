@@ -1174,6 +1174,11 @@ abstract class Swift_Transport_AbstractSmtpTest extends \SwiftMailerTestCase
         $smtp->send($message);
     }
 
+<<<<<<< HEAD
+=======
+    // -- Protected methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     protected function _getBuffer()
     {
         return $this->getMockery('Swift_Transport_IoBuffer')->shouldIgnoreMissing();

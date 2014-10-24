@@ -11,6 +11,11 @@
 /**
  * An abstract base MIME Header.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Mime
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 abstract class Swift_Mime_Headers_AbstractHeader implements Swift_Mime_Header
@@ -437,6 +442,10 @@ abstract class Swift_Mime_Headers_AbstractHeader implements Swift_Mime_Header
         }
     }
 
+<<<<<<< HEAD
+=======
+    // -- Private methods
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
     /**
      * Generate a list of all tokens in the final header.
@@ -460,7 +469,10 @@ abstract class Swift_Mime_Headers_AbstractHeader implements Swift_Mime_Header
                 $tokens[] = $newToken;
             }
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         return $tokens;
     }
 

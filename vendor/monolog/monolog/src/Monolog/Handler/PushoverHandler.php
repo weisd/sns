@@ -121,7 +121,11 @@ class PushoverHandler extends SocketHandler
         return $header;
     }
 
+<<<<<<< HEAD
     protected function write(array $record)
+=======
+    public function write(array $record)
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     {
         foreach ($this->users as $user) {
             $this->user = $user;

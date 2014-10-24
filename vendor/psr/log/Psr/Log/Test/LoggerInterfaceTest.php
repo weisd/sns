@@ -2,7 +2,10 @@
 
 namespace Psr\Log\Test;
 
+<<<<<<< HEAD
 use Psr\Log\LoggerInterface;
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 use Psr\Log\LogLevel;
 
 /**
@@ -62,7 +65,11 @@ abstract class LoggerInterfaceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+<<<<<<< HEAD
      * @expectedException \Psr\Log\InvalidArgumentException
+=======
+     * @expectedException Psr\Log\InvalidArgumentException
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      */
     public function testThrowsOnInvalidLevel()
     {
@@ -87,9 +94,12 @@ abstract class LoggerInterfaceTest extends \PHPUnit_Framework_TestCase
             ->will($this->returnValue('DUMMY'));
 
         $this->getLogger()->warning($dummy);
+<<<<<<< HEAD
 
         $expected = array('warning DUMMY');
         $this->assertEquals($expected, $this->getLogs());
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     }
 
     public function testContextCanContainAnything()
@@ -106,13 +116,17 @@ abstract class LoggerInterfaceTest extends \PHPUnit_Framework_TestCase
         );
 
         $this->getLogger()->warning('Crazy context data', $context);
+<<<<<<< HEAD
 
         $expected = array('warning Crazy context data');
         $this->assertEquals($expected, $this->getLogs());
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     }
 
     public function testContextExceptionKeyCanBeExceptionOrOtherValues()
     {
+<<<<<<< HEAD
         $logger = $this->getLogger();
         $logger->warning('Random message', array('exception' => 'oops'));
         $logger->critical('Uncaught Exception!', array('exception' => new \LogicException('Fail')));
@@ -122,9 +136,17 @@ abstract class LoggerInterfaceTest extends \PHPUnit_Framework_TestCase
             'critical Uncaught Exception!'
         );
         $this->assertEquals($expected, $this->getLogs());
+=======
+        $this->getLogger()->warning('Random message', array('exception' => 'oops'));
+        $this->getLogger()->critical('Uncaught Exception!', array('exception' => new \LogicException('Fail')));
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     }
 }
 
 class DummyTest
 {
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d

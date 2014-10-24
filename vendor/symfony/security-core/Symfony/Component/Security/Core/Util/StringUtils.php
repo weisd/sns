@@ -35,19 +35,36 @@ class StringUtils
      */
     public static function equals($knownString, $userInput)
     {
+<<<<<<< HEAD
         $knownLen = strlen($knownString);
         $userLen = strlen($userInput);
 
         // Extend the known string to avoid uninitialized string offsets
         $knownString .= $userInput;
 
+=======
+        // Prevent issues if string length is 0
+        $knownString .= chr(0);
+        $userInput .= chr(0);
+
+        $knownLen = strlen($knownString);
+        $userLen = strlen($userInput);
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         // Set the result to the difference between the lengths
         $result = $knownLen - $userLen;
 
         // Note that we ALWAYS iterate over the user-supplied length
         // This is to prevent leaking length information
         for ($i = 0; $i < $userLen; $i++) {
+<<<<<<< HEAD
             $result |= (ord($knownString[$i]) ^ ord($userInput[$i]));
+=======
+            // Using % here is a trick to prevent notices
+            // It's safe, since if the lengths are different
+            // $result is already non-0
+            $result |= (ord($knownString[$i % $knownLen]) ^ ord($userInput[$i]));
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         }
 
         // They are only identical strings if $result is exactly 0...

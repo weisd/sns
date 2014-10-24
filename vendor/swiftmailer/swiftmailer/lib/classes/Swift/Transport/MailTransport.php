@@ -19,6 +19,11 @@
  * due to limitations of PHP's internal mail() function.  You'll get an
  * all-or-nothing result from sending.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Transport
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Transport_MailTransport implements Swift_Transport
@@ -205,6 +210,11 @@ class Swift_Transport_MailTransport implements Swift_Transport
         $this->_eventDispatcher->bindEventListener($plugin);
     }
 
+<<<<<<< HEAD
+=======
+    // -- Private methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /** Determine the best-use reverse path for this message */
     private function _getReversePath(Swift_Mime_Message $message)
     {

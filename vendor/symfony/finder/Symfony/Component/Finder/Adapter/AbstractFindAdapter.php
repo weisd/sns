@@ -16,6 +16,10 @@ use Symfony\Component\Finder\Iterator;
 use Symfony\Component\Finder\Shell\Shell;
 use Symfony\Component\Finder\Expression\Expression;
 use Symfony\Component\Finder\Shell\Command;
+<<<<<<< HEAD
+=======
+use Symfony\Component\Finder\Iterator\SortableIterator;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 use Symfony\Component\Finder\Comparator\NumberComparator;
 use Symfony\Component\Finder\Comparator\DateComparator;
 

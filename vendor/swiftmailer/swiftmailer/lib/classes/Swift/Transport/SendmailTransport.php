@@ -15,6 +15,11 @@
  * It is advised to use -bs mode since error reporting with -t mode is not
  * possible.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Transport
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Transport_SendmailTransport extends Swift_Transport_AbstractSmtpTransport
@@ -151,6 +156,11 @@ class Swift_Transport_SendmailTransport extends Swift_Transport_AbstractSmtpTran
         return $count;
     }
 
+<<<<<<< HEAD
+=======
+    // -- Protected methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /** Get the params to initialize the buffer */
     protected function _getBufferParams()
     {

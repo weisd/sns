@@ -502,8 +502,11 @@ class Request
      */
     public function overrideGlobals()
     {
+<<<<<<< HEAD
         $this->server->set('QUERY_STRING', static::normalizeQueryString(http_build_query($this->query->all(), null, '&')));
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         $_GET = $this->query->all();
         $_POST = $this->request->all();
         $_SERVER = $this->server->all();
@@ -1172,8 +1175,12 @@ class Request
 
         // as the host can come from the user (HTTP_HOST and depending on the configuration, SERVER_NAME too can come from the user)
         // check that it does not contain forbidden characters (see RFC 952 and RFC 2181)
+<<<<<<< HEAD
         // use preg_replace() instead of preg_match() to prevent DoS attacks with long host names
         if ($host && '' !== preg_replace('/(?:^\[)?[a-zA-Z0-9-:\]_]+\.?/', '', $host)) {
+=======
+        if ($host && !preg_match('/^\[?(?:[a-zA-Z0-9-:\]_]+\.?)+$/', $host)) {
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             throw new \UnexpectedValueException(sprintf('Invalid Host "%s"', $host));
         }
 
@@ -1383,6 +1390,7 @@ class Request
     }
 
     /**
+<<<<<<< HEAD
      * Get the default locale.
      *
      * @return string
@@ -1393,6 +1401,8 @@ class Request
     }
 
     /**
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * Sets the locale.
      *
      * @param string $locale

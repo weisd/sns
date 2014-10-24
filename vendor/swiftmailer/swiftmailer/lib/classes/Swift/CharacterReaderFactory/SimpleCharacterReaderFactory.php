@@ -11,6 +11,11 @@
 /**
  * Standard factory for creating CharacterReaders.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Encoder
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_CharacterReaderFactory_SimpleCharacterReaderFactory implements Swift_CharacterReaderFactory

@@ -11,6 +11,11 @@
 /**
  * Sends Messages over SMTP.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Transport
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 abstract class Swift_Transport_AbstractSmtpTransport implements Swift_Transport
@@ -281,6 +286,11 @@ abstract class Swift_Transport_AbstractSmtpTransport implements Swift_Transport
         return $response;
     }
 
+<<<<<<< HEAD
+=======
+    // -- Protected methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /** Read the opening SMTP greeting */
     protected function _readGreeting()
     {
@@ -396,18 +406,30 @@ abstract class Swift_Transport_AbstractSmtpTransport implements Swift_Transport
                 $line = $this->_buffer->readLine($seq);
                 $response .= $line;
             } while (null !== $line && false !== $line && ' ' != $line{3});
+<<<<<<< HEAD
         } catch (Swift_TransportException $e) {
             $this->_throwException($e);
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         } catch (Swift_IoException $e) {
             $this->_throwException(
                 new Swift_TransportException(
                     $e->getMessage())
                 );
+<<<<<<< HEAD
+=======
+        } catch (Swift_TransportException $e) {
+            $this->_throwException($e);
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         }
 
         return $response;
     }
 
+<<<<<<< HEAD
+=======
+    // -- Private methods
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
     /** Send an email to the given recipients from the given reverse path */
     private function _doMailTransaction($message, $reversePath, array $recipients, array &$failedRecipients)

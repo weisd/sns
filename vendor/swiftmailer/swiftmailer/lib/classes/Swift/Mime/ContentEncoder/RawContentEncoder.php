@@ -11,6 +11,11 @@
 /**
  * Handles raw Transfer Encoding in Swift Mailer.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Mime
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  *
  * @author     Sebastiaan Stok <s.stok@rollerscapes.net>
  */

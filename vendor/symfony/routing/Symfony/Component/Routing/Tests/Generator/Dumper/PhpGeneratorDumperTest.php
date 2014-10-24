@@ -60,7 +60,11 @@ class PhpGeneratorDumperTest extends \PHPUnit_Framework_TestCase
         $this->routeCollection->add('Test2', new Route('/testing2'));
 
         file_put_contents($this->testTmpFilepath, $this->generatorDumper->dump());
+<<<<<<< HEAD
         include $this->testTmpFilepath;
+=======
+        include ($this->testTmpFilepath);
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
         $projectUrlGenerator = new \ProjectUrlGenerator(new RequestContext('/app.php'));
 
@@ -81,7 +85,11 @@ class PhpGeneratorDumperTest extends \PHPUnit_Framework_TestCase
     public function testDumpWithoutRoutes()
     {
         file_put_contents($this->testTmpFilepath, $this->generatorDumper->dump(array('class' => 'WithoutRoutesUrlGenerator')));
+<<<<<<< HEAD
         include $this->testTmpFilepath;
+=======
+        include ($this->testTmpFilepath);
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
         $projectUrlGenerator = new \WithoutRoutesUrlGenerator(new RequestContext('/app.php'));
 
@@ -96,7 +104,11 @@ class PhpGeneratorDumperTest extends \PHPUnit_Framework_TestCase
         $this->routeCollection->add('Test', new Route('/test'));
 
         file_put_contents($this->testTmpFilepath, $this->generatorDumper->dump(array('class' => 'NonExistingRoutesUrlGenerator')));
+<<<<<<< HEAD
         include $this->testTmpFilepath;
+=======
+        include ($this->testTmpFilepath);
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
         $projectUrlGenerator = new \NonExistingRoutesUrlGenerator(new RequestContext());
         $url = $projectUrlGenerator->generate('NonExisting', array());
@@ -107,7 +119,11 @@ class PhpGeneratorDumperTest extends \PHPUnit_Framework_TestCase
         $this->routeCollection->add('Test', new Route('/testing/{foo}', array('foo' => 'bar')));
 
         file_put_contents($this->testTmpFilepath, $this->generatorDumper->dump(array('class' => 'DefaultRoutesUrlGenerator')));
+<<<<<<< HEAD
         include $this->testTmpFilepath;
+=======
+        include ($this->testTmpFilepath);
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
         $projectUrlGenerator = new \DefaultRoutesUrlGenerator(new RequestContext());
         $url = $projectUrlGenerator->generate('Test', array());

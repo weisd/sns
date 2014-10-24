@@ -12,6 +12,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $table = 'users';
 
+<<<<<<< HEAD
 	 /**
      * 软删除
      * @var boolean
@@ -19,6 +20,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     protected $softDelete = true;
 
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *
@@ -87,6 +90,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->email;
 	}
 
+<<<<<<< HEAD
 	/**
 	 * 调整器：加密密码
 	 * @param  string $value
@@ -98,4 +102,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		$this->attributes['password'] = Hash::needsRehash($value) ? Hash::make($value) : $value; 
 	}
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 }

@@ -11,6 +11,11 @@
 /**
  * Contains a list of redundant Transports so when one fails, the next is used.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Transport
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Transport_FailoverTransport extends Swift_Transport_LoadBalancedTransport
@@ -69,6 +74,11 @@ class Swift_Transport_FailoverTransport extends Swift_Transport_LoadBalancedTran
         return $sent;
     }
 
+<<<<<<< HEAD
+=======
+    // -- Protected methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     protected function _getNextTransport()
     {
         if (!isset($this->_currentTransport)) {

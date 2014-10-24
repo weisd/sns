@@ -50,7 +50,11 @@ class MockSplFileInfo extends \SplFileInfo
 
     public function isFile()
     {
+<<<<<<< HEAD
         if (null === $this->type) {
+=======
+        if ($this->type === null) {
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             return preg_match('/file/', $this->getFilename());
         };
 
@@ -59,7 +63,11 @@ class MockSplFileInfo extends \SplFileInfo
 
     public function isDir()
     {
+<<<<<<< HEAD
         if (null === $this->type) {
+=======
+        if ($this->type === null) {
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             return preg_match('/directory/', $this->getFilename());
         }
 
@@ -68,7 +76,11 @@ class MockSplFileInfo extends \SplFileInfo
 
     public function isReadable()
     {
+<<<<<<< HEAD
         if (null === $this->mode) {
+=======
+        if ($this->mode === null) {
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             return preg_match('/r\+/', $this->getFilename());
         }
 

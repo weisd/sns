@@ -33,10 +33,13 @@ class CreateFromFormatTest extends TestFixture
       $this->assertCarbon($d, 1975, 5, 21, 22, 32, 11);
       $this->assertSame('Europe/London', $d->tzName);
    }
+<<<<<<< HEAD
 
    public function testCreateFromFormatWithMillis()
    {
       $d = Carbon::createFromFormat('Y-m-d H:i:s.u', '1975-05-21 22:32:11.254687');
       $this->assertSame(254687, $d->micro);
    }
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 }

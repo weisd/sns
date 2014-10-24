@@ -27,6 +27,7 @@ class CopyTest extends TestFixture
       $this->assertSame($dating->tzName, $dating2->tzName);
       $this->assertSame($dating->offset, $dating2->offset);
    }
+<<<<<<< HEAD
 
    public function testCopyEnsureMicrosAreCopied()
    {
@@ -35,4 +36,6 @@ class CopyTest extends TestFixture
       $dating2 = $dating->copy();
       $this->assertSame($micro, $dating2->micro);
    }
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 }

@@ -311,6 +311,10 @@ class Swift_Mime_ContentEncoder_Base64ContentEncoderTest extends \SwiftMailerTes
             );
     }
 
+<<<<<<< HEAD
+=======
+    // -- Private Methods
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
     private function _createOutputByteStream($stub = false)
     {

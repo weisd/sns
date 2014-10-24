@@ -11,6 +11,11 @@
 /**
  * A CharacterStream implementation which stores characters in an internal array.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage CharacterStream
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Xavier De Cock <xdecock@gmail.com>
  */
 

@@ -307,6 +307,11 @@ class Swift_Mime_Headers_MailboxHeaderTest extends \SwiftMailerTestCase
             );
     }
 
+<<<<<<< HEAD
+=======
+    // -- Private methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     private function _getHeader($name, $encoder)
     {
         $header = new Swift_Mime_Headers_MailboxHeader($name, $encoder, new Swift_Mime_Grammar());

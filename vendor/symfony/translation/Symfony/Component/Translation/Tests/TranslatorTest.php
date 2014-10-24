@@ -103,6 +103,10 @@ class TranslatorTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('bar (fr)', $translator->trans('bar'));
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
      * @dataProvider      getInvalidLocalesTests
      * @expectedException \InvalidArgumentException
@@ -328,6 +332,10 @@ class TranslatorTest extends \PHPUnit_Framework_TestCase
         // no assertion. this method just asserts that no exception is thrown
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     public function getTransFileTests()
     {
         return array(
@@ -428,7 +436,10 @@ class TranslatorTest extends \PHPUnit_Framework_TestCase
             array('fr_FR'),
             array('fr.FR'),
             array('fr-FR.UTF8'),
+<<<<<<< HEAD
             array('sr@latin'),
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         );
     }
 

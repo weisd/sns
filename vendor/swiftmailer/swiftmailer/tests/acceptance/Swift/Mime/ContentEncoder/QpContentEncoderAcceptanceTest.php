@@ -152,6 +152,11 @@ class Swift_Mime_ContentEncoder_QpContentEncoderAcceptanceTest extends \PHPUnit_
         Swift_Preferences::getInstance()->setQPDotEscape(false);
     }
 
+<<<<<<< HEAD
+=======
+    // -- Private Methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     private function _createEncoderFromContainer()
     {
         return Swift_DependencyContainer::getInstance()

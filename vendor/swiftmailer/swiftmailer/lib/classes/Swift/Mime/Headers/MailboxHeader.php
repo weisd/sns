@@ -11,6 +11,11 @@
 /**
  * A Mailbox Address MIME Header for something like From or Sender.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Mime
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Mime_Headers_MailboxHeader extends Swift_Mime_Headers_AbstractHeader
@@ -310,6 +315,11 @@ class Swift_Mime_Headers_MailboxHeader extends Swift_Mime_Headers_AbstractHeader
         return preg_match('/[,;]/', $token) || parent::tokenNeedsEncoding($token);
     }
 
+<<<<<<< HEAD
+=======
+    // -- Private methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
      * Return an array of strings conforming the the name-addr spec of RFC 2822.
      *

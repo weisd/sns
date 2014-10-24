@@ -11,6 +11,11 @@
 /**
  * Makes sure a connection to a POP3 host has been established prior to connecting to SMTP.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Plugins
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Plugins_PopBeforeSmtpPlugin implements Swift_Events_TransportChangeListener, Swift_Plugins_Pop_Pop3Connection
@@ -228,6 +233,11 @@ class Swift_Plugins_PopBeforeSmtpPlugin implements Swift_Events_TransportChangeL
     {
     }
 
+<<<<<<< HEAD
+=======
+    // -- Private Methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     private function _command($command)
     {
         if (!fwrite($this->_socket, $command)) {

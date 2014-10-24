@@ -51,6 +51,7 @@ class Filesystem
 
         if ($doCopy) {
             // https://bugs.php.net/bug.php?id=64634
+<<<<<<< HEAD
             if (false === $source = @fopen($originFile, 'r')) {
                 throw new IOException(sprintf('Failed to copy "%s" to "%s" because source file could not be opened for reading.', $originFile, $targetFile), 0, null, $originFile);
             }
@@ -60,6 +61,10 @@ class Filesystem
                 throw new IOException(sprintf('Failed to copy "%s" to "%s" because target file could not be opened for writing.', $originFile, $targetFile), 0, null, $originFile);
             }
 
+=======
+            $source = fopen($originFile, 'r');
+            $target = fopen($targetFile, 'w');
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             stream_copy_to_stream($source, $target);
             fclose($source);
             fclose($target);
@@ -87,6 +92,7 @@ class Filesystem
             }
 
             if (true !== @mkdir($dir, $mode, true)) {
+<<<<<<< HEAD
                 $error = error_get_last();
                 if (!is_dir($dir)) {
                     // The directory was not created by a concurrent process. Let's throw an exception with a developer friendly error message if we have one
@@ -95,6 +101,9 @@ class Filesystem
                     }
                     throw new IOException(sprintf('Failed to create "%s"', $dir), 0, null, $dir);
                 }
+=======
+                throw new IOException(sprintf('Failed to create "%s".', $dir), 0, null, $dir);
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             }
         }
     }

@@ -147,6 +147,7 @@ class SimpleProcessTest extends AbstractProcessTest
         parent::testSignalWithWrongNonIntSignal();
     }
 
+<<<<<<< HEAD
     public function testStopTerminatesProcessCleanly()
     {
         try {
@@ -198,6 +199,8 @@ class SimpleProcessTest extends AbstractProcessTest
         parent::testStopWithTimeoutIsActuallyWorking();
     }
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
      * {@inheritdoc}
      */

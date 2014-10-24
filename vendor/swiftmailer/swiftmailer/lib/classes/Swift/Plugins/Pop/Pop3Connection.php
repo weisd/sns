@@ -11,6 +11,11 @@
 /**
  * Pop3Connection interface for connecting and disconnecting to a POP3 host.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Plugins
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 interface Swift_Plugins_Pop_Pop3Connection

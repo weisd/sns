@@ -11,6 +11,10 @@
 /**
  * Dependency Injection container.
  *
+<<<<<<< HEAD
+=======
+ * @package Swift
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author  Chris Corbyn
  */
 class Swift_DependencyContainer
@@ -288,6 +292,11 @@ class Swift_DependencyContainer
         return $this;
     }
 
+<<<<<<< HEAD
+=======
+    // -- Private methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /** Get the literal value with $itemName */
     private function _getValue($itemName)
     {

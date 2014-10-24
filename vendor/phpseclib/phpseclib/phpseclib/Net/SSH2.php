@@ -191,100 +191,177 @@ class Net_SSH2
      * Server Identifier
      *
      * @see Net_SSH2::getServerIdentification()
+<<<<<<< HEAD
      * @var mixed false or Array
      * @access private
      */
     var $server_identifier = false;
+=======
+     * @var String
+     * @access private
+     */
+    var $server_identifier = '';
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
     /**
      * Key Exchange Algorithms
      *
      * @see Net_SSH2::getKexAlgorithims()
+<<<<<<< HEAD
      * @var mixed false or Array
      * @access private
      */
     var $kex_algorithms = false;
+=======
+     * @var Array
+     * @access private
+     */
+    var $kex_algorithms;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
     /**
      * Server Host Key Algorithms
      *
      * @see Net_SSH2::getServerHostKeyAlgorithms()
+<<<<<<< HEAD
      * @var mixed false or Array
      * @access private
      */
     var $server_host_key_algorithms = false;
+=======
+     * @var Array
+     * @access private
+     */
+    var $server_host_key_algorithms;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
     /**
      * Encryption Algorithms: Client to Server
      *
      * @see Net_SSH2::getEncryptionAlgorithmsClient2Server()
+<<<<<<< HEAD
      * @var mixed false or Array
      * @access private
      */
     var $encryption_algorithms_client_to_server = false;
+=======
+     * @var Array
+     * @access private
+     */
+    var $encryption_algorithms_client_to_server;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
     /**
      * Encryption Algorithms: Server to Client
      *
      * @see Net_SSH2::getEncryptionAlgorithmsServer2Client()
+<<<<<<< HEAD
      * @var mixed false or Array
      * @access private
      */
     var $encryption_algorithms_server_to_client = false;
+=======
+     * @var Array
+     * @access private
+     */
+    var $encryption_algorithms_server_to_client;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
     /**
      * MAC Algorithms: Client to Server
      *
      * @see Net_SSH2::getMACAlgorithmsClient2Server()
+<<<<<<< HEAD
      * @var mixed false or Array
      * @access private
      */
     var $mac_algorithms_client_to_server = false;
+=======
+     * @var Array
+     * @access private
+     */
+    var $mac_algorithms_client_to_server;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
     /**
      * MAC Algorithms: Server to Client
      *
      * @see Net_SSH2::getMACAlgorithmsServer2Client()
+<<<<<<< HEAD
      * @var mixed false or Array
      * @access private
      */
     var $mac_algorithms_server_to_client = false;
+=======
+     * @var Array
+     * @access private
+     */
+    var $mac_algorithms_server_to_client;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
     /**
      * Compression Algorithms: Client to Server
      *
      * @see Net_SSH2::getCompressionAlgorithmsClient2Server()
+<<<<<<< HEAD
      * @var mixed false or Array
      * @access private
      */
     var $compression_algorithms_client_to_server = false;
+=======
+     * @var Array
+     * @access private
+     */
+    var $compression_algorithms_client_to_server;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
     /**
      * Compression Algorithms: Server to Client
      *
      * @see Net_SSH2::getCompressionAlgorithmsServer2Client()
+<<<<<<< HEAD
      * @var mixed false or Array
      * @access private
      */
     var $compression_algorithms_server_to_client = false;
+=======
+     * @var Array
+     * @access private
+     */
+    var $compression_algorithms_server_to_client;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
     /**
      * Languages: Server to Client
      *
      * @see Net_SSH2::getLanguagesServer2Client()
+<<<<<<< HEAD
      * @var mixed false or Array
      * @access private
      */
     var $languages_server_to_client = false;
+=======
+     * @var Array
+     * @access private
+     */
+    var $languages_server_to_client;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
     /**
      * Languages: Client to Server
      *
      * @see Net_SSH2::getLanguagesClient2Server()
+<<<<<<< HEAD
      * @var mixed false or Array
      * @access private
      */
     var $languages_client_to_server = false;
+=======
+     * @var Array
+     * @access private
+     */
+    var $languages_client_to_server;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
     /**
      * Block Size for Server to Client Encryption
@@ -820,7 +897,11 @@ class Net_SSH2
 
     /**
      * Number of columns for terminal window size
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * @see Net_SSH2::getWindowColumns()
      * @see Net_SSH2::setWindowColumns()
      * @see Net_SSH2::setWindowSize()
@@ -831,7 +912,11 @@ class Net_SSH2
 
     /**
      * Number of columns for terminal window size
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * @see Net_SSH2::getWindowRows()
      * @see Net_SSH2::setWindowRows()
      * @see Net_SSH2::setWindowSize()
@@ -949,12 +1034,15 @@ class Net_SSH2
      */
     function _connect()
     {
+<<<<<<< HEAD
         if ($this->bitmap & NET_SSH2_MASK_CONSTRUCTOR) {
             return false;
         }
 
         $this->bitmap |= NET_SSH2_MASK_CONSTRUCTOR;
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         $timeout = $this->connectionTimeout;
         $host = $this->host . ':' . $this->port;
 
@@ -1044,7 +1132,11 @@ class Net_SSH2
             return false;
         }
 
+<<<<<<< HEAD
         $this->bitmap|= NET_SSH2_MASK_CONNECTED;
+=======
+        $this->bitmap = NET_SSH2_MASK_CONNECTED;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
         return true;
     }
@@ -1104,7 +1196,11 @@ class Net_SSH2
                 'arcfour256',
                 'arcfour128',
 
+<<<<<<< HEAD
                 //'arcfour',        // OPTIONAL          the ARCFOUR stream cipher with a 128-bit key
+=======
+                'arcfour',        // OPTIONAL          the ARCFOUR stream cipher with a 128-bit key
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
                 // CTR modes from <http://tools.ietf.org/html/rfc4344#section-4>:
                 'aes128-ctr',     // RECOMMENDED       AES (Rijndael) in SDCTR mode, with 128-bit key
@@ -1132,7 +1228,11 @@ class Net_SSH2
                 '3des-ctr',       // RECOMMENDED       Three-key 3DES in SDCTR mode
 
                 '3des-cbc',       // REQUIRED          three-key 3DES in CBC mode
+<<<<<<< HEAD
                 //'none'            // OPTIONAL          no encryption; NOT RECOMMENDED
+=======
+                'none'            // OPTIONAL          no encryption; NOT RECOMMENDED
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             );
 
             if (phpseclib_resolve_include_path('Crypt/RC4.php') === false) {
@@ -1169,14 +1269,21 @@ class Net_SSH2
         }
 
         $mac_algorithms = array(
+<<<<<<< HEAD
             // from <http://www.ietf.org/rfc/rfc6668.txt>:
             'hmac-sha2-256',// RECOMMENDED     HMAC-SHA256 (digest length = key length = 32)
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             'hmac-sha1-96', // RECOMMENDED     first 96 bits of HMAC-SHA1 (digest length = 12, key length = 20)
             'hmac-sha1',    // REQUIRED        HMAC-SHA1 (digest length = key length = 20)
             'hmac-md5-96',  // OPTIONAL        first 96 bits of HMAC-MD5 (digest length = 12, key length = 16)
             'hmac-md5',     // OPTIONAL        HMAC-MD5 (digest length = key length = 16)
+<<<<<<< HEAD
             //'none'          // OPTIONAL        no MAC; NOT RECOMMENDED
+=======
+            'none'          // OPTIONAL        no MAC; NOT RECOMMENDED
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         );
 
         static $compression_algorithms = array(
@@ -1701,10 +1808,13 @@ class Net_SSH2
 
         $createKeyLength = 0; // ie. $mac_algorithms[$i] == 'none'
         switch ($mac_algorithms[$i]) {
+<<<<<<< HEAD
             case 'hmac-sha2-256':
                 $this->hmac_create = new Crypt_Hash('sha256');
                 $createKeyLength = 32;
                 break;
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             case 'hmac-sha1':
                 $this->hmac_create = new Crypt_Hash('sha1');
                 $createKeyLength = 20;
@@ -1731,11 +1841,14 @@ class Net_SSH2
         $checkKeyLength = 0;
         $this->hmac_size = 0;
         switch ($mac_algorithms[$i]) {
+<<<<<<< HEAD
             case 'hmac-sha2-256':
                 $this->hmac_check = new Crypt_Hash('sha256');
                 $checkKeyLength = 32;
                 $this->hmac_size = 32;
                 break;
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             case 'hmac-sha1':
                 $this->hmac_check = new Crypt_Hash('sha1');
                 $checkKeyLength = 20;
@@ -1817,6 +1930,10 @@ class Net_SSH2
     function _login($username)
     {
         if (!($this->bitmap & NET_SSH2_MASK_CONSTRUCTOR)) {
+<<<<<<< HEAD
+=======
+            $this->bitmap |= NET_SSH2_MASK_CONSTRUCTOR;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             if (!$this->_connect()) {
                 return false;
             }
@@ -2079,6 +2196,10 @@ class Net_SSH2
 
                 if (!count($responses) && $num_prompts) {
                     $this->last_interactive_response = $orig;
+<<<<<<< HEAD
+=======
+                    $this->bitmap |= NET_SSH_MASK_LOGIN_INTERACTIVE;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                     return false;
                 }
 
@@ -2670,12 +2791,19 @@ class Net_SSH2
     /**
      * Is the connection still active?
      *
+<<<<<<< HEAD
      * @return boolean
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * @access public
      */
     function isConnected()
     {
+<<<<<<< HEAD
         return (bool) ($this->bitmap & NET_SSH2_MASK_CONNECTED);
+=======
+        return $this->bitmap & NET_SSH2_MASK_LOGIN;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     }
 
     /**
@@ -2985,7 +3113,11 @@ class Net_SSH2
 
             extract(unpack('Ctype/Nchannel', $this->_string_shift($response, 5)));
 
+<<<<<<< HEAD
             $this->window_size_server_to_client[$channel]-= strlen($response);
+=======
+            $this->window_size_server_to_client[$channel]-= strlen($response) + 4;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
             // resize the window, if appropriate
             if ($this->window_size_server_to_client[$channel] < 0) {
@@ -3283,7 +3415,11 @@ class Net_SSH2
         $max_size = min(
             $this->packet_size_client_to_server[$client_channel],
             $this->window_size_client_to_server[$client_channel]
+<<<<<<< HEAD
         );
+=======
+        ) - 4;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         while (strlen($data) > $max_size) {
             if (!$this->window_size_client_to_server[$client_channel]) {
                 $this->bitmap^= NET_SSH2_MASK_WINDOW_ADJUST;
@@ -3293,7 +3429,11 @@ class Net_SSH2
                 $max_size = min(
                     $this->packet_size_client_to_server[$client_channel],
                     $this->window_size_client_to_server[$client_channel]
+<<<<<<< HEAD
                 );
+=======
+                ) - 4;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             }
 
             $temp = $this->_string_shift($data, $max_size);
@@ -3304,20 +3444,32 @@ class Net_SSH2
                 $temp
             );
 
+<<<<<<< HEAD
             $this->window_size_client_to_server[$client_channel]-= strlen($temp);
+=======
+            $this->window_size_client_to_server[$client_channel]-= strlen($temp) + 4;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
             if (!$this->_send_binary_packet($packet)) {
                 return false;
             }
         }
 
+<<<<<<< HEAD
         if (strlen($data) >= $this->window_size_client_to_server[$client_channel]) {
+=======
+        if (strlen($data) >= $this->window_size_client_to_server[$client_channel] - 4) {
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             $this->bitmap^= NET_SSH2_MASK_WINDOW_ADJUST;
             $this->_get_channel_packet(-1);
             $this->bitmap^= NET_SSH2_MASK_WINDOW_ADJUST;
         }
 
+<<<<<<< HEAD
         $this->window_size_client_to_server[$client_channel]-= strlen($data);
+=======
+        $this->window_size_client_to_server[$client_channel]-= strlen($data) + 4;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
         return $this->_send_binary_packet(pack('CN2a*',
             NET_SSH2_MSG_CHANNEL_DATA,
@@ -3526,8 +3678,11 @@ class Net_SSH2
      */
     function getServerIdentification()
     {
+<<<<<<< HEAD
         $this->_connect();
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         return $this->server_identifier;
     }
 
@@ -3539,8 +3694,11 @@ class Net_SSH2
      */
     function getKexAlgorithms()
     {
+<<<<<<< HEAD
         $this->_connect();
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         return $this->kex_algorithms;
     }
 
@@ -3552,8 +3710,11 @@ class Net_SSH2
      */
     function getServerHostKeyAlgorithms()
     {
+<<<<<<< HEAD
         $this->_connect();
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         return $this->server_host_key_algorithms;
     }
 
@@ -3565,8 +3726,11 @@ class Net_SSH2
      */
     function getEncryptionAlgorithmsClient2Server()
     {
+<<<<<<< HEAD
         $this->_connect();
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         return $this->encryption_algorithms_client_to_server;
     }
 
@@ -3578,8 +3742,11 @@ class Net_SSH2
      */
     function getEncryptionAlgorithmsServer2Client()
     {
+<<<<<<< HEAD
         $this->_connect();
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         return $this->encryption_algorithms_server_to_client;
     }
 
@@ -3591,8 +3758,11 @@ class Net_SSH2
      */
     function getMACAlgorithmsClient2Server()
     {
+<<<<<<< HEAD
         $this->_connect();
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         return $this->mac_algorithms_client_to_server;
     }
 
@@ -3604,8 +3774,11 @@ class Net_SSH2
      */
     function getMACAlgorithmsServer2Client()
     {
+<<<<<<< HEAD
         $this->_connect();
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         return $this->mac_algorithms_server_to_client;
     }
 
@@ -3617,8 +3790,11 @@ class Net_SSH2
      */
     function getCompressionAlgorithmsClient2Server()
     {
+<<<<<<< HEAD
         $this->_connect();
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         return $this->compression_algorithms_client_to_server;
     }
 
@@ -3630,8 +3806,11 @@ class Net_SSH2
      */
     function getCompressionAlgorithmsServer2Client()
     {
+<<<<<<< HEAD
         $this->_connect();
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         return $this->compression_algorithms_server_to_client;
     }
 
@@ -3643,8 +3822,11 @@ class Net_SSH2
      */
     function getLanguagesServer2Client()
     {
+<<<<<<< HEAD
         $this->_connect();
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         return $this->languages_server_to_client;
     }
 
@@ -3656,8 +3838,11 @@ class Net_SSH2
      */
     function getLanguagesClient2Server()
     {
+<<<<<<< HEAD
         $this->_connect();
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         return $this->languages_client_to_server;
     }
 
@@ -3687,6 +3872,10 @@ class Net_SSH2
     function getServerPublicHostKey()
     {
         if (!($this->bitmap & NET_SSH2_MASK_CONSTRUCTOR)) {
+<<<<<<< HEAD
+=======
+            $this->bitmap |= NET_SSH2_MASK_CONSTRUCTOR;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             if (!$this->_connect()) {
                 return false;
             }
@@ -3838,7 +4027,11 @@ class Net_SSH2
 
     /**
      * Returns the number of columns for the terminal window size.
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * @return Integer
      * @access public
      */
@@ -3849,7 +4042,11 @@ class Net_SSH2
 
     /**
      * Returns the number of rows for the terminal window size.
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * @return Integer
      * @access public
      */
@@ -3860,7 +4057,11 @@ class Net_SSH2
 
     /**
      * Sets the number of columns for the terminal window size.
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * @param Integer $value
      * @access public
      */
@@ -3871,7 +4072,11 @@ class Net_SSH2
 
     /**
      * Sets the number of rows for the terminal window size.
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * @param Integer $value
      * @access public
      */
@@ -3882,7 +4087,11 @@ class Net_SSH2
 
     /**
      * Sets the number of columns and rows for the terminal window size.
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * @param Integer $columns
      * @param Integer $rows
      * @access public

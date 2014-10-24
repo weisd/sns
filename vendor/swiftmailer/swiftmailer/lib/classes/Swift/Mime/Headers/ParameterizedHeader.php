@@ -11,6 +11,11 @@
 /**
  * An abstract base MIME Header.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Mime
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Mime_Headers_ParameterizedHeader extends Swift_Mime_Headers_UnstructuredHeader implements Swift_Mime_ParameterizedHeader
@@ -142,6 +147,10 @@ class Swift_Mime_Headers_ParameterizedHeader extends Swift_Mime_Headers_Unstruct
         return $body;
     }
 
+<<<<<<< HEAD
+=======
+    // -- Protected methods
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
     /**
      * Generate a list of all tokens in the final header.
@@ -171,6 +180,11 @@ class Swift_Mime_Headers_ParameterizedHeader extends Swift_Mime_Headers_Unstruct
         return $tokens;
     }
 
+<<<<<<< HEAD
+=======
+    // -- Private methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
      * Render a RFC 2047 compliant header parameter from the $name and $value.
      *

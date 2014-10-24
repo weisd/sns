@@ -11,6 +11,11 @@
 /**
  * Pop3Exception thrown when an error occurs connecting to a POP3 host.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Transport
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Plugins_Pop_Pop3Exception extends Swift_IoException

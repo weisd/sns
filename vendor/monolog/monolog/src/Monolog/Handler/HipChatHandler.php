@@ -165,7 +165,11 @@ class HipChatHandler extends SocketHandler
      *
      * @param array $record
      */
+<<<<<<< HEAD
     protected function write(array $record)
+=======
+    public function write(array $record)
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     {
         parent::write($record);
         $this->closeSocket();
@@ -209,6 +213,10 @@ class HipChatHandler extends SocketHandler
     {
         $batchRecord = null;
         $batchRecords = array();
+<<<<<<< HEAD
+=======
+        $batchedMessages = array();
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         $messages = array();
         $formattedMessages = array();
         $level = 0;

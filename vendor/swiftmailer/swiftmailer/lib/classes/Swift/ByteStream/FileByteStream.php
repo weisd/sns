@@ -11,6 +11,11 @@
 /**
  * Allows reading and writing of bytes to and from a file.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage ByteStream
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_ByteStream_FileByteStream extends Swift_ByteStream_AbstractFilterableInputStream implements Swift_FileStream
@@ -91,6 +96,7 @@ class Swift_ByteStream_FileByteStream extends Swift_ByteStream_AbstractFilterabl
                 ini_set('magic_quotes_runtime', 1);
             }
             $this->_offset = ftell($fp);
+<<<<<<< HEAD
 
             // If we read one byte after reaching the end of the file
             // feof() will return false and an empty string is returned
@@ -98,6 +104,15 @@ class Swift_ByteStream_FileByteStream extends Swift_ByteStream_AbstractFilterabl
                 $this->_resetReadHandle();
 
                 return false;
+=======
+            
+            // If we read one byte after reaching the end of the file
+            // feof() will return false and an empty string is returned
+            if ($bytes === '' && feof($fp)) {
+            	$this->_resetReadHandle();
+            	
+            	return false;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             }
 
             return $bytes;
@@ -123,6 +138,11 @@ class Swift_ByteStream_FileByteStream extends Swift_ByteStream_AbstractFilterabl
         $this->_offset = $byteOffset;
     }
 
+<<<<<<< HEAD
+=======
+    // -- Private methods
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /** Just write the bytes to the file */
     protected function _commit($bytes)
     {

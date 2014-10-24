@@ -11,6 +11,11 @@
 /**
  * A null KeyCache that does not cache at all.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage KeyCache
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_KeyCache_NullKeyCache implements Swift_KeyCache

@@ -24,6 +24,7 @@ class InstanceTest extends TestFixture
       $dating = Carbon::instance(\DateTime::createFromFormat('Y-m-d H:i:s', '1975-05-21 22:32:11')->setTimezone(new \DateTimeZone('America/Vancouver')));
       $this->assertSame('America/Vancouver', $dating->tzName);
    }
+<<<<<<< HEAD
 
    public function testInstanceFromDateTimeKeepsMicros()
    {
@@ -32,4 +33,6 @@ class InstanceTest extends TestFixture
       $carbon = Carbon::instance($datetime);
       $this->assertSame($micro, $carbon->micro);
    }
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 }

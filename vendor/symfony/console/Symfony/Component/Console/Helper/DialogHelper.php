@@ -325,7 +325,11 @@ class DialogHelper extends InputAwareHelper
      * @param OutputInterface $output       An Output instance
      * @param string|array    $question     The question to ask
      * @param callable        $validator    A PHP callback
+<<<<<<< HEAD
      * @param int|false       $attempts     Max number of times to ask before giving up (false by default, which means infinite)
+=======
+     * @param int             $attempts     Max number of times to ask before giving up (false by default, which means infinite)
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * @param string          $default      The default answer if none is given by the user
      * @param array           $autocomplete List of values to autocomplete
      *
@@ -354,7 +358,11 @@ class DialogHelper extends InputAwareHelper
      * @param OutputInterface $output    An Output instance
      * @param string|array    $question  The question to ask
      * @param callable        $validator A PHP callback
+<<<<<<< HEAD
      * @param int|false       $attempts  Max number of times to ask before giving up (false by default, which means infinite)
+=======
+     * @param int             $attempts  Max number of times to ask before giving up (false by default, which means infinite)
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * @param bool            $fallback  In case the response can not be hidden, whether to fallback on non-hidden question or not
      *
      * @return string         The response
@@ -448,7 +456,11 @@ class DialogHelper extends InputAwareHelper
      * @param callable         $interviewer  A callable that will ask for a question and return the result
      * @param OutputInterface  $output       An Output instance
      * @param callable         $validator    A PHP callback
+<<<<<<< HEAD
      * @param int|false        $attempts     Max number of times to ask before giving up ; false will ask infinitely
+=======
+     * @param int              $attempts     Max number of times to ask before giving up ; false will ask infinitely
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      *
      * @return string   The validated response
      *

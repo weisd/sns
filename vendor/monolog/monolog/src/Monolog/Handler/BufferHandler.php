@@ -88,6 +88,7 @@ class BufferHandler extends AbstractHandler
         }
 
         $this->handler->handleBatch($this->buffer);
+<<<<<<< HEAD
         $this->clear();
     }
 
@@ -96,6 +97,10 @@ class BufferHandler extends AbstractHandler
         // suppress the parent behavior since we already have register_shutdown_function()
         // to call close(), and the reference contained there will prevent this from being
         // GC'd until the end of the request
+=======
+        $this->bufferSize = 0;
+        $this->buffer = array();
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     }
 
     /**
@@ -105,6 +110,7 @@ class BufferHandler extends AbstractHandler
     {
         $this->flush();
     }
+<<<<<<< HEAD
 
     /**
      * Clears the buffer without flushing any messages down to the wrapped handler.
@@ -114,4 +120,6 @@ class BufferHandler extends AbstractHandler
         $this->bufferSize = 0;
         $this->buffer = array();
     }
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 }

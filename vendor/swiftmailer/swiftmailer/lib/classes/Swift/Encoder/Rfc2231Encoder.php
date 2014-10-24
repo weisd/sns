@@ -11,6 +11,11 @@
 /**
  * Handles RFC 2231 specified Encoding in Swift Mailer.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Encoder
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Encoder_Rfc2231Encoder implements Swift_Encoder

@@ -11,6 +11,11 @@
 /**
  * DKIM Signer used to apply DKIM Signature to a message
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Signatures
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Xavier De Cock <xdecock@gmail.com>
  */
 class Swift_Signers_DKIMSigner implements Swift_Signers_HeaderSigner
@@ -185,18 +190,31 @@ class Swift_Signers_DKIMSigner implements Swift_Signers_HeaderSigner
 
     /**
      * Instanciate DKIMSigner
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * @param string $privateKey
      * @param string $domainName
      * @param string $selector
      * @return Swift_Signers_DKIMSigner
      */
+<<<<<<< HEAD
     public static function newInstance($privateKey, $domainName, $selector)
     {
         return new static($privateKey, $domainName, $selector);
     }
 
 
+=======
+    public static function newInstance($privateKey, $domainName, $selector) 
+    {
+        return new static($privateKey, $domainName, $selector);
+    }
+    
+    
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
      * Reset the Signer
      * @see Swift_Signer::reset()
@@ -210,7 +228,11 @@ class Swift_Signers_DKIMSigner implements Swift_Signers_HeaderSigner
         $this->_bodyHashHandler = null;
         $this->_bodyCanonIgnoreStart = 2;
         $this->_bodyCanonEmptyCounter = 0;
+<<<<<<< HEAD
         $this->_bodyCanonLastChar = null;
+=======
+        $this->_bodyCanonLastChar = NULL;
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         $this->_bodyCanonSpace = false;
     }
 
@@ -277,7 +299,10 @@ class Swift_Signers_DKIMSigner implements Swift_Signers_HeaderSigner
         foreach ($this->_bound as $k => $stream) {
             if ($stream === $is) {
                 unset($this->_bound[$k]);
+<<<<<<< HEAD
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                 return;
             }
         }

@@ -11,6 +11,11 @@
 /**
  * Listens for responses from a remote SMTP server.
  *
+<<<<<<< HEAD
+=======
+ * @package    Swift
+ * @subpackage Events
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 interface Swift_Events_ResponseListener extends Swift_Events_EventListener

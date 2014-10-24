@@ -728,6 +728,7 @@ class FinderTest extends Iterator\RealIteratorTestCase
         $finder->files()->in(self::$tmpDir);
 
         // make 'foo' directory non-readable
+<<<<<<< HEAD
         $testDir = self::$tmpDir.DIRECTORY_SEPARATOR.'foo';
         chmod($testDir, 0333);
 
@@ -752,6 +753,19 @@ class FinderTest extends Iterator\RealIteratorTestCase
         if ($couldRead) {
             $this->markTestSkipped('could read test files while test requires unreadable');
         }
+=======
+        chmod(self::$tmpDir.DIRECTORY_SEPARATOR.'foo', 0333);
+
+        try {
+            $this->assertIterator($this->toAbsolute(array('foo bar', 'test.php', 'test.py')), $finder->getIterator());
+            $this->fail('Finder should throw an exception when opening a non-readable directory.');
+        } catch (\Exception $e) {
+            $this->assertInstanceOf('Symfony\\Component\\Finder\\Exception\\AccessDeniedException', $e);
+        }
+
+        // restore original permissions
+        chmod(self::$tmpDir.DIRECTORY_SEPARATOR.'foo', 0777);
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     }
 
     /**
@@ -767,6 +781,7 @@ class FinderTest extends Iterator\RealIteratorTestCase
         $finder->files()->ignoreUnreadableDirs()->in(self::$tmpDir);
 
         // make 'foo' directory non-readable
+<<<<<<< HEAD
         $testDir = self::$tmpDir.DIRECTORY_SEPARATOR.'foo';
         chmod($testDir, 0333);
 
@@ -781,6 +796,14 @@ class FinderTest extends Iterator\RealIteratorTestCase
         if ($couldRead) {
             $this->markTestSkipped('could read test files while test requires unreadable');
         }
+=======
+        chmod(self::$tmpDir.DIRECTORY_SEPARATOR.'foo', 0333);
+
+        $this->assertIterator($this->toAbsolute(array('foo bar', 'test.php', 'test.py')), $finder->getIterator());
+
+        // restore original permissions
+        chmod(self::$tmpDir.DIRECTORY_SEPARATOR.'foo', 0777);
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     }
 
     private function buildTestData(array $tests)
@@ -841,4 +864,28 @@ class FinderTest extends Iterator\RealIteratorTestCase
         $this->assertIterator($expected, $finder);
         $this->assertIteratorInForeach($expected, $finder);
     }
+<<<<<<< HEAD
+=======
+
+    public function testNonSeekableStream()
+    {
+        if (!in_array('ftp', stream_get_wrappers())) {
+            $this->markTestSkipped(sprintf('Unavailable stream "%s".', 'ftp'));
+        }
+
+        try {
+            $i = Finder::create()->in('ftp://ftp.mozilla.org/')->depth(0)->getIterator();
+        } catch (\UnexpectedValueException $e) {
+            $this->markTestSkipped(sprintf('Unsupported stream "%s".', 'ftp'));
+        }
+
+        $contains = array(
+            'ftp://ftp.mozilla.org'.DIRECTORY_SEPARATOR.'README',
+            'ftp://ftp.mozilla.org'.DIRECTORY_SEPARATOR.'index.html',
+            'ftp://ftp.mozilla.org'.DIRECTORY_SEPARATOR.'pub',
+        );
+
+        $this->assertIteratorInForeach($contains, $i);
+    }
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 }

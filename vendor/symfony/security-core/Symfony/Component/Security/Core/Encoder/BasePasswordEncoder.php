@@ -89,8 +89,11 @@ abstract class BasePasswordEncoder implements PasswordEncoderInterface
     /**
      * Checks if the password is too long.
      *
+<<<<<<< HEAD
      * @param string $password The password to check
      *
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * @return bool    true if the password is too long, false otherwise
      */
     protected function isPasswordTooLong($password)

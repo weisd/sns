@@ -1,5 +1,9 @@
 <?php
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 class Swift_Transport_Esmtp_AuthHandlerTest extends \SwiftMailerTestCase
 {
     private $_agent;

@@ -252,9 +252,14 @@ class TraceableEventDispatcher implements EventDispatcherInterface, TraceableEve
     /**
      * Returns information about the listener
      *
+<<<<<<< HEAD
      * @param object   $listener  The listener
      * @param int|null $eventId   The event id
      * @param string   $eventName The event name
+=======
+     * @param object $listener  The listener
+     * @param string $eventName The event name
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      *
      * @return array Information about the listener
      */

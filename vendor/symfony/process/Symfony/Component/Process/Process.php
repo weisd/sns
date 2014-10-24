@@ -67,8 +67,11 @@ class Process
     /** @var ProcessPipes */
     private $processPipes;
 
+<<<<<<< HEAD
     private $latestSignal;
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     private static $sigchild;
 
     /**
@@ -328,7 +331,11 @@ class Process
             usleep(1000);
         }
 
+<<<<<<< HEAD
         if ($this->processInformation['signaled'] && $this->processInformation['termsig'] !== $this->latestSignal) {
+=======
+        if ($this->processInformation['signaled']) {
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             throw new RuntimeException(sprintf('The process has been signaled with signal "%s".', $this->processInformation['termsig']));
         }
 
@@ -694,8 +701,12 @@ class Process
                     throw new RuntimeException('Unable to kill the process');
                 }
             }
+<<<<<<< HEAD
             // given `SIGTERM` may not be defined and that `proc_terminate` uses the constant value and not the constant itself, we use the same here
             $this->doSignal(15, false);
+=======
+            proc_terminate($this->process);
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             do {
                 usleep(1000);
             } while ($this->isRunning() && microtime(true) < $timeoutMicro);
@@ -1240,7 +1251,10 @@ class Process
         $this->stdout = null;
         $this->stderr = null;
         $this->process = null;
+<<<<<<< HEAD
         $this->latestSignal = null;
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         $this->status = self::STATUS_READY;
         $this->incrementalOutputOffset = 0;
         $this->incrementalErrorOutputOffset = 0;
@@ -1284,8 +1298,11 @@ class Process
             return false;
         }
 
+<<<<<<< HEAD
         $this->latestSignal = $signal;
 
+=======
+>>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         return true;
     }
 
