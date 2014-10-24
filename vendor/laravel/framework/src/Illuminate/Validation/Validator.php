@@ -307,11 +307,7 @@ class Validator implements MessageProviderInterface {
 	protected function isValidatable($rule, $attribute, $value)
 	{
 		return $this->presentOrRuleIsImplicit($rule, $attribute, $value) &&
-<<<<<<< HEAD
 			$this->passesOptionalCheck($attribute);
-=======
-               $this->passesOptionalCheck($attribute);
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 	}
 
 	/**
@@ -337,12 +333,8 @@ class Validator implements MessageProviderInterface {
 	{
 		if ($this->hasRule($attribute, array('Sometimes')))
 		{
-<<<<<<< HEAD
 			return array_key_exists($attribute, array_dot($this->data)) 
 				|| array_key_exists($attribute, $this->files);
-=======
-			return array_key_exists($attribute, $this->data) || array_key_exists($attribute, $this->files);
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 		}
 		else
 		{

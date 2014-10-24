@@ -10,11 +10,6 @@
 
 /**
  * Interface for all Encoder schemes.
-<<<<<<< HEAD
-=======
- * @package Swift
- * @subpackage Encoder
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author Chris Corbyn
  */
 interface Swift_Encoder extends Swift_Mime_CharsetObserver

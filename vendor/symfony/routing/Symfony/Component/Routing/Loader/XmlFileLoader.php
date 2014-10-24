@@ -219,11 +219,7 @@ class XmlFileLoader extends FileLoader
         foreach ($node->getElementsByTagNameNS(self::NAMESPACE_URI, '*') as $n) {
             switch ($n->localName) {
                 case 'default':
-<<<<<<< HEAD
                     if ($this->isElementValueNull($n)) {
-=======
-                    if ($n->hasAttribute('xsi:nil') && 'true' == $n->getAttribute('xsi:nil')) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                         $defaults[$n->getAttribute('key')] = null;
                     } else {
                         $defaults[$n->getAttribute('key')] = trim($n->textContent);
@@ -246,7 +242,6 @@ class XmlFileLoader extends FileLoader
 
         return array($defaults, $requirements, $options, $condition);
     }
-<<<<<<< HEAD
 
     private function isElementValueNull(\DOMElement $element)
     {
@@ -258,6 +253,4 @@ class XmlFileLoader extends FileLoader
 
         return 'true' === $element->getAttributeNS($namespaceUri, 'nil') || '1' === $element->getAttributeNS($namespaceUri, 'nil');
     }
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 }

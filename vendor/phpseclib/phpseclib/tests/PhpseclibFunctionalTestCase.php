@@ -7,7 +7,6 @@
 
 abstract class PhpseclibFunctionalTestCase extends PhpseclibTestCase
 {
-<<<<<<< HEAD
     static public function setUpBeforeClass()
     {
         if (extension_loaded('runkit')) {
@@ -19,8 +18,6 @@ abstract class PhpseclibFunctionalTestCase extends PhpseclibTestCase
         parent::setUpBeforeClass();
     }
 
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
     * @param string $variable
     * @param string|null $message

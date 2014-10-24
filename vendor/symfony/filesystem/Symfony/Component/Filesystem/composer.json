@@ -25,11 +25,7 @@
     "minimum-stability": "dev",
     "extra": {
         "branch-alias": {
-<<<<<<< HEAD
-            "dev-master": "2.6-dev"
-=======
             "dev-master": "2.5-dev"
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         }
     }
 }

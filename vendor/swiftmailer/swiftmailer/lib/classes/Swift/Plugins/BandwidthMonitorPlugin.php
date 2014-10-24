@@ -11,11 +11,6 @@
 /**
  * Reduces network flooding when sending large amounts of mail.
  *
-<<<<<<< HEAD
-=======
- * @package    Swift
- * @subpackage Plugins
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Plugins_BandwidthMonitorPlugin implements Swift_Events_SendListener, Swift_Events_CommandListener, Swift_Events_ResponseListener, Swift_InputByteStream

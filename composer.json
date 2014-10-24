@@ -4,12 +4,8 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-<<<<<<< HEAD
 		"laravel/framework": "4.1.*",
 		"mews/purifier": "dev-master"
-=======
-		"laravel/framework": "4.1.*"
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 	},
 	"require-dev": {
 		"barryvdh/laravel-debugbar": "1.*",
@@ -22,12 +18,8 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
-<<<<<<< HEAD
 			"app/tests/TestCase.php",
 			"app/helpers/Comm.php"
-=======
-			"app/tests/TestCase.php"
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 		]
 	},
 	"scripts": {
@@ -47,9 +39,5 @@
 	"config": {
 		"preferred-install": "dist"
 	},
-<<<<<<< HEAD
-	"minimum-stability": "dev"
-=======
 	"minimum-stability": "stable"
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 }

@@ -13,9 +13,7 @@
 | and give it the Closure to execute when that URI is requested.
 | 并且给它一个闭包，当那个URI发起请求后执行它。
 |
-*/
-
-<<<<<<< HEAD
+ */
 
 // 博客
 Route::controller('blog', 'BlogController');
@@ -28,12 +26,5 @@ Route::controller('/', 'SiteController', [
 	'getSignin' => 'signin',
 ]);
 
-
 // 所有post请求csrf验证
 Route::when('*', 'csrf', ['post']);
-=======
-Route::get('/', function()
-{
-	return View::make('hello');
-});
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d

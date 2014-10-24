@@ -15,10 +15,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Controller\ControllerReference;
 use Symfony\Component\HttpKernel\HttpCache\Esi;
-<<<<<<< HEAD
 use Symfony\Component\HttpKernel\UriSigner;
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
 /**
  * Implements the ESI rendering strategy.
@@ -29,10 +26,7 @@ class EsiFragmentRenderer extends RoutableFragmentRenderer
 {
     private $esi;
     private $inlineStrategy;
-<<<<<<< HEAD
     private $signer;
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
     /**
      * Constructor.
@@ -42,7 +36,6 @@ class EsiFragmentRenderer extends RoutableFragmentRenderer
      *
      * @param Esi                       $esi            An Esi instance
      * @param FragmentRendererInterface $inlineStrategy The inline strategy to use when ESI is not supported
-<<<<<<< HEAD
      * @param UriSigner                 $signer
      */
     public function __construct(Esi $esi = null, InlineFragmentRenderer $inlineStrategy, UriSigner $signer = null)
@@ -50,13 +43,6 @@ class EsiFragmentRenderer extends RoutableFragmentRenderer
         $this->esi = $esi;
         $this->inlineStrategy = $inlineStrategy;
         $this->signer = $signer;
-=======
-     */
-    public function __construct(Esi $esi = null, InlineFragmentRenderer $inlineStrategy)
-    {
-        $this->esi = $esi;
-        $this->inlineStrategy = $inlineStrategy;
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     }
 
     /**
@@ -79,20 +65,12 @@ class EsiFragmentRenderer extends RoutableFragmentRenderer
         }
 
         if ($uri instanceof ControllerReference) {
-<<<<<<< HEAD
             $uri = $this->generateSignedFragmentUri($uri, $request);
-=======
-            $uri = $this->generateFragmentUri($uri, $request);
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         }
 
         $alt = isset($options['alt']) ? $options['alt'] : null;
         if ($alt instanceof ControllerReference) {
-<<<<<<< HEAD
             $alt = $this->generateSignedFragmentUri($alt, $request);
-=======
-            $alt = $this->generateFragmentUri($alt, $request);
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         }
 
         $tag = $this->esi->renderIncludeTag($uri, $alt, isset($options['ignore_errors']) ? $options['ignore_errors'] : false, isset($options['comment']) ? $options['comment'] : '');
@@ -107,7 +85,6 @@ class EsiFragmentRenderer extends RoutableFragmentRenderer
     {
         return 'esi';
     }
-<<<<<<< HEAD
 
     private function generateSignedFragmentUri($uri, Request $request)
     {
@@ -120,6 +97,4 @@ class EsiFragmentRenderer extends RoutableFragmentRenderer
 
         return substr($fragmentUri, strlen($request->getSchemeAndHttpHost()));
     }
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 }

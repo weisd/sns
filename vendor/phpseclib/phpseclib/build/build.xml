@@ -4,11 +4,7 @@
          default="all"
 >
 
-<<<<<<< HEAD
   <target name="all" depends="sniff,api" />
-=======
-  <target name="all" depends="sniff" />
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
   <!-- Code Sniffer -->
   <target name="sniff" depends="sniff-php-code,sniff-php-tests" />
@@ -27,13 +23,10 @@
       dir=".." checkreturn="true" passthru="true" />
   </target>
 
-<<<<<<< HEAD
   <!-- API Generation -->
   <target name="api">
     <exec command="vendor/bin/sami.php update build/sami.conf.php"
       dir=".." passthru="true" />
   </target>
 
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 </project>

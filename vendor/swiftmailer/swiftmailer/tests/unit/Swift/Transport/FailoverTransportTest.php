@@ -12,20 +12,12 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
 
         $t1->shouldReceive('isStarted')
            ->zeroOrMoreTimes()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState) {
-=======
-           ->andReturnUsing(function() use (&$connectionState) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                return $connectionState;
            });
         $t1->shouldReceive('start')
            ->once()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState) {
-=======
-           ->andReturnUsing(function() use (&$connectionState) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if (!$connectionState) {
                    $connectionState = true;
                }
@@ -33,11 +25,7 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
         $t1->shouldReceive('send')
            ->twice()
            ->with(\Mockery::anyOf($message1, $message2), \Mockery::any())
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState) {
-=======
-           ->andReturnUsing(function() use (&$connectionState) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if ($connectionState) {
                    return 1;
                }
@@ -63,20 +51,12 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
 
         $t1->shouldReceive('isStarted')
            ->zeroOrMoreTimes()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState1) {
-=======
-           ->andReturnUsing(function() use (&$connectionState1) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                return $connectionState1;
            });
         $t1->shouldReceive('start')
            ->once()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState1) {
-=======
-           ->andReturnUsing(function() use (&$connectionState1) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if (!$connectionState1) {
                    $connectionState1 = true;
                }
@@ -84,11 +64,7 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
         $t1->shouldReceive('send')
            ->once()
            ->with($message, \Mockery::any())
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState1, $e) {
-=======
-           ->andReturnUsing(function() use (&$connectionState1, $e) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if ($connectionState1) {
                    throw $e;
                }
@@ -96,20 +72,12 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
 
         $t2->shouldReceive('isStarted')
            ->zeroOrMoreTimes()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState2) {
-=======
-           ->andReturnUsing(function() use (&$connectionState2) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                return $connectionState2;
            });
         $t2->shouldReceive('start')
            ->once()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState2) {
-=======
-           ->andReturnUsing(function() use (&$connectionState2) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if (!$connectionState2) {
                    $connectionState2 = true;
                }
@@ -117,11 +85,7 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
         $t2->shouldReceive('send')
            ->once()
            ->with($message, \Mockery::any())
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState2, $e) {
-=======
-           ->andReturnUsing(function() use (&$connectionState2, $e) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if ($connectionState2) {
                    return 1;
                }
@@ -137,26 +101,15 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
         $message = $this->getMockery('Swift_Mime_Message')->shouldIgnoreMissing();
         $t1 = $this->getMockery('Swift_Transport')->shouldIgnoreMissing();
 
-<<<<<<< HEAD
         $connectionState = false;
         $t1->shouldReceive('isStarted')
            ->zeroOrMoreTimes()
            ->andReturnUsing(function () use (&$connectionState) {
-=======
-		$connectionState = false;
-		$t1->shouldReceive('isStarted')
-           ->zeroOrMoreTimes()
-           ->andReturnUsing(function() use (&$connectionState) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                return $connectionState;
            });
         $t1->shouldReceive('start')
            ->once()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState) {
-=======
-           ->andReturnUsing(function() use (&$connectionState) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if (!$connectionState) {
                    $connectionState = true;
                }
@@ -165,18 +118,11 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
         $t1->shouldReceive('send')
            ->once()
            ->with($message, \Mockery::any())
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState, $testCase) {
                if (!$connectionState) {
                    $testCase->fail();
                }
 
-=======
-           ->andReturnUsing(function() use (&$connectionState, $testCase) {
-               if (!$connectionState) {
-                   $testCase->fail();
-               }
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                return 0;
            });
 
@@ -200,20 +146,12 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
 
         $t1->shouldReceive('isStarted')
            ->zeroOrMoreTimes()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState1) {
-=======
-           ->andReturnUsing(function() use (&$connectionState1) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                return $connectionState1;
            });
         $t1->shouldReceive('start')
            ->once()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState1) {
-=======
-           ->andReturnUsing(function() use (&$connectionState1) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if (!$connectionState1) {
                    $connectionState1 = true;
                }
@@ -221,11 +159,7 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
         $t1->shouldReceive('send')
            ->once()
            ->with($message1, \Mockery::any())
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState1, $e) {
-=======
-           ->andReturnUsing(function() use (&$connectionState1, $e) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if ($connectionState1) {
                    throw $e;
                }
@@ -242,20 +176,12 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
 
         $t2->shouldReceive('isStarted')
            ->zeroOrMoreTimes()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState2) {
-=======
-           ->andReturnUsing(function() use (&$connectionState2) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                return $connectionState2;
            });
         $t2->shouldReceive('start')
            ->once()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState2) {
-=======
-           ->andReturnUsing(function() use (&$connectionState2) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if (!$connectionState2) {
                    $connectionState2 = true;
                }
@@ -263,11 +189,7 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
         $t2->shouldReceive('send')
            ->times(4)
            ->with(\Mockery::anyOf($message1, $message2, $message3, $message4), \Mockery::any())
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState2, $e) {
-=======
-           ->andReturnUsing(function() use (&$connectionState2, $e) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if ($connectionState2) {
                    return 1;
                }
@@ -293,20 +215,12 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
 
         $t1->shouldReceive('isStarted')
            ->zeroOrMoreTimes()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState1) {
-=======
-           ->andReturnUsing(function() use (&$connectionState1) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                return $connectionState1;
            });
         $t1->shouldReceive('start')
            ->once()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState1) {
-=======
-           ->andReturnUsing(function() use (&$connectionState1) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if (!$connectionState1) {
                    $connectionState1 = true;
                }
@@ -314,11 +228,7 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
         $t1->shouldReceive('send')
            ->once()
            ->with($message, \Mockery::any())
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState1, $e) {
-=======
-           ->andReturnUsing(function() use (&$connectionState1, $e) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if ($connectionState1) {
                    throw $e;
                }
@@ -326,20 +236,12 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
 
         $t2->shouldReceive('isStarted')
            ->zeroOrMoreTimes()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState2) {
-=======
-           ->andReturnUsing(function() use (&$connectionState2) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                return $connectionState2;
            });
         $t2->shouldReceive('start')
            ->once()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState2) {
-=======
-           ->andReturnUsing(function() use (&$connectionState2) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if (!$connectionState2) {
                    $connectionState2 = true;
                }
@@ -347,11 +249,7 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
         $t2->shouldReceive('send')
            ->once()
            ->with($message, \Mockery::any())
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState2, $e) {
-=======
-           ->andReturnUsing(function() use (&$connectionState2, $e) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if ($connectionState2) {
                    throw $e;
                }
@@ -376,20 +274,12 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
 
         $t1->shouldReceive('isStarted')
            ->zeroOrMoreTimes()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState1) {
-=======
-           ->andReturnUsing(function() use (&$connectionState1) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                return $connectionState1;
            });
         $t1->shouldReceive('stop')
            ->once()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState1) {
-=======
-           ->andReturnUsing(function() use (&$connectionState1) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if ($connectionState1) {
                    $connectionState1 = false;
                }
@@ -397,20 +287,12 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
 
         $t2->shouldReceive('isStarted')
            ->zeroOrMoreTimes()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState2) {
-=======
-           ->andReturnUsing(function() use (&$connectionState2) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                return $connectionState2;
            });
         $t2->shouldReceive('stop')
            ->once()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState2) {
-=======
-           ->andReturnUsing(function() use (&$connectionState2) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if ($connectionState2) {
                    $connectionState2 = false;
                }
@@ -434,20 +316,12 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
 
         $t1->shouldReceive('isStarted')
            ->zeroOrMoreTimes()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState1) {
-=======
-           ->andReturnUsing(function() use (&$connectionState1) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                return $connectionState1;
            });
         $t1->shouldReceive('start')
            ->once()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState1) {
-=======
-           ->andReturnUsing(function() use (&$connectionState1) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if (!$connectionState1) {
                    $connectionState1 = true;
                }
@@ -455,11 +329,7 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
         $t1->shouldReceive('send')
            ->once()
            ->with($message, \Mockery::any())
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState1, $e) {
-=======
-           ->andReturnUsing(function() use (&$connectionState1, $e) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if ($connectionState1) {
                    $connectionState1 = false;
                    throw $e;
@@ -468,20 +338,12 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
 
         $t2->shouldReceive('isStarted')
            ->zeroOrMoreTimes()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState2) {
-=======
-           ->andReturnUsing(function() use (&$connectionState2) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                return $connectionState2;
            });
         $t2->shouldReceive('start')
            ->once()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState2) {
-=======
-           ->andReturnUsing(function() use (&$connectionState2) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if (!$connectionState2) {
                    $connectionState2 = true;
                }
@@ -489,11 +351,7 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
         $t2->shouldReceive('send')
            ->once()
            ->with($message, \Mockery::any())
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState2, $e) {
-=======
-           ->andReturnUsing(function() use (&$connectionState2, $e) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if ($connectionState2) {
                    $connectionState2 = false;
                    throw $e;
@@ -525,20 +383,12 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
 
         $t1->shouldReceive('isStarted')
            ->zeroOrMoreTimes()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState1) {
-=======
-           ->andReturnUsing(function() use (&$connectionState1) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                return $connectionState1;
            });
         $t1->shouldReceive('start')
            ->twice()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState1) {
-=======
-           ->andReturnUsing(function() use (&$connectionState1) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if (!$connectionState1) {
                    $connectionState1 = true;
                }
@@ -546,11 +396,7 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
         $t1->shouldReceive('send')
            ->once()
            ->with($message1, \Mockery::any())
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState1, $e) {
-=======
-           ->andReturnUsing(function() use (&$connectionState1, $e) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if ($connectionState1) {
                    $connectionState1 = false;
                    throw $e;
@@ -559,11 +405,7 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
         $t1->shouldReceive('send')
            ->once()
            ->with($message2, \Mockery::any())
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState1) {
-=======
-           ->andReturnUsing(function() use (&$connectionState1) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if ($connectionState1) {
                    return 10;
                }
@@ -571,20 +413,12 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
 
         $t2->shouldReceive('isStarted')
            ->zeroOrMoreTimes()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState2) {
-=======
-           ->andReturnUsing(function() use (&$connectionState2) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                return $connectionState2;
            });
         $t2->shouldReceive('start')
            ->once()
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState2) {
-=======
-           ->andReturnUsing(function() use (&$connectionState2) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if (!$connectionState2) {
                    $connectionState2 = true;
                }
@@ -592,11 +426,7 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
         $t2->shouldReceive('send')
            ->once()
            ->with($message1, \Mockery::any())
-<<<<<<< HEAD
            ->andReturnUsing(function () use (&$connectionState2, $e) {
-=======
-           ->andReturnUsing(function() use (&$connectionState2, $e) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if ($connectionState2) {
                    $connectionState2 = false;
                    throw $e;
@@ -632,20 +462,12 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
 
         $t1->shouldReceive('isStarted')
            ->zeroOrMoreTimes()
-<<<<<<< HEAD
            ->andReturnUsing(function () use ($connectionState) {
-=======
-           ->andReturnUsing(function() use ($connectionState) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                return $connectionState;
            });
         $t1->shouldReceive('start')
            ->once()
-<<<<<<< HEAD
            ->andReturnUsing(function () use ($connectionState) {
-=======
-           ->andReturnUsing(function() use ($connectionState) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if (!$connectionState) {
                    $connectionState = true;
                }
@@ -653,11 +475,7 @@ class Swift_Transport_FailoverTransportTest extends \SwiftMailerTestCase
         $t1->shouldReceive('send')
            ->once()
            ->with($message, $failures)
-<<<<<<< HEAD
            ->andReturnUsing(function () use ($connectionState) {
-=======
-           ->andReturnUsing(function() use ($connectionState) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                if ($connectionState) {
                    return 1;
                }

@@ -11,11 +11,6 @@
 /**
  * A collection of MIME headers.
  *
-<<<<<<< HEAD
-=======
- * @package    Swift
- * @subpackage Mime
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Mime_SimpleHeaderSet implements Swift_Mime_HeaderSet
@@ -330,11 +325,6 @@ class Swift_Mime_SimpleHeaderSet implements Swift_Mime_HeaderSet
         return $this->toString();
     }
 
-<<<<<<< HEAD
-=======
-    // -- Private methods
-
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /** Save a Header to the internal collection */
     private function _storeHeader($name, Swift_Mime_Header $header, $offset = null)
     {
@@ -387,6 +377,19 @@ class Swift_Mime_SimpleHeaderSet implements Swift_Mime_HeaderSet
         foreach ($this->_headers as $headerGroup) {
             foreach ($headerGroup as $header) {
                 $header->setCharset($charset);
+            }
+        }
+    }
+
+    /**
+    * Make a deep copy of object
+    */
+    public function __clone()
+    {
+        $this->_factory = clone $this->_factory;
+        foreach ($this->_headers as $groupKey => $headerGroup) {
+            foreach ($headerGroup as $key => $header) {
+                $this->_headers[$groupKey][$key] = clone $header;
             }
         }
     }

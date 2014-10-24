@@ -1061,7 +1061,6 @@ class Net_SFTP extends Net_SSH2
         $dirs = explode('/', preg_replace('#^/|/(?=/)|/$#', '', $path));
 
         $temp = &$this->stat_cache;
-<<<<<<< HEAD
         $max = count($dirs) - 1;
         foreach ($dirs as $i=>$dir) {
             if (!isset($temp[$dir])) {
@@ -1070,14 +1069,6 @@ class Net_SFTP extends Net_SSH2
             if ($i === $max) {
                 $temp[$dir] = $value;
                 break;
-=======
-        foreach ($dirs as $dir) {
-            if (!isset($temp[$dir])) {
-                $temp[$dir] = array();
-            }
-            if ($dir == end($dirs)) {
-                $temp[$dir] = $value;
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             }
             $temp = &$temp[$dir];
         }
@@ -1095,14 +1086,9 @@ class Net_SFTP extends Net_SSH2
         $dirs = explode('/', preg_replace('#^/|/(?=/)|/$#', '', $path));
 
         $temp = &$this->stat_cache;
-<<<<<<< HEAD
         $max = count($dirs) - 1;
         foreach ($dirs as $i=>$dir) {
             if ($i === $max) {
-=======
-        foreach ($dirs as $dir) {
-            if ($dir == end($dirs)) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                 unset($temp[$dir]);
                 return true;
             }
@@ -1518,11 +1504,7 @@ class Net_SFTP extends Net_SSH2
             return false;
         }
         $i = 0;
-<<<<<<< HEAD
         $entries = $this->_list($path, true);
-=======
-        $entries = $this->_list($path, true, false);
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
         if ($entries === false) {
             return $this->_setstat($path, $attr, false);
@@ -1534,16 +1516,8 @@ class Net_SFTP extends Net_SSH2
             return false;
         }
 
-<<<<<<< HEAD
         unset($entries['.'], $entries['..']);
         foreach ($entries as $filename=>$props) {
-=======
-        foreach ($entries as $filename=>$props) {
-            if ($filename == '.' || $filename == '..') {
-                continue;
-            }
-
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             if (!isset($props['type'])) {
                 return false;
             }
@@ -1783,11 +1757,8 @@ class Net_SFTP extends Net_SSH2
      * contain as many bytes as filename.ext does on your local filesystem.  If your filename.ext is 1MB then that is how
      * large $remote_file will be, as well.
      *
-<<<<<<< HEAD
      * If $data is a resource then it'll be used as a resource instead.
      *
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * Currently, only binary mode is supported.  As such, if the line endings need to be adjusted, you will need to take
      * care of that, yourself.
      *
@@ -1809,11 +1780,7 @@ class Net_SFTP extends Net_SSH2
      * Setting $local_start to > 0 or $mode | NET_SFTP_RESUME_START doesn't do anything unless $mode | NET_SFTP_LOCAL_FILE.
      *
      * @param String $remote_file
-<<<<<<< HEAD
      * @param String|resource $data
-=======
-     * @param String $data
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * @param optional Integer $mode
      * @param optional Integer $start
      * @param optional Integer $local_start
@@ -1869,7 +1836,6 @@ class Net_SFTP extends Net_SSH2
         }
 
         // http://tools.ietf.org/html/draft-ietf-secsh-filexfer-13#section-8.2.3
-<<<<<<< HEAD
         switch (true) {
             case is_resource($data):
                 $mode = $mode & ~NET_SFTP_LOCAL_FILE;
@@ -1889,18 +1855,6 @@ class Net_SFTP extends Net_SSH2
         if (isset($fp)) {
             $stat = fstat($fp);
             $size = $stat['size'];
-=======
-        if ($mode & NET_SFTP_LOCAL_FILE) {
-            if (!is_file($data)) {
-                user_error("$data is not a valid file");
-                return false;
-            }
-            $fp = @fopen($data, 'rb');
-            if (!$fp) {
-                return false;
-            }
-            $size = filesize($data);
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
             if ($local_start >= 0) {
                 fseek($fp, $local_start);
@@ -1921,7 +1875,6 @@ class Net_SFTP extends Net_SSH2
         $sftp_packet_size-= strlen($handle) + 25;
         $i = 0;
         while ($sent < $size) {
-<<<<<<< HEAD
             $temp = isset($fp) ? fread($fp, $sftp_packet_size) : substr($data, $sent, $sftp_packet_size);
             $subtemp = $offset + $sent;
             $packet = pack('Na*N3a*', strlen($handle), $handle, $subtemp / 4294967296, $subtemp, strlen($temp), $temp);
@@ -1929,13 +1882,6 @@ class Net_SFTP extends Net_SSH2
                 if ($mode & NET_SFTP_LOCAL_FILE) {
                     fclose($fp);
                 }
-=======
-            $temp = $mode & NET_SFTP_LOCAL_FILE ? fread($fp, $sftp_packet_size) : substr($data, $sent, $sftp_packet_size);
-            $subtemp = $offset + $sent;
-            $packet = pack('Na*N3a*', strlen($handle), $handle, $subtemp / 4294967296, $subtemp, strlen($temp), $temp);
-            if (!$this->_send_sftp_packet(NET_SFTP_WRITE, $packet)) {
-                fclose($fp);
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                 return false;
             }
             $sent+= strlen($temp);
@@ -2070,7 +2016,6 @@ class Net_SFTP extends Net_SSH2
                 return false;
         }
 
-<<<<<<< HEAD
         if (is_resource($local_file)) {
             $fp = $local_file;
             $stat = fstat($fp);
@@ -2089,27 +2034,12 @@ class Net_SFTP extends Net_SSH2
 
         $fclose_check = $local_file !== false && !is_resource($local_file);
 
-=======
-        if ($local_file !== false) {
-            $fp = fopen($local_file, 'wb');
-            if (!$fp) {
-                return false;
-            }
-        } else {
-            $content = '';
-        }
-
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         $start = $offset;
         $size = $this->max_sftp_packet < $length || $length < 0 ? $this->max_sftp_packet : $length;
         while (true) {
             $packet = pack('Na*N3', strlen($handle), $handle, $offset / 4294967296, $offset, $size);
             if (!$this->_send_sftp_packet(NET_SFTP_READ, $packet)) {
-<<<<<<< HEAD
                 if ($fclose_check) {
-=======
-                if ($local_file !== false) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                     fclose($fp);
                 }
                 return false;
@@ -2132,11 +2062,7 @@ class Net_SFTP extends Net_SSH2
                     break 2;
                 default:
                     user_error('Expected SSH_FXP_DATA or SSH_FXP_STATUS');
-<<<<<<< HEAD
                     if ($fclose_check) {
-=======
-                    if ($local_file !== false) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                         fclose($fp);
                     }
                     return false;
@@ -2151,19 +2077,11 @@ class Net_SFTP extends Net_SSH2
             if ($local_file === false) {
                 $content = substr($content, 0, $length);
             } else {
-<<<<<<< HEAD
                 ftruncate($fp, $length + $res_offset);
             }
         }
 
         if ($fclose_check) {
-=======
-                ftruncate($fp, $length);
-            }
-        }
-
-        if ($local_file !== false) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             fclose($fp);
         }
 
@@ -2239,11 +2157,7 @@ class Net_SFTP extends Net_SSH2
             return false;
         }
         $i = 0;
-<<<<<<< HEAD
         $entries = $this->_list($path, true);
-=======
-        $entries = $this->_list($path, true, false);
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
         // normally $entries would have at least . and .. but it might not if the directories
         // permissions didn't allow reading
@@ -2251,16 +2165,8 @@ class Net_SFTP extends Net_SSH2
             return false;
         }
 
-<<<<<<< HEAD
         unset($entries['.'], $entries['..']);
         foreach ($entries as $filename=>$props) {
-=======
-        foreach ($entries as $filename=>$props) {
-            if ($filename == '.' || $filename == '..') {
-                continue;
-            }
-
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             if (!isset($props['type'])) {
                 return false;
             }
@@ -2318,11 +2224,7 @@ class Net_SFTP extends Net_SSH2
             $result = $this->_query_stat_cache($path);
 
             if (isset($result)) {
-<<<<<<< HEAD
                 // return true if $result is an array or if it's an stdClass object
-=======
-                // return true if $result is an array or if it's int(1)
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                 return $result !== false;
             }
         }

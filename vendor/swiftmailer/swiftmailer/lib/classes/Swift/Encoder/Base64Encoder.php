@@ -11,11 +11,6 @@
 /**
  * Handles Base 64 Encoding in Swift Mailer.
  *
-<<<<<<< HEAD
-=======
- * @package    Swift
- * @subpackage Encoder
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Encoder_Base64Encoder implements Swift_Encoder
@@ -45,13 +40,13 @@ class Swift_Encoder_Base64Encoder implements Swift_Encoder
         if (0 != $firstLineOffset) {
             $firstLine = substr(
                 $encodedString, 0, $maxLineLength - $firstLineOffset
-                ) . "\r\n";
+                )."\r\n";
             $encodedString = substr(
                 $encodedString, $maxLineLength - $firstLineOffset
                 );
         }
 
-        return $firstLine . trim(chunk_split($encodedString, $maxLineLength, "\r\n"));
+        return $firstLine.trim(chunk_split($encodedString, $maxLineLength, "\r\n"));
     }
 
     /**

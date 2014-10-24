@@ -11,11 +11,6 @@
 /**
  * SendmailTransport for sending mail through a Sendmail/Postfix (etc..) binary.
  *
-<<<<<<< HEAD
-=======
- * @package    Swift
- * @subpackage Transport
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_SendmailTransport extends Swift_Transport_SendmailTransport

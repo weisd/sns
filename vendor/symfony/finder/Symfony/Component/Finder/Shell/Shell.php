@@ -50,7 +50,6 @@ class Shell
      */
     public function testCommand($command)
     {
-<<<<<<< HEAD
         if (!function_exists('exec')) {
             return false;
         }
@@ -64,19 +63,6 @@ class Shell
         $command = escapeshellcmd($command);
 
         exec($testCommand.$command, $output, $code);
-=======
-        if (self::TYPE_WINDOWS === $this->type) {
-            // todo: find a way to test if Windows command exists
-            return false;
-        }
-
-        if (!function_exists('exec')) {
-            return false;
-        }
-
-        // todo: find a better way (command could not be available)
-        exec('command -v '.$command, $output, $code);
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
         return 0 === $code && count($output) > 0;
     }

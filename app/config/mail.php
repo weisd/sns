@@ -18,7 +18,7 @@ return array(
 	| Supported: "smtp", "mail", "sendmail"
 	| 支持: "smtp", "mail", "sendmail"
 	|
-	*/
+	 */
 
 	'driver' => 'smtp',
 
@@ -35,13 +35,9 @@ return array(
 	| the Mailgun mail service which will provide reliable deliveries.
 	| 它将提供可靠的投递支持。
 	|
-	*/
+	 */
 
-<<<<<<< HEAD
 	'host' => 'smtp.ym.163.com',
-=======
-	'host' => 'smtp.mailgun.org',
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
 	/*
 	|--------------------------------------------------------------------------
@@ -56,14 +52,9 @@ return array(
 	| stay compatible with the Mailgun e-mail applications by default.
 	| 以保持对 Mailgun 邮件应用程序的兼容。
 	|
-	*/
+	 */
 
-<<<<<<< HEAD
 	'port' => 25,
-	// 'port' => 587,
-=======
-	'port' => 587,
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,13 +69,9 @@ return array(
 	| used globally for all e-mails that are sent by your application.
 	| 将是全局的，被用于所有你的应用程序发送的邮件。
 	|
-	*/
+	 */
 
-<<<<<<< HEAD
 	'from' => array('address' => 'service@weisd.in', 'name' => 'weisd.in'),
-=======
-	'from' => array('address' => null, 'name' => null),
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
 	/*
 	|--------------------------------------------------------------------------
@@ -99,7 +86,7 @@ return array(
 	| transport layer security protocol should provide great security.
 	| 使用了传输层安全协议，应该可以提供极大的安全保障。
 	|
-	*/
+	 */
 
 	'encryption' => 'tls',
 
@@ -116,13 +103,9 @@ return array(
 	| connection. You may also set the "password" value below this one.
 	| 你还可以设置接下来的 "password" 值。
 	|
-	*/
+	 */
 
-<<<<<<< HEAD
 	'username' => 'service@weisd.in',
-=======
-	'username' => null,
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
 	/*
 	|--------------------------------------------------------------------------
@@ -137,13 +120,9 @@ return array(
 	| connection so that the application will be able to send messages.
 	| 以便应用程序能够发送信息。
 	|
-	*/
+	 */
 
-<<<<<<< HEAD
-	'password' => 'tf6eqg2CeZ',
-=======
 	'password' => null,
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
 	/*
 	|--------------------------------------------------------------------------
@@ -158,7 +137,7 @@ return array(
 	| been provided here, which will work well on most of your systems.
 	| 这在你的大多数的系统中都能够很好的工作。
 	|
-	*/
+	 */
 
 	'sendmail' => '/usr/sbin/sendmail -bs',
 
@@ -175,7 +154,7 @@ return array(
 	| you may inspect the message. This is great for local development.
 	| 以便你可以检查这个消息。这是本地开发的好方法。
 	|
-	*/
+	 */
 
 	'pretend' => false,
 

@@ -11,11 +11,6 @@
 /**
  * Analyzes US-ASCII characters.
  *
-<<<<<<< HEAD
-=======
- * @package    Swift
- * @subpackage Encoder
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_CharacterReader_UsAsciiReader implements Swift_CharacterReader
@@ -32,11 +27,12 @@ class Swift_CharacterReader_UsAsciiReader implements Swift_CharacterReader
      */
     public function getCharPositions($string, $startOffset, &$currentMap, &$ignoredChars)
     {
-        $strlen=strlen($string);
-        $ignoredChars='';
+        $strlen = strlen($string);
+        $ignoredChars = '';
         for ($i = 0; $i < $strlen; ++$i) {
-            if ($string[$i]>"\x07F") { // Invalid char
-                $currentMap[$i+$startOffset]=$string[$i];
+            if ($string[$i]>"\x07F") {
+                // Invalid char
+                $currentMap[$i+$startOffset] = $string[$i];
             }
         }
 

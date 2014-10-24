@@ -11,11 +11,6 @@
 /**
  * Handles Base64 (B) Header Encoding in Swift Mailer.
  *
-<<<<<<< HEAD
-=======
- * @package    Swift
- * @subpackage Mime
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Mime_HeaderEncoder_Base64HeaderEncoder extends Swift_Encoder_Base64Encoder implements Swift_Mime_HeaderEncoder

@@ -11,11 +11,6 @@
 /**
  * Header Signer Interface used to apply Header-Based Signature to a message
  *
-<<<<<<< HEAD
-=======
- * @package    Swift
- * @subpackage Signatures
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Xavier De Cock <xdecock@gmail.com>
  */
 interface Swift_Signers_HeaderSigner extends Swift_Signer, Swift_InputByteStream

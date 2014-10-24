@@ -39,11 +39,7 @@ return array(
      | This can also be set to 'js' or 'css', to only include javascript or css vendor files.
      | Vendor files are for css: font-awesome (including fonts) and highlight.js (css files)
      | and for js: jquery and and highlight.js
-<<<<<<< HEAD
      | So if you want syntax highlighting, set it to true.
-=======
-     | So if you want syntax highlighting, set it to true. 
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      | jQuery is set to not conflict with existing jQuery scripts.
      |
      */
@@ -61,11 +57,7 @@ return array(
      */
 
     'capture_ajax' => true,
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /*
      |--------------------------------------------------------------------------
      | Capture Console Commands
@@ -105,10 +97,7 @@ return array(
         'files'           => false, // Show the included files
         'config'          => false, // Display config settings
         'auth'            => false, // Display Laravel authentication status
-<<<<<<< HEAD
         'session'         => false, // Display session data in a separate tab
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     ),
 
     /*

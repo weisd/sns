@@ -11,11 +11,6 @@
 /**
  * Allows customization of Messages on-the-fly.
  *
-<<<<<<< HEAD
-=======
- * @package    Swift
- * @subpackage Plugins
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  * @author     Fabien Potencier
  */
@@ -180,11 +175,6 @@ class Swift_Plugins_DecoratorPlugin implements Swift_Events_SendListener, Swift_
         $this->_restoreMessage($evt->getMessage());
     }
 
-<<<<<<< HEAD
-=======
-    // -- Private methods
-
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /** Restore a changed message back to its original state */
     private function _restoreMessage(Swift_Mime_Message $message)
     {

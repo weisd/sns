@@ -14,11 +14,6 @@
  * Classes implementing this interface may use a subsystem which requires less
  * memory than working with large strings of data.
  *
-<<<<<<< HEAD
-=======
- * @package    Swift
- * @subpackage ByteStream
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 interface Swift_InputByteStream

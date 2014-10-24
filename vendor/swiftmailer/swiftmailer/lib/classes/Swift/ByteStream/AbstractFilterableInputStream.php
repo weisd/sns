@@ -11,11 +11,6 @@
 /**
  * Provides the base functionality for an InputStream supporting filters.
  *
-<<<<<<< HEAD
-=======
- * @package    Swift
- * @subpackage ByteStream
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 abstract class Swift_ByteStream_AbstractFilterableInputStream implements Swift_InputByteStream, Swift_Filterable
@@ -160,11 +155,6 @@ abstract class Swift_ByteStream_AbstractFilterableInputStream implements Swift_I
         }
     }
 
-<<<<<<< HEAD
-=======
-    // -- Private methods
-
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /** Run $bytes through all filters */
     private function _filter($bytes)
     {

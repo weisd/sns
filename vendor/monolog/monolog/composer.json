@@ -22,22 +22,15 @@
         "raven/raven": "~0.5",
         "ruflin/elastica": "0.90.*",
         "doctrine/couchdb": "~1.0@dev",
-<<<<<<< HEAD
         "aws/aws-sdk-php": "~2.4, >2.4.8",
         "videlalvaro/php-amqplib": "~2.4"
-=======
-        "aws/aws-sdk-php": "~2.4, >2.4.8"
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     },
     "suggest": {
         "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
         "raven/raven": "Allow sending log messages to a Sentry server",
         "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
         "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
-<<<<<<< HEAD
         "videlalvaro/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
         "ext-mongo": "Allow sending log messages to a MongoDB server",
         "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
@@ -46,18 +39,12 @@
     "autoload": {
         "psr-4": {"Monolog\\": "src/Monolog"}
     },
-<<<<<<< HEAD
     "provide": {
         "psr/log-implementation": "1.0.0"
     },
     "extra": {
         "branch-alias": {
             "dev-master": "1.11.x-dev"
-=======
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.10.x-dev"
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         }
     }
 }

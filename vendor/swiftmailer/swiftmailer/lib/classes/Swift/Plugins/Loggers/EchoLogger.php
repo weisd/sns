@@ -11,11 +11,6 @@
 /**
  * Prints all log messages in real time.
  *
-<<<<<<< HEAD
-=======
- * @package    Swift
- * @subpackage Transport
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_Plugins_Loggers_EchoLogger implements Swift_Plugins_Logger

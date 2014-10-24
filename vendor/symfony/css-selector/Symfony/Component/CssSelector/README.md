@@ -35,11 +35,7 @@ Resources
 This component is a port of the Python lxml library, which is copyright Infrae
 and distributed under the BSD license.
 
-<<<<<<< HEAD
 Current code is a port of https://github.com/SimonSapin/cssselect/releases/tag/v0.7.1
-=======
-Current code is a port of https://github.com/SimonSapin/cssselect@v0.7.1
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
 You can run the unit tests with the following command:
 

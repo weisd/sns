@@ -45,11 +45,7 @@ class FingersCrossedHandler extends AbstractHandler
      * @param Boolean                         $stopBuffering      Whether the handler should stop buffering after being triggered (default true)
      * @param int                             $passthruLevel      Minimum level to always flush to handler on close, even if strategy not triggered
      */
-<<<<<<< HEAD
     public function __construct($handler, $activationStrategy = null, $bufferSize = 0, $bubble = true, $stopBuffering = true, $passthruLevel = null)
-=======
-    public function __construct($handler, $activationStrategy = null, $bufferSize = 0, $bubble = true, $stopBuffering = true, $passthruLevel = NULL)
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     {
         if (null === $activationStrategy) {
             $activationStrategy = new ErrorLevelActivationStrategy(Logger::WARNING);
@@ -120,11 +116,7 @@ class FingersCrossedHandler extends AbstractHandler
      */
     public function close()
     {
-<<<<<<< HEAD
         if (null !== $this->passthruLevel) {
-=======
-        if (NULL !== $this->passthruLevel) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             $level = $this->passthruLevel;
             $this->buffer = array_filter($this->buffer, function ($record) use ($level) {
                 return $record['level'] >= $level;
@@ -143,7 +135,6 @@ class FingersCrossedHandler extends AbstractHandler
     {
         $this->buffering = true;
     }
-<<<<<<< HEAD
 
     /**
      * Clears the buffer without flushing any messages down to the wrapped handler.
@@ -155,6 +146,4 @@ class FingersCrossedHandler extends AbstractHandler
         $this->buffer = array();
         $this->reset();
     }
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 }

@@ -35,20 +35,10 @@ function generateUpToDateMimeArray()
             'php3' => 'application/x-php',
             'php4' => 'application/x-php',
             'php5' => 'application/x-php',
-<<<<<<< HEAD
             'zip'  => 'application/zip',
             'gif'  => 'image/gif',
             'png'  => 'image/png',
             'css'  => 'text/css',
-=======
-            'pdf'  => 'application/pdf',
-            'zip'  => 'application/zip',
-            'gif'  => 'image/gif',
-            'jpg'  => 'image/jpeg',
-            'png'  => 'image/png',
-            'css'  => 'text/css',
-            'html' => 'text/html',
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             'js'   => 'text/javascript',
             'txt'  => 'text/plain',
             'xml'  => 'text/xml',
@@ -65,10 +55,6 @@ function generateUpToDateMimeArray()
             'aps'  => 'application/postscript',
             'exe'  => 'application/x-ms-dos-executable',
             'flv'  => 'video/x-flv',
-<<<<<<< HEAD
-=======
-            'gif'  => 'image/gif',
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             'gz'   => 'application/x-gzip',
             'hqx'  => 'application/stuffit',
             'htm'  => 'text/html',
@@ -92,10 +78,6 @@ function generateUpToDateMimeArray()
             'ods'  => 'vnd.oasis.opendocument.spreadsheet',
             'ogg'  => 'audio/ogg',
             'pdf'  => 'application/pdf',
-<<<<<<< HEAD
-=======
-            'png'  => 'image/png',
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             'ppt'  => 'application/vnd.ms-powerpoint',
             'pptx' => 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
             'ps'   => 'application/postscript',
@@ -107,22 +89,13 @@ function generateUpToDateMimeArray()
             'tif'  => 'image/tiff',
             'tiff' => 'image/tiff',
             'ttf'  => 'application/x-font-truetype',
-<<<<<<< HEAD
-=======
-            'txt'  => 'text/plain',
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             'vcf'  => 'text/x-vcard',
             'wav'  => 'audio/wav',
             'wma'  => 'audio/x-ms-wma',
             'wmv'  => 'audio/x-ms-wmv',
             'xls'  => 'application/excel',
             'xlsx' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-<<<<<<< HEAD
-            'xml'  => 'application/xml'
-=======
             'xml'  => 'application/xml',
-            'zip'  => 'application/zip'
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         );
 
         // wrap array for generating file

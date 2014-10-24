@@ -11,7 +11,6 @@ abstract class Unit_Crypt_AES_TestCase extends PhpseclibTestCase
 {
     static public function setUpBeforeClass()
     {
-<<<<<<< HEAD
         parent::setUpBeforeClass();
 
         self::reRequireFile('Crypt/Rijndael.php');
@@ -104,19 +103,5 @@ abstract class Unit_Crypt_AES_TestCase extends PhpseclibTestCase
         $aes->setKey(pack('H*', '2b7e151628aed2a6abf7158809cf4f3c762e7160')); // 160-bit key. AES should null pad to 192-bits
         $ciphertext = $aes->encrypt(pack('H*', '3243f6a8885a308d313198a2e0370734'));
         $this->assertEquals($ciphertext, pack('H*', 'c109292b173f841b88e0ee49f13db8c0'));
-=======
-        if (!defined('CRYPT_AES_MODE')) {
-            define('CRYPT_AES_MODE', CRYPT_AES_MODE_INTERNAL);
-        }
-    }
-
-    public function setUp()
-    {
-        if (defined('CRYPT_AES_MODE') && CRYPT_AES_MODE !== CRYPT_AES_MODE_INTERNAL) {
-            $this->markTestSkipped(
-                'Skipping test because CRYPT_AES_MODE is not defined as CRYPT_AES_MODE_INTERNAL.'
-            );
-        }
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     }
 }

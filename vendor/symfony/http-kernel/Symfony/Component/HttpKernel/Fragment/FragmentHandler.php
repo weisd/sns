@@ -97,11 +97,7 @@ class FragmentHandler
      * @return string|null The Response content or null when the Response is streamed
      *
      * @throws \InvalidArgumentException when the renderer does not exist
-<<<<<<< HEAD
      * @throws \LogicException           when no master request is being handled
-=======
-     * @throws \LogicException           when the Request is not successful
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      */
     public function render($uri, $renderer = 'inline', array $options = array())
     {

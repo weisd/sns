@@ -595,11 +595,7 @@ class JavascriptRenderer
             return $uris;
         }
 
-<<<<<<< HEAD
-        if (substr($uri, 0, 1) === '/' || preg_match('/^([a-zA-Z]+:\/\/|[a-zA-Z]:\/|[a-zA-Z]:\\\)/', $uri)) {
-=======
         if (substr($uri, 0, 1) === '/' || preg_match('/^([a-z]+:\/\/|[a-zA-Z]:\/)/', $uri)) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             return $uri;
         }
         return rtrim($root, '/') . "/$uri";

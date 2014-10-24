@@ -11,11 +11,6 @@
 /**
  * Observes changes for a Mime entity's ContentEncoder.
  *
-<<<<<<< HEAD
-=======
- * @package    Swift
- * @subpackage Mime
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 interface Swift_Mime_EncodingObserver

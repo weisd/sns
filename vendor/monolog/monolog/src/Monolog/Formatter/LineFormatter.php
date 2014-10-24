@@ -27,7 +27,6 @@ class LineFormatter extends NormalizerFormatter
 
     protected $format;
     protected $allowInlineLineBreaks;
-<<<<<<< HEAD
     protected $ignoreEmptyContextAndExtra;
 
     /**
@@ -41,18 +40,6 @@ class LineFormatter extends NormalizerFormatter
         $this->format = $format ?: static::SIMPLE_FORMAT;
         $this->allowInlineLineBreaks = $allowInlineLineBreaks;
         $this->ignoreEmptyContextAndExtra = $ignoreEmptyContextAndExtra;
-=======
-
-    /**
-     * @param string $format                The format of the message
-     * @param string $dateFormat            The format of the timestamp: one supported by DateTime::format
-     * @param bool   $allowInlineLineBreaks Whether to allow inline line breaks in log entries
-     */
-    public function __construct($format = null, $dateFormat = null, $allowInlineLineBreaks = false)
-    {
-        $this->format = $format ?: static::SIMPLE_FORMAT;
-        $this->allowInlineLineBreaks = $allowInlineLineBreaks;
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         parent::__construct($dateFormat);
     }
 
@@ -64,17 +51,13 @@ class LineFormatter extends NormalizerFormatter
         $vars = parent::format($record);
 
         $output = $this->format;
-<<<<<<< HEAD
 
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         foreach ($vars['extra'] as $var => $val) {
             if (false !== strpos($output, '%extra.'.$var.'%')) {
                 $output = str_replace('%extra.'.$var.'%', $this->replaceNewlines($this->convertToString($val)), $output);
                 unset($vars['extra'][$var]);
             }
         }
-<<<<<<< HEAD
 
         if ($this->ignoreEmptyContextAndExtra) {
             if (empty($vars['context'])) {
@@ -88,8 +71,6 @@ class LineFormatter extends NormalizerFormatter
             }
         }
 
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         foreach ($vars as $var => $val) {
             if (false !== strpos($output, '%'.$var.'%')) {
                 $output = str_replace('%'.$var.'%', $this->replaceNewlines($this->convertToString($val)), $output);
@@ -144,6 +125,6 @@ class LineFormatter extends NormalizerFormatter
             return $str;
         }
 
-        return preg_replace('{[\r\n]+}', ' ', $str);
+        return strtr($str, array("\r\n" => ' ', "\r" => ' ', "\n" => ' '));
     }
 }

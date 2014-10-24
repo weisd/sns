@@ -702,7 +702,6 @@ class Crypt_Rijndael extends Crypt_Base
                 case $length <= 16:
                     $this->key_size = 16;
                     break;
-<<<<<<< HEAD
                 case $length <= 20:
                     $this->key_size = 20;
                     break;
@@ -712,11 +711,6 @@ class Crypt_Rijndael extends Crypt_Base
                 case $length <= 28:
                     $this->key_size = 28;
                     break;
-=======
-                case $length <= 24:
-                    $this->key_size = 24;
-                    break;
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                 default:
                     $this->key_size = 32;
             }

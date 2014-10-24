@@ -29,25 +29,15 @@ return array(
     'PHPParser' => array($vendorDir . '/nikic/php-parser/lib'),
     'Normalizer' => array($vendorDir . '/patchwork/utf8/class'),
     'Net' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
-<<<<<<< HEAD
     'Mews\\Purifier' => array($vendorDir . '/mews/purifier/src'),
     'Math' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'Jeremeamia\\SuperClosure' => array($vendorDir . '/jeremeamia/SuperClosure/src'),
     'Illuminate' => array($vendorDir . '/laravel/framework/src'),
     'HTMLPurifier' => array($vendorDir . '/ezyang/htmlpurifier/library'),
-=======
-    'Math' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
-    'Jeremeamia\\SuperClosure' => array($vendorDir . '/jeremeamia/SuperClosure/src'),
-    'Illuminate' => array($vendorDir . '/laravel/framework/src'),
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     'File' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'DebugBar' => array($vendorDir . '/maximebf/debugbar/src'),
     'Crypt' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'ClassPreloader' => array($vendorDir . '/classpreloader/classpreloader/src'),
     'Carbon' => array($vendorDir . '/nesbot/carbon/src'),
     'Boris' => array($vendorDir . '/d11wtq/boris/lib'),
-<<<<<<< HEAD
-=======
-    'Barryvdh\\Debugbar' => array($vendorDir . '/barryvdh/laravel-debugbar/src'),
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 );

@@ -11,10 +11,6 @@
 /**
  * Stores Messages in a queue.
  *
-<<<<<<< HEAD
-=======
- * @package Swift
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author  Fabien Potencier
  */
 class Swift_SpoolTransport extends Swift_Transport_SpoolTransport

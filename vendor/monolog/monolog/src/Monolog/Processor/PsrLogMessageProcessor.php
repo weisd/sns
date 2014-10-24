@@ -32,7 +32,6 @@ class PsrLogMessageProcessor
 
         $replacements = array();
         foreach ($record['context'] as $key => $val) {
-<<<<<<< HEAD
             if (is_null($val) || is_scalar($val) || (is_object($val) && method_exists($val, "__toString"))) {
                 $replacements['{'.$key.'}'] = $val;
             } elseif (is_object($val)) {
@@ -40,9 +39,6 @@ class PsrLogMessageProcessor
             } else {
                 $replacements['{'.$key.'}'] = '['.gettype($val).']';
             }
-=======
-            $replacements['{'.$key.'}'] = $val;
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         }
 
         $record['message'] = strtr($record['message'], $replacements);

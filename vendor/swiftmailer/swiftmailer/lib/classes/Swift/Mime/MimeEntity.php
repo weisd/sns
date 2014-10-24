@@ -11,11 +11,6 @@
 /**
  * A MIME entity, such as an attachment.
  *
-<<<<<<< HEAD
-=======
- * @package    Swift
- * @subpackage Mime
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 interface Swift_Mime_MimeEntity extends Swift_Mime_CharsetObserver, Swift_Mime_EncodingObserver
@@ -83,11 +78,7 @@ interface Swift_Mime_MimeEntity extends Swift_Mime_CharsetObserver, Swift_Mime_E
     /**
      * Get the collection of Headers in this Mime entity.
      *
-<<<<<<< HEAD
      * @return Swift_Mime_HeaderSet
-=======
-     * @return Swift_Mime_Header[]
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      */
     public function getHeaders();
 

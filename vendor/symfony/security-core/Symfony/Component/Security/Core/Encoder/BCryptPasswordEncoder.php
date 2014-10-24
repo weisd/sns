@@ -61,11 +61,8 @@ class BCryptPasswordEncoder extends BasePasswordEncoder
      *
      * @return string The encoded password
      *
-<<<<<<< HEAD
      * @throws BadCredentialsException when the given password is too long
      *
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * @link http://lxr.php.net/xref/PHP_5_5/ext/standard/password.c#111
      */
     public function encodePassword($raw, $salt)

@@ -1,14 +1,19 @@
-<<<<<<< HEAD
-1.12.0 / 2014-X-X
+1.13.0 / 2014-09-25
+===================
+* Fixed diffInDaysFiltered() bug.
+* Removed default param from formatLocalized() (thanks @vlakoff)
+* Various refactorings (thanks @lucasmichot @euromark)
+* Updated toXXXString() methods to be camel cased (thanks @euromark)
+* Now using 4 spaces for indent. (thanks @lucasmichot @euromark)
+
+1.12.0 / 2014-09-09
 ===================
 * Add new functions diffInDaysFiltered(), diffInWeekdays() and diffInWeekendDays() (thanks @m4tthumphrey)
 * Fixed XofQuarter methods when moving to a month that doesn't have that day it jumps forward #168
 * Support for microseconds during instantiation and copy.  Be aware that microseconds are ignored for doing any of the math.
 * Microsecond getter.
-* Various refactorings (thanks @lucasmichot)
+* Various refactorings (thanks @lucasmichot @lorenzo)
 
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 1.11.0 / 2014-08-25
 ===================
 * Added isSameDay() (thanks @enkelmedia)

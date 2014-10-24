@@ -316,17 +316,10 @@ class Translator implements TranslatorInterface
      *
      * @throws \InvalidArgumentException If the locale contains invalid characters
      */
-<<<<<<< HEAD
     protected function assertValidLocale($locale)
     {
         if (1 !== preg_match('/^[a-z0-9@_\\.\\-]*$/i', $locale)) {
             throw new \InvalidArgumentException(sprintf('Invalid "%s" locale.', $locale));
-=======
-    private function assertValidLocale($locale)
-    {
-        if (0 !== preg_match('/[^a-z0-9_\\.\\-]+/i', $locale, $match)) {
-            throw new \InvalidArgumentException(sprintf('Invalid locale: %s.', $locale));
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         }
     }
 }

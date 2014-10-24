@@ -12,7 +12,6 @@
 namespace Symfony\Component\HttpKernel\EventListener;
 
 use Symfony\Component\HttpFoundation\Cookie;
-use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
@@ -30,11 +29,7 @@ abstract class TestSessionListener implements EventSubscriberInterface
 {
     public function onKernelRequest(GetResponseEvent $event)
     {
-<<<<<<< HEAD
         if (!$event->isMasterRequest()) {
-=======
-        if (HttpKernelInterface::MASTER_REQUEST !== $event->getRequestType()) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             return;
         }
 
@@ -59,11 +54,7 @@ abstract class TestSessionListener implements EventSubscriberInterface
      */
     public function onKernelResponse(FilterResponseEvent $event)
     {
-<<<<<<< HEAD
         if (!$event->isMasterRequest()) {
-=======
-        if (HttpKernelInterface::MASTER_REQUEST !== $event->getRequestType()) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             return;
         }
 
@@ -86,11 +77,7 @@ abstract class TestSessionListener implements EventSubscriberInterface
     /**
      * Gets the session object.
      *
-<<<<<<< HEAD
      * @return SessionInterface|null A SessionInterface instance or null if no session is available
-=======
-     * @return SessionInterface|null A SessionInterface instance of null if no session is available
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      */
     abstract protected function getSession();
 }

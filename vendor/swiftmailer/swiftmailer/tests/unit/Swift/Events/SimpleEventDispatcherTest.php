@@ -101,7 +101,7 @@ class Swift_Events_SimpleEventDispatcherTest extends \PHPUnit_Framework_TestCase
         $this->_dispatcher->dispatchEvent($evt, 'sendPerformed');
     }
 
-     public function testListenersCanCancelBubblingOfEvent()
+    public function testListenersCanCancelBubblingOfEvent()
     {
         $transport = $this->getMock('Swift_Transport');
         $message = $this->getMock('Swift_Mime_Message');
@@ -117,11 +117,7 @@ class Swift_Events_SimpleEventDispatcherTest extends \PHPUnit_Framework_TestCase
         $listenerA->expects($this->once())
                   ->method('sendPerformed')
                   ->with($evt)
-<<<<<<< HEAD
                   ->will($this->returnCallback(function ($object) {
-=======
-                  ->will($this->returnCallback(function($object) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                       $object->cancelBubble(true);
                   }));
         $listenerB->expects($this->never())
@@ -132,11 +128,6 @@ class Swift_Events_SimpleEventDispatcherTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($evt->bubbleCancelled());
     }
 
-<<<<<<< HEAD
-=======
-    // -- Private methods
-
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     private function _createDispatcher(array $map)
     {
         return new Swift_Events_SimpleEventDispatcher($map);

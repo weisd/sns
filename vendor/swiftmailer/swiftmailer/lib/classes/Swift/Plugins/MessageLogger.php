@@ -11,11 +11,6 @@
 /**
  * Stores all sent emails for further usage.
  *
-<<<<<<< HEAD
-=======
- * @package    Swift
- * @subpackage Plugins
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Fabien Potencier
  */
 class Swift_Plugins_MessageLogger implements Swift_Events_SendListener

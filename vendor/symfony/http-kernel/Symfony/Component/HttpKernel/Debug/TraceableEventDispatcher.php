@@ -252,14 +252,9 @@ class TraceableEventDispatcher implements EventDispatcherInterface, TraceableEve
     /**
      * Returns information about the listener
      *
-<<<<<<< HEAD
      * @param object   $listener  The listener
      * @param int|null $eventId   The event id
      * @param string   $eventName The event name
-=======
-     * @param object $listener  The listener
-     * @param string $eventName The event name
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      *
      * @return array Information about the listener
      */
@@ -273,7 +268,7 @@ class TraceableEventDispatcher implements EventDispatcherInterface, TraceableEve
         if ($listener instanceof \Closure) {
             $info += array(
                 'type' => 'Closure',
-                'pretty' => 'closure'
+                'pretty' => 'closure',
             );
         } elseif (is_string($listener)) {
             try {
@@ -351,7 +346,8 @@ class TraceableEventDispatcher implements EventDispatcherInterface, TraceableEve
                 // which must be caught.
                 try {
                     $this->stopwatch->openSection($token);
-                } catch (\LogicException $e) {}
+                } catch (\LogicException $e) {
+                }
                 break;
         }
     }
@@ -372,7 +368,8 @@ class TraceableEventDispatcher implements EventDispatcherInterface, TraceableEve
                 $token = $event->getResponse()->headers->get('X-Debug-Token');
                 try {
                     $this->stopwatch->stopSection($token);
-                } catch (\LogicException $e) {}
+                } catch (\LogicException $e) {
+                }
                 break;
         }
 

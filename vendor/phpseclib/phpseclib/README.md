@@ -6,21 +6,13 @@ MIT-licensed pure-PHP implementations of an arbitrary-precision integer
 arithmetic library, fully PKCS#1 (v2.1) compliant RSA, DES, 3DES, RC4, Rijndael,
 AES, Blowfish, Twofish, SSH-1, SSH-2, SFTP, and X.509
 
-<<<<<<< HEAD
 * [Download (0.3.8)](http://sourceforge.net/projects/phpseclib/files/phpseclib0.3.8.zip/download)
 * [Browse Git](https://github.com/phpseclib/phpseclib)
-=======
-* [Download (0.3.7)](http://sourceforge.net/projects/phpseclib/files/phpseclib0.3.7.zip/download)
-* [Browse Git](https://github.com/phpseclib/phpseclib)
-* [Documentation](http://phpseclib.sourceforge.net/)
-* [Support](http://www.frostjedi.com/phpbb/viewforum.php?f=46)
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 * [Code Coverage Report](http://phpseclib.bantux.org/code_coverage/master/latest/)
 
 <img src="http://phpseclib.sourceforge.net/pear-icon.png" alt="PEAR Channel" width="16" height="16">
 PEAR Channel: [phpseclib.sourceforge.net](http://phpseclib.sourceforge.net/pear.htm)
 
-<<<<<<< HEAD
 ## Documentation
 
 * [Documentation / Manual](http://phpseclib.sourceforge.net/)
@@ -34,8 +26,6 @@ Need Support?
 * [Create a Support Ticket on GitHub](https://github.com/phpseclib/phpseclib/issues/new)
 * [Browse the Support Forum](http://www.frostjedi.com/phpbb/viewforum.php?f=46) (no longer in use)
 
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 ## Installing Development Dependencies
 
 Dependencies are managed via Composer.

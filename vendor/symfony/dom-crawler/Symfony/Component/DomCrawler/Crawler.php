@@ -259,13 +259,9 @@ class Crawler extends \SplObjectStorage
     public function addNodeList(\DOMNodeList $nodes)
     {
         foreach ($nodes as $node) {
-<<<<<<< HEAD
             if ($node instanceof \DOMNode) {
                 $this->addNode($node);
             }
-=======
-            $this->addNode($node);
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         }
     }
 
@@ -877,18 +873,14 @@ class Crawler extends \SplObjectStorage
             // BC for Symfony 2.4 and lower were elements were adding in a fake _root parent
             if (0 === strpos($expression, '/_root/')) {
                 $expression = './'.substr($expression, 7);
-<<<<<<< HEAD
             } elseif (0 === strpos($expression, 'self::*/')) {
                 $expression = './'.substr($expression, 8);
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             }
 
             // add prefix before absolute element selector
             if (empty($expression)) {
                 $expression = $nonMatchingExpression;
             } elseif (0 === strpos($expression, '//')) {
-<<<<<<< HEAD
                 $expression = 'descendant-or-self::'.substr($expression, 2);
             } elseif (0 === strpos($expression, './/')) {
                 $expression = 'descendant-or-self::'.substr($expression, 3);
@@ -897,14 +889,6 @@ class Crawler extends \SplObjectStorage
             } elseif (0 === strpos($expression, 'child::')) {
                 $expression = 'self::'.substr($expression, 7);
             } elseif ('/' === $expression[0] || 0 === strpos($expression, 'self::')) {
-=======
-                $expression = 'descendant-or-self::' . substr($expression, 2);
-            } elseif (0 === strpos($expression, './/')) {
-                $expression = 'descendant-or-self::' . substr($expression, 3);
-            } elseif (0 === strpos($expression, './')) {
-                $expression = 'self::' . substr($expression, 2);
-            } elseif ('/' === $expression[0]) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                 // the only direct child in Symfony 2.4 and lower is _root, which is already handled previously
                 // so let's drop the expression entirely
                 $expression = $nonMatchingExpression;
@@ -912,18 +896,12 @@ class Crawler extends \SplObjectStorage
                 // '.' is the fake root element in Symfony 2.4 and lower, which is excluded from results
                 $expression = $nonMatchingExpression;
             } elseif (0 === strpos($expression, 'descendant::')) {
-<<<<<<< HEAD
                 $expression = 'descendant-or-self::'.substr($expression, strlen('descendant::'));
             } elseif (preg_match('/^(ancestor|ancestor-or-self|attribute|following|following-sibling|namespace|parent|preceding|preceding-sibling)::/', $expression)) {
                 // the fake root has no parent, preceding or following nodes and also no attributes (even no namespace attributes)
                 $expression = $nonMatchingExpression;
             } elseif (0 !== strpos($expression, 'descendant-or-self::')) {
                 $expression = 'self::'.$expression;
-=======
-                $expression = 'descendant-or-self::' . substr($expression, strlen('descendant::'));
-            } elseif (0 !== strpos($expression, 'descendant-or-self::')) {
-                $expression = 'self::' .$expression;
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
             }
             $expressions[] = $parenthesis.$expression;
         }

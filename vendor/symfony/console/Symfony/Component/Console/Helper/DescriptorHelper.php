@@ -54,11 +54,7 @@ class DescriptorHelper extends Helper
      * @param object          $object
      * @param array           $options
      *
-<<<<<<< HEAD
      * @throws \InvalidArgumentException when the given format is not supported
-=======
-     * @throws \InvalidArgumentException
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      */
     public function describe(OutputInterface $output, $object, array $options = array())
     {

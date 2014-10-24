@@ -46,17 +46,10 @@ class ExecutableFinderTest extends \PHPUnit_Framework_TestCase
 
         $this->setPath(dirname(PHP_BINARY));
 
-<<<<<<< HEAD
         $finder = new ExecutableFinder();
         $result = $finder->find($this->getPhpBinaryName());
 
         $this->assertSamePath(PHP_BINARY, $result);
-=======
-        $finder = new ExecutableFinder;
-        $result = $finder->find(basename(PHP_BINARY));
-
-        $this->assertEquals($result, PHP_BINARY);
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     }
 
     public function testFindWithDefault()
@@ -69,11 +62,7 @@ class ExecutableFinderTest extends \PHPUnit_Framework_TestCase
 
         $this->setPath('');
 
-<<<<<<< HEAD
         $finder = new ExecutableFinder();
-=======
-        $finder = new ExecutableFinder;
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         $result = $finder->find('foo', $expected);
 
         $this->assertEquals($expected, $result);
@@ -93,17 +82,10 @@ class ExecutableFinderTest extends \PHPUnit_Framework_TestCase
 
         $extraDirs = array(dirname(PHP_BINARY));
 
-<<<<<<< HEAD
         $finder = new ExecutableFinder();
         $result = $finder->find($this->getPhpBinaryName(), null, $extraDirs);
 
         $this->assertSamePath(PHP_BINARY, $result);
-=======
-        $finder = new ExecutableFinder;
-        $result = $finder->find(basename(PHP_BINARY), null, $extraDirs);
-
-        $this->assertEquals(PHP_BINARY, $result);
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     }
 
     public function testFindWithOpenBaseDir()
@@ -122,7 +104,6 @@ class ExecutableFinderTest extends \PHPUnit_Framework_TestCase
 
         ini_set('open_basedir', dirname(PHP_BINARY).PATH_SEPARATOR.'/');
 
-<<<<<<< HEAD
         $finder = new ExecutableFinder();
         $result = $finder->find($this->getPhpBinaryName());
 
@@ -162,11 +143,5 @@ class ExecutableFinderTest extends \PHPUnit_Framework_TestCase
     private function getPhpBinaryName()
     {
         return basename(PHP_BINARY, defined('PHP_WINDOWS_VERSION_BUILD') ? '.exe' : '');
-=======
-        $finder = new ExecutableFinder;
-        $result = $finder->find(basename(PHP_BINARY));
-
-        $this->assertEquals(PHP_BINARY, $result);
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     }
 }

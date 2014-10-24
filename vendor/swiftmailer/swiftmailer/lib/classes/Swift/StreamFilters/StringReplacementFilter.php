@@ -11,10 +11,6 @@
 /**
  * Processes bytes as they pass through a buffer and replaces sequences in it.
  *
-<<<<<<< HEAD
-=======
- * @package Swift
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author  Chris Corbyn
  */
 class Swift_StreamFilters_StringReplacementFilter implements Swift_StreamFilter

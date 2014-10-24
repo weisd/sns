@@ -11,11 +11,6 @@
 /**
  * A CharacterStream implementation which stores characters in an internal array.
  *
-<<<<<<< HEAD
-=======
- * @package    Swift
- * @subpackage CharacterStream
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_CharacterStream_ArrayCharacterStream implements Swift_CharacterStream
@@ -100,8 +95,7 @@ class Swift_CharacterStream_ArrayCharacterStream implements Swift_CharacterStrea
             $need = $this->_charReader
                 ->validateByteSequence($c, $size);
             if ($need > 0 &&
-                false !== $bytes = $os->read($need))
-            {
+                false !== $bytes = $os->read($need)) {
                 for ($i = 0, $len = strlen($bytes); $i < $len; ++$i) {
                     $c[] = self::$_byteMap[$bytes[$i]];
                 }

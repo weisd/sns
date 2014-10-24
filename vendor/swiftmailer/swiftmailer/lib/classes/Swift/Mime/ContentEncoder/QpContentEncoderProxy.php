@@ -13,11 +13,6 @@
  *
  * Switches on the best QP encoder implementation for current charset.
  *
-<<<<<<< HEAD
-=======
- * @package    Swift
- * @subpackage Mime
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Jean-François Simon <jeanfrancois.simon@sensiolabs.com>
  */
 class Swift_Mime_ContentEncoder_QpContentEncoderProxy implements Swift_Mime_ContentEncoder
@@ -49,6 +44,15 @@ class Swift_Mime_ContentEncoder_QpContentEncoderProxy implements Swift_Mime_Cont
         $this->safeEncoder = $safeEncoder;
         $this->nativeEncoder = $nativeEncoder;
         $this->charset = $charset;
+    }
+
+    /**
+     * Make a deep copy of object
+     */
+    public function __clone()
+    {
+        $this->safeEncoder = clone $this->safeEncoder;
+        $this->nativeEncoder = clone $this->nativeEncoder;
     }
 
     /**

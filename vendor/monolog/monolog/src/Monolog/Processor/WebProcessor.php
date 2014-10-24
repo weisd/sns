@@ -18,7 +18,6 @@ namespace Monolog\Processor;
  */
 class WebProcessor
 {
-<<<<<<< HEAD
     /**
      * @var array|\ArrayAccess
      */
@@ -40,14 +39,6 @@ class WebProcessor
      * @param array|null         $extraFields Extra field names to be added (all available by default)
      */
     public function __construct($serverData = null, array $extraFields = null)
-=======
-    protected $serverData;
-
-    /**
-     * @param mixed $serverData array or object w/ ArrayAccess that provides access to the $_SERVER data
-     */
-    public function __construct($serverData = null)
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     {
         if (null === $serverData) {
             $this->serverData =& $_SERVER;
@@ -56,7 +47,6 @@ class WebProcessor
         } else {
             throw new \UnexpectedValueException('$serverData must be an array or object implementing ArrayAccess.');
         }
-<<<<<<< HEAD
 
         if (null !== $extraFields) {
             foreach (array_keys($this->extraFields) as $fieldName) {
@@ -65,8 +55,6 @@ class WebProcessor
                 }
             }
         }
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     }
 
     /**
@@ -81,15 +69,14 @@ class WebProcessor
             return $record;
         }
 
-<<<<<<< HEAD
         $record['extra'] = $this->appendExtraFields($record['extra']);
 
         return $record;
     }
 
     /**
-     * @param string $extraName
-     * @param string $serverName
+     * @param  string $extraName
+     * @param  string $serverName
      * @return $this
      */
     public function addExtraField($extraName, $serverName)
@@ -98,7 +85,7 @@ class WebProcessor
 
         return $this;
     }
-    
+
     /**
      * @param  array $extra
      * @return array
@@ -114,23 +101,5 @@ class WebProcessor
         }
 
         return $extra;
-=======
-        $record['extra'] = array_merge(
-            $record['extra'],
-            array(
-                'url'         => $this->serverData['REQUEST_URI'],
-                'ip'          => isset($this->serverData['REMOTE_ADDR']) ? $this->serverData['REMOTE_ADDR'] : null,
-                'http_method' => isset($this->serverData['REQUEST_METHOD']) ? $this->serverData['REQUEST_METHOD'] : null,
-                'server'      => isset($this->serverData['SERVER_NAME']) ? $this->serverData['SERVER_NAME'] : null,
-                'referrer'    => isset($this->serverData['HTTP_REFERER']) ? $this->serverData['HTTP_REFERER'] : null,
-            )
-        );
-
-        if (isset($this->serverData['UNIQUE_ID'])) {
-            $record['extra']['unique_id'] = $this->serverData['UNIQUE_ID'];
-        }
-
-        return $record;
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     }
 }

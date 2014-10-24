@@ -11,11 +11,6 @@
 /**
  * Provides an abstract way of specifying recipients for batch sending.
  *
-<<<<<<< HEAD
-=======
- * @package    Swift
- * @subpackage Mailer
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 interface Swift_Mailer_RecipientIterator

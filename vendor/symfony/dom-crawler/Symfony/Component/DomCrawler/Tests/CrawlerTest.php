@@ -400,13 +400,8 @@ EOF
         $this->assertCount(1, $crawler->filterXPath('//body'));
         $this->assertCount(1, $crawler->filterXPath('descendant-or-self::body'));
         $this->assertCount(1, $crawler->filterXPath('//div[@id="parent"]')->filterXPath('./div'), 'A child selection finds only the current div');
-<<<<<<< HEAD
         $this->assertCount(3, $crawler->filterXPath('//div[@id="parent"]')->filterXPath('descendant::div'), 'A descendant selector matches the current div and its child');
         $this->assertCount(3, $crawler->filterXPath('//div[@id="parent"]')->filterXPath('//div'), 'A descendant selector matches the current div and its child');
-=======
-        $this->assertCount(2, $crawler->filterXPath('//div[@id="parent"]')->filterXPath('descendant::div'), 'A descendant selector matches the current div and its child');
-        $this->assertCount(2, $crawler->filterXPath('//div[@id="parent"]')->filterXPath('//div'), 'A descendant selector matches the current div and its child');
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         $this->assertCount(5, $crawler->filterXPath('(//a | //div)//img'));
         $this->assertCount(7, $crawler->filterXPath('((//a | //div)//img | //ul)'));
         $this->assertCount(7, $crawler->filterXPath('( ( //a | //div )//img | //ul )'));
@@ -477,7 +472,6 @@ EOF
         $this->assertSame('Music', $crawler->text());
     }
 
-<<<<<<< HEAD
     public function testFilterXPathWithFakeRoot()
     {
         $crawler = $this->createTestCrawler();
@@ -578,8 +572,6 @@ EOF
         $this->assertCount(9, $crawler->filterXPath('self::*/a'));
     }
 
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
      * @covers Symfony\Component\DomCrawler\Crawler::filter
      */
@@ -987,10 +979,7 @@ HTML;
                     </ul>
                     <div id="parent">
                         <div id="child"></div>
-<<<<<<< HEAD
                         <div id="child2" xmlns:foo="http://example.com"></div>
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                     </div>
                     <div id="sibling"><img /></div>
                 </body>

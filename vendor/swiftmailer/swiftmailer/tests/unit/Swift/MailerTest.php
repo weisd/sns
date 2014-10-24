@@ -10,23 +10,14 @@ class Swift_MailerTest extends \SwiftMailerTestCase
         $started = false;
         $transport->shouldReceive('isStarted')
                   ->zeroOrMoreTimes()
-<<<<<<< HEAD
                   ->andReturnUsing(function () use (&$started) {
-=======
-                  ->andReturnUsing(function() use (&$started) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                       return $started;
                   });
         $transport->shouldReceive('start')
                   ->once()
-<<<<<<< HEAD
                   ->andReturnUsing(function () use (&$started) {
                       $started = true;
 
-=======
-                  ->andReturnUsing(function() use (&$started) {
-                      $started = true;
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                       return;
                   });
 
@@ -42,23 +33,14 @@ class Swift_MailerTest extends \SwiftMailerTestCase
         $started = false;
         $transport->shouldReceive('isStarted')
                   ->zeroOrMoreTimes()
-<<<<<<< HEAD
                   ->andReturnUsing(function () use (&$started) {
-=======
-                  ->andReturnUsing(function() use (&$started) {
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                       return $started;
                   });
         $transport->shouldReceive('start')
                   ->once()
-<<<<<<< HEAD
                   ->andReturnUsing(function () use (&$started) {
                       $started = true;
 
-=======
-                  ->andReturnUsing(function() use (&$started) {
-                      $started = true;
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
                       return;
                   });
 

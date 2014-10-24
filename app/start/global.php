@@ -13,7 +13,6 @@
 | your classes in the "global" namespace without Composer updating.
 | 你所有的类在“全局”命名空间，在没有 Composer 更新时。
 |
-<<<<<<< HEAD
  */
 
 ClassLoader::addDirectories(array(
@@ -22,16 +21,6 @@ ClassLoader::addDirectories(array(
 	app_path() . '/controllers',
 	app_path() . '/models',
 	app_path() . '/database/seeds',
-=======
-*/
-
-ClassLoader::addDirectories(array(
-
-	app_path().'/commands',
-	app_path().'/controllers',
-	app_path().'/models',
-	app_path().'/database/seeds',
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
 ));
 
@@ -48,15 +37,9 @@ ClassLoader::addDirectories(array(
 | build a basic log file setup which creates a single file for logs.
 | 建立一个基础日志文件设置，这将创建一个单文件日志。
 |
-<<<<<<< HEAD
  */
 
 Log::useFiles(storage_path() . '/logs/laravel.log');
-=======
-*/
-
-Log::useFiles(storage_path().'/logs/laravel.log');
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 
 /*
 |--------------------------------------------------------------------------
@@ -75,16 +58,9 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 | shown, which includes a detailed stack trace during debug.
 | 其中包括在 debug 过程中详细的堆栈跟踪。
 |
-<<<<<<< HEAD
  */
 
 App::error(function (Exception $exception, $code) {
-=======
-*/
-
-App::error(function(Exception $exception, $code)
-{
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 	Log::error($exception);
 });
 
@@ -108,16 +84,9 @@ App::error(function(Exception $exception, $code)
 |     1、php artisan up 命令
 |     2、手动删除在 app\storage\meta 文件夹下的 down 文件
 |
-<<<<<<< HEAD
  */
 
 App::down(function () {
-=======
-*/
-
-App::down(function()
-{
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 	return Response::make("Be right back!", 503);
 });
 
@@ -134,17 +103,9 @@ App::down(function()
 | definitions instead of putting them all in the main routes file.
 | 而不是将它们都放置在主路由文件中。
 |
-<<<<<<< HEAD
  */
 
 require app_path() . '/filters.php';
 
 // weisd 添加自定义异常处理
 require app_path() . '/errors.php';
-// 自定义函数库
-// require app_path().'/helpers/functions.php';
-=======
-*/
-
-require app_path().'/filters.php';
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d

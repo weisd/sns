@@ -15,7 +15,7 @@ return array(
 	| You may specify it now so it is used for all of your workbenches.
 	| 你可以现在指定它，这样它将被用于你所有的工作台。
 	|
-	*/
+	 */
 
 	'name' => '',
 
@@ -32,7 +32,7 @@ return array(
 	| automatically after the package is created by the workbench tool.
 	| 在 workbench 工具创建资源包后，放入你的 composer.json 文件中的。
 	|
-	*/
+	 */
 
 	'email' => '',
 

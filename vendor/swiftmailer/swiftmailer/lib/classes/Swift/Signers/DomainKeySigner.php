@@ -11,11 +11,6 @@
 /**
  * DomainKey Signer used to apply DomainKeys Signature to a message
  *
-<<<<<<< HEAD
-=======
- * @package    Swift
- * @subpackage Signatures
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Xavier De Cock <xdecock@gmail.com>
  */
 class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
@@ -65,11 +60,7 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
     /**
      * Signer identity
      *
-<<<<<<< HEAD
      * @var string
-=======
-     * @var unknown_type
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      */
     protected $_signerIdentity;
 
@@ -89,16 +80,6 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
     private $_signedHeaders = array();
 
     /**
-<<<<<<< HEAD
-=======
-     * If debugHeaders is set store debugDatas here
-     *
-     * @var string
-     */
-    private $_debugHeadersData = '';
-
-    /**
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      * Stores the signature header
      *
      * @var Swift_Mime_Headers_ParameterizedHeader
@@ -108,11 +89,7 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
     /**
      * Hash Handler
      *
-<<<<<<< HEAD
      * @var resource|null
-=======
-     * @var hash_ressource
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
      */
     private $_hashHandler;
 
@@ -143,7 +120,7 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
     {
         $this->_privateKey = $privateKey;
         $this->_domainName = $domainName;
-        $this->_signerIdentity = '@' . $domainName;
+        $this->_signerIdentity = '@'.$domainName;
         $this->_selector = $selector;
     }
 
@@ -155,18 +132,11 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
      * @param string $selector
      * @return Swift_Signers_DomainKeySigner
      */
-<<<<<<< HEAD
     public static function newInstance($privateKey, $domainName, $selector)
     {
         return new static($privateKey, $domainName, $selector);
     }
 
-=======
-    public static function newInstance($privateKey, $domainName, $selector) {
-        return new static($privateKey, $domainName, $selector);
-    }
-    
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     /**
      * Resets internal states
      *
@@ -178,11 +148,7 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
         $this->_hashHandler = null;
         $this->_bodyCanonIgnoreStart = 2;
         $this->_bodyCanonEmptyCounter = 0;
-<<<<<<< HEAD
         $this->_bodyCanonLastChar = null;
-=======
-        $this->_bodyCanonLastChar = NULL;
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
         $this->_bodyCanonSpace = false;
 
         return $this;
@@ -422,7 +388,7 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
         $params = array('a' => $this->_hashAlgorithm, 'b' => chunk_split(base64_encode($this->_getEncryptedHash()), 73, " "), 'c' => $this->_canon, 'd' => $this->_domainName, 'h' => implode(': ', $this->_signedHeaders), 'q' => 'dns', 's' => $this->_selector);
         $string = '';
         foreach ($params as $k => $v) {
-            $string .= $k . '=' . $v . '; ';
+            $string .= $k.'='.$v.'; ';
         }
         $string = trim($string);
         $headers->addTextHeader('DomainKey-Signature', $string);
@@ -441,7 +407,7 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
                 $name = strtolower(trim($exploded[0]));
                 $value = str_replace("\r\n", "", $exploded[1]);
                 $value = preg_replace("/[ \t][ \t]+/", " ", $value);
-                $header = $name . ":" . trim($value) . "\r\n";
+                $header = $name.":".trim($value)."\r\n";
             case 'simple' :
                 // Nothing to do
         }
@@ -534,7 +500,7 @@ class Swift_Signers_DomainKeySigner implements Swift_Signers_HeaderSigner
     private function _getEncryptedHash()
     {
         $signature = '';
-        $pkeyId=openssl_get_privatekey($this->_privateKey);
+        $pkeyId = openssl_get_privatekey($this->_privateKey);
         if (!$pkeyId) {
             throw new Swift_SwiftException('Unable to load DomainKey Private Key ['.openssl_error_string().']');
         }

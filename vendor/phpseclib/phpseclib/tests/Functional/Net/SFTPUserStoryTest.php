@@ -319,7 +319,6 @@ class Functional_Net_SFTPUserStoryTest extends PhpseclibFunctionalTestCase
     /**
     * @depends testSortOrder
     */
-<<<<<<< HEAD
     public function testResourceXfer($sftp)
     {
         $fp = fopen('res.txt', 'w+');
@@ -340,8 +339,6 @@ class Functional_Net_SFTPUserStoryTest extends PhpseclibFunctionalTestCase
     /**
     * @depends testResourceXfer
     */
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     public function testSymlink($sftp)
     {
         $this->assertTrue(
@@ -365,7 +362,6 @@ class Functional_Net_SFTPUserStoryTest extends PhpseclibFunctionalTestCase
     }
 
     /**
-<<<<<<< HEAD
     * on older versions this would result in a fatal error
     * @depends testReadlink
     * @group github402
@@ -392,9 +388,6 @@ class Functional_Net_SFTPUserStoryTest extends PhpseclibFunctionalTestCase
 
     /**
     * @depends testStatcacheFix
-=======
-    * @depends testSortOrder
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
     */
     public function testChDirUpHome($sftp)
     {

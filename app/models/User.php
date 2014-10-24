@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
+use Illuminate\Auth\UserInterface;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
@@ -12,16 +12,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $table = 'users';
 
-<<<<<<< HEAD
-	 /**
-     * 软删除
-     * @var boolean
-     */
-    protected $softDelete = true;
+	/**
+	 * 软删除
+	 * @var boolean
+	 */
+	protected $softDelete = true;
 
-
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *
@@ -34,8 +30,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @return mixed
 	 */
-	public function getAuthIdentifier()
-	{
+	public function getAuthIdentifier() {
 		return $this->getKey();
 	}
 
@@ -44,8 +39,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @return string
 	 */
-	public function getAuthPassword()
-	{
+	public function getAuthPassword() {
 		return $this->password;
 	}
 
@@ -54,8 +48,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @return string
 	 */
-	public function getRememberToken()
-	{
+	public function getRememberToken() {
 		return $this->remember_token;
 	}
 
@@ -65,8 +58,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 * @param  string  $value
 	 * @return void
 	 */
-	public function setRememberToken($value)
-	{
+	public function setRememberToken($value) {
 		$this->remember_token = $value;
 	}
 
@@ -75,8 +67,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @return string
 	 */
-	public function getRememberTokenName()
-	{
+	public function getRememberTokenName() {
 		return 'remember_token';
 	}
 
@@ -85,23 +76,18 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @return string
 	 */
-	public function getReminderEmail()
-	{
+	public function getReminderEmail() {
 		return $this->email;
 	}
 
-<<<<<<< HEAD
 	/**
 	 * 调整器：加密密码
 	 * @param  string $value
-	 * @return void 
+	 * @return void
 	 */
-	public function setPasswordAttribute($value)
-	{
+	public function setPasswordAttribute($value) {
 		// 如果已加密码， 不重复处理
-		$this->attributes['password'] = Hash::needsRehash($value) ? Hash::make($value) : $value; 
+		$this->attributes['password'] = Hash::needsRehash($value) ? Hash::make($value) : $value;
 	}
 
-=======
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
 }

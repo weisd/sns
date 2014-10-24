@@ -11,11 +11,6 @@
 /**
  * A MIME part, in a multipart message.
  *
-<<<<<<< HEAD
-=======
- * @package    Swift
- * @subpackage Mime
->>>>>>> cb959f70d1a8d6ccf47f8f24432f2edddb44a29d
  * @author     Chris Corbyn
  */
 class Swift_MimePart extends Swift_Mime_MimePart
