@@ -15,9 +15,9 @@ return array(
 	| application. If disabled, a simple generic error page is shown.
 	| 如果禁用，一个简单的普通错误页面将被显示。
 	|
-	*/
+	 */
 
-	'debug' => true,
+	'debug' => false,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -32,9 +32,9 @@ return array(
 	| your application so that it is used when running Artisan tasks.
 	| 这样当运行Artisan任务时就可以使用它。
 	|
-	*/
+	 */
 
-	'url' => 'http://localhost',
+	'url' => 'http://sns.dev',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -49,10 +49,10 @@ return array(
 	| ahead and set this to a sensible default for you out of the box.
 	| 我们已经提前设置了一个合理的默认值，让你可以直接使用。
 	|
-	*/
+	 */
 
 	// 'timezone' => 'UTC',
-    'timezone' => 'PRC',
+	'timezone' => 'PRC',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -67,10 +67,10 @@ return array(
 	| to any of the locales which will be supported by the application.
 	| 为任何应用程序所支持的语言环境。
 	|
-	*/
+	 */
 
 	// 'locale' => 'en',
-    'locale' => 'zh-CN',
+	'locale' => 'zh-CN',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -85,7 +85,7 @@ return array(
 	| the language folders that are provided through your application.
 	| 通过你应用程序提供的语言包文件夹。
 	|
-	*/
+	 */
 
 	'fallback_locale' => 'en',
 
@@ -105,9 +105,9 @@ return array(
 	| 在首次执行安装命令 composer install 时将自动生成，
 	| 也可以通过 php artisan key:generate 命令重新生成。
 	|
-	*/
+	 */
 
-	'key' => 'YourSecretKey!!!',
+	'key' => 'cccmlqN3IDD87F3HreBUgfVddx1C111d',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -122,7 +122,7 @@ return array(
 	| this array to grant expanded functionality to your applications.
 	| 它授予你拓展你应用程序功能的权利。
 	|
-	*/
+	 */
 
 	'providers' => array(
 
@@ -170,9 +170,9 @@ return array(
 	| list of all of the services. Here, you may set its storage spot.
 	| 这里，你可以设置它的缓存目录。
 	|
-	*/
+	 */
 
-	'manifest' => storage_path().'/meta',
+	'manifest' => storage_path() . '/meta',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -187,47 +187,49 @@ return array(
 	| the aliases are "lazy" loaded so they don't hinder performance.
 	| 因此它们不妨碍性能。
 	|
-	*/
+	 */
 
 	'aliases' => array(
 
-		'App'             => 'Illuminate\Support\Facades\App',
-		'Artisan'         => 'Illuminate\Support\Facades\Artisan',
-		'Auth'            => 'Illuminate\Support\Facades\Auth',
-		'Blade'           => 'Illuminate\Support\Facades\Blade',
-		'Cache'           => 'Illuminate\Support\Facades\Cache',
-		'ClassLoader'     => 'Illuminate\Support\ClassLoader',
-		'Config'          => 'Illuminate\Support\Facades\Config',
-		'Controller'      => 'Illuminate\Routing\Controller',
-		'Cookie'          => 'Illuminate\Support\Facades\Cookie',
-		'Crypt'           => 'Illuminate\Support\Facades\Crypt',
-		'DB'              => 'Illuminate\Support\Facades\DB',
-		'Eloquent'        => 'Illuminate\Database\Eloquent\Model',
-		'Event'           => 'Illuminate\Support\Facades\Event',
-		'File'            => 'Illuminate\Support\Facades\File',
-		'Form'            => 'Illuminate\Support\Facades\Form',
-		'Hash'            => 'Illuminate\Support\Facades\Hash',
-		'HTML'            => 'Illuminate\Support\Facades\HTML',
-		'Input'           => 'Illuminate\Support\Facades\Input',
-		'Lang'            => 'Illuminate\Support\Facades\Lang',
-		'Log'             => 'Illuminate\Support\Facades\Log',
-		'Mail'            => 'Illuminate\Support\Facades\Mail',
-		'Paginator'       => 'Illuminate\Support\Facades\Paginator',
-		'Password'        => 'Illuminate\Support\Facades\Password',
-		'Queue'           => 'Illuminate\Support\Facades\Queue',
-		'Redirect'        => 'Illuminate\Support\Facades\Redirect',
-		'Redis'           => 'Illuminate\Support\Facades\Redis',
-		'Request'         => 'Illuminate\Support\Facades\Request',
-		'Response'        => 'Illuminate\Support\Facades\Response',
-		'Route'           => 'Illuminate\Support\Facades\Route',
-		'Schema'          => 'Illuminate\Support\Facades\Schema',
-		'Seeder'          => 'Illuminate\Database\Seeder',
-		'Session'         => 'Illuminate\Support\Facades\Session',
-		'SSH'             => 'Illuminate\Support\Facades\SSH',
-		'Str'             => 'Illuminate\Support\Str',
-		'URL'             => 'Illuminate\Support\Facades\URL',
-		'Validator'       => 'Illuminate\Support\Facades\Validator',
-		'View'            => 'Illuminate\Support\Facades\View',
+		'App' => 'Illuminate\Support\Facades\App',
+		'Artisan' => 'Illuminate\Support\Facades\Artisan',
+		'Auth' => 'Illuminate\Support\Facades\Auth',
+		'Blade' => 'Illuminate\Support\Facades\Blade',
+		'Cache' => 'Illuminate\Support\Facades\Cache',
+		'ClassLoader' => 'Illuminate\Support\ClassLoader',
+		'Config' => 'Illuminate\Support\Facades\Config',
+		'Controller' => 'Illuminate\Routing\Controller',
+		'Cookie' => 'Illuminate\Support\Facades\Cookie',
+		'Crypt' => 'Illuminate\Support\Facades\Crypt',
+		'DB' => 'Illuminate\Support\Facades\DB',
+		'Eloquent' => 'Illuminate\Database\Eloquent\Model',
+		'Event' => 'Illuminate\Support\Facades\Event',
+		'File' => 'Illuminate\Support\Facades\File',
+		'Form' => 'Illuminate\Support\Facades\Form',
+		'Hash' => 'Illuminate\Support\Facades\Hash',
+		'HTML' => 'Illuminate\Support\Facades\HTML',
+		'Input' => 'Illuminate\Support\Facades\Input',
+		'Lang' => 'Illuminate\Support\Facades\Lang',
+		'Log' => 'Illuminate\Support\Facades\Log',
+		'Mail' => 'Illuminate\Support\Facades\Mail',
+		'Paginator' => 'Illuminate\Support\Facades\Paginator',
+		'Password' => 'Illuminate\Support\Facades\Password',
+		'Queue' => 'Illuminate\Support\Facades\Queue',
+		'Redirect' => 'Illuminate\Support\Facades\Redirect',
+		'Redis' => 'Illuminate\Support\Facades\Redis',
+		'Request' => 'Illuminate\Support\Facades\Request',
+		'Response' => 'Illuminate\Support\Facades\Response',
+		'Route' => 'Illuminate\Support\Facades\Route',
+		'Schema' => 'Illuminate\Support\Facades\Schema',
+		'Seeder' => 'Illuminate\Database\Seeder',
+		'Session' => 'Illuminate\Support\Facades\Session',
+		'SSH' => 'Illuminate\Support\Facades\SSH',
+		'Str' => 'Illuminate\Support\Str',
+		'URL' => 'Illuminate\Support\Facades\URL',
+		'Validator' => 'Illuminate\Support\Facades\Validator',
+		'View' => 'Illuminate\Support\Facades\View',
+		'Debugbar' => 'Barryvdh\Debugbar\Facade', // 在项目中调用
+		'Carbon' => 'Carbon\Carbon',
 
 	),
 

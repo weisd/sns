@@ -15,7 +15,7 @@ return array(
 	| array format for simplicity. Here you can tweak the fetch style.
 	| 在这里你可以调整获取的类型。
 	|
-	*/
+	 */
 
 	'fetch' => PDO::FETCH_CLASS,
 
@@ -32,7 +32,7 @@ return array(
 	| you may use many connections at once using the Database library.
 	| 你可以在一个数据库类库的使用中采用多个连接。
 	|
-	*/
+	 */
 
 	'default' => 'mysql',
 
@@ -57,45 +57,45 @@ return array(
 	| choice installed on your machine before you begin development.
 	| 安装在你的机器上的，特定数据库的驱动。
 	|
-	*/
+	 */
 
 	'connections' => array(
 
 		'sqlite' => array(
-			'driver'   => 'sqlite',
-			'database' => __DIR__.'/../database/production.sqlite',
-			'prefix'   => '',
+			'driver' => 'sqlite',
+			'database' => __DIR__ . '/../database/production.sqlite',
+			'prefix' => '',
 		),
 
 		'mysql' => array(
-			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'sns',
-			'username'  => 'sns',
-			'password'  => 'sns',
-			'charset'   => 'utf8',
+			'driver' => 'mysql',
+			'host' => 'localhost',
+			'database' => '',
+			'username' => '',
+			'password' => '',
+			'charset' => 'utf8',
 			'collation' => 'utf8_general_ci',
-			'prefix'    => '',
+			'prefix' => '',
 		),
 
 		'pgsql' => array(
-			'driver'   => 'pgsql',
-			'host'     => 'localhost',
+			'driver' => 'pgsql',
+			'host' => 'localhost',
 			'database' => 'database',
 			'username' => 'root',
 			'password' => '',
-			'charset'  => 'utf8',
-			'prefix'   => '',
-			'schema'   => 'public',
+			'charset' => 'utf8',
+			'prefix' => '',
+			'schema' => 'public',
 		),
 
 		'sqlsrv' => array(
-			'driver'   => 'sqlsrv',
-			'host'     => 'localhost',
+			'driver' => 'sqlsrv',
+			'host' => 'localhost',
 			'database' => 'database',
 			'username' => 'root',
 			'password' => '',
-			'prefix'   => '',
+			'prefix' => '',
 		),
 
 	),
@@ -113,7 +113,7 @@ return array(
 	| the migrations on disk haven't actually been run in the database.
 	| 磁盘上的哪些迁移还没有运行于数据库中。
 	|
-	*/
+	 */
 
 	'migrations' => 'migrations',
 
@@ -130,15 +130,15 @@ return array(
 	| such as APC or Memcached. Laravel makes it easy to dig right in.
 	| 如 APC 或 Memcached 更丰富的命令。Laravel 使得它更容易的被使用。
 	|
-	*/
+	 */
 
 	'redis' => array(
 
 		'cluster' => false,
 
 		'default' => array(
-			'host'     => '127.0.0.1',
-			'port'     => 6379,
+			'host' => '127.0.0.1',
+			'port' => 6379,
 			'database' => 0,
 		),
 

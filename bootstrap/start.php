@@ -13,7 +13,7 @@
 | the IoC container for the system binding all of the various parts.
 | 并且为系统的各个部分绑定了 IoC 容器。
 |
-*/
+ */
 
 $app = new Illuminate\Foundation\Application;
 
@@ -30,11 +30,11 @@ $app = new Illuminate\Foundation\Application;
 | given environment, then we will automatically detect it for you.
 | 我们将自动为你检测。
 |
-*/
+ */
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('your-machine-name'),
+	'local' => array('weisd.local'),
 
 ));
 
@@ -51,9 +51,9 @@ $env = $app->detectEnvironment(array(
 | may do so within the paths.php file and they will be bound here.
 | 你可以这样做，在 paths.php 文件中修改并在这一步完成绑定。
 |
-*/
+ */
 
-$app->bindInstallPaths(require __DIR__.'/paths.php');
+$app->bindInstallPaths(require __DIR__ . '/paths.php');
 
 /*
 |--------------------------------------------------------------------------
@@ -68,12 +68,12 @@ $app->bindInstallPaths(require __DIR__.'/paths.php');
 | from the actual running of the application with a given request.
 | 从实际运行的应用程序与给定的请求中。
 |
-*/
+ */
 
-$framework = $app['path.base'].
-                 '/vendor/laravel/framework/src';
+$framework = $app['path.base'] .
+'/vendor/laravel/framework/src';
 
-require $framework.'/Illuminate/Foundation/start.php';
+require $framework . '/Illuminate/Foundation/start.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -88,6 +88,6 @@ require $framework.'/Illuminate/Foundation/start.php';
 | from the actual running of the application and sending responses.
 | 为实际运行的应用程序和发送的响应。
 |
-*/
+ */
 
 return $app;
